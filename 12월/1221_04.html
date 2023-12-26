@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: solid;
+            src: url(webfonts/fa-solid-900.woff2) format("woff2");
+        }
+        @font-face {
+            font-family: brand;
+            src: url(webfonts/fa-brands-400.woff2) format("woff2");
+        }
+        h1{font-family: solid;}
+        h1::before{content: "\f002";}
+        h1::after{content: "\f09a"; font-family: brand;}
+        #arrow{font-size: 100px;}
+    </style>
+    <link rel="stylesheet" href="css/all.css">
+     
+</head>
+<body>
+    <h1>&#xf015;</h1>
+    <div class="fa-3x">
+        <i class="fa-solid fa-sync fa-spin"></i>
+        <i class="fa-solid fa-circle-notch fa-spin"></i>
+        <i class="fa-solid fa-cog fa-spin"></i>
+        <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
+        <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+        <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+      </div>   
+      <i class="fa-solid fa-sync fa-spin" id="arrow"></i> 
+</body>
+</html>

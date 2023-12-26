@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{margin: 0;padding: 0;}
+       body{text-align: center;}
+       section{width: 1280px;
+         height: 100px; 
+         border: 1px solid;
+          display: inline-block;}
+       section>div{width: 100px;
+         height: 100px;
+        background-color: black;
+         float: left;
+       margin-right: calc((1280px - 300px) / 2);
+        overflow: hidden;}
+       section>div:last-child{margin-right: 0;}       
+    </style>
+</head>
+<body>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>    
+  </section>  
+</body>
+</html>

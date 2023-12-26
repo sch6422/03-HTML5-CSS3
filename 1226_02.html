@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commit</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        p{width: 200px; height: 200px; border: 10px solid rgba(0, 0, 0, 0.5);
+        padding: 40px; margin: 40px; background-image: url(images/photo1.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;}
+        p:first-child{background-origin: border-box;}
+        p:nth-child(2){background-origin: content-box;}
+        p:last-child{background-origin: padding-box;}
+        div{width: 200px; height: 200px; border: 10px solid rgba(0, 0, 0, 0.5);
+            padding: 40px; margin: 40px; background-color: aqua;}
+        div:first-of-type{background-clip: border-box;}
+        div:nth-last-of-type(2){background-clip: content-box;}
+        div:last-of-type{background-clip: padding-box;}
+        section{width: 200px; height: 200px;
+                background-image: url(images/photo1.jpg);
+                background-repeat: no-repeat;
+                border: 1px solid;}
+                
+        section:first-of-type{background-size: contain;}
+        /*bg의 가로세로 비율은 유지하되 가로크기와 세로크기중 이미지가 넘치지 않게 조정*/
+        section:last-of-type{background-size: cover;
+                             background-position-x: center;}
+        /*bg의 가로세로 비율은 유지하되 가로크기와 세로크기중 이미지가 크기에 fill 하게 크기조정 넘치는 부분이 생김*/
+    </style>
+</head>
+<body>
+    123
+    <img src="images/photo1.jpg" alt="photo1">
+   <p></p>
+   <p></p>
+   <p></p>
+   <div></div>
+   <div></div>
+   <div></div>
+   <section></section>
+   <section></section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      a{color: #000; text-decoration: none;}
+      a:hover{text-decoration: underline;}
+      /* a:focus{outline: none;} 키보드의 tab키를 눌럿을때 */
+      /* a:first-child{background-color: #ccc;}
+      a:last-child{background-color: #ccc;}
+      p:nth-of-type(2n+1){background-color: #ccc;} 홀수 1,3,5
+      p:nth-of-type(2n){background-color: #ccc;} 짝수 2,4 */
+      p:nth-of-type(3){background-color: #ccc;}
+      span:only-child{background-color: #ccc;}
+      span:only-of-type{background-color: #ccc;}
+      :not(p){border: 1px solid;}
+    </style>
+</head>
+<body>
+    <a href="#">링크태그1</a>
+    <a href="#">링크태그2</a>
+    <a href="#">링크태그3</a>
+    <a href="#">링크태그4</a>
+    <a href="#">링크태그5</a>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <p>문단태그</p>
+    <span>인라인태그</span>
+        <h1><span>인라인태그</span><a href="#">링크태그</a></h1>
+        <h2><span>인라인태그</span></h2>
+</body>
+</html>

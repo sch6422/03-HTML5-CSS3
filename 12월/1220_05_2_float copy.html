@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+      *{margin: 0;padding: 0;} 
+       section{width: 1200px; margin: 0 auto;}
+      .one{height: 100px; background-color: #f00;}
+      .two{height: 100px; background-color: #00f;}
+      .three>div{float: left;}
+      .three>div:first-child{width: 200px; height: 500px; background-color: #0f0;}
+      .three>div:nth-child(2){width: 900px; height: 500px; background-color: pink;}
+      .three>div:nth-child(3){width: 100px; height: 500px; background-color: #0f0;}
+      .four{height: 100px; background-color: #00f; clear: left;}
+      /*부모에 높이or가로 크기 정해주면 자식에 퍼센트로 응용이 가능*/
+                
+    </style>
+</head>
+<body>
+    <section>
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <div class="four">6</div>
+    </section>
+</body>
+</html>

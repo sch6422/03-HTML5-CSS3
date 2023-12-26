@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style>
+        html{font-size: 24px;}
+     div{width: 500px; height: 500px; border: 1px solid; font-size: 32px;
+         text-align: center;}
+     /* p{width: 50%; height: 50%; background-color: #ccc;} */
+     /* p{width: 10em; height: 10em; background-color: #ccc;} */
+     /* p{width: 10rem; height: 10rem; background-color: #ccc;} */
+     p{width: 50vw; height: 50vh; background-color: #ccc;
+     font-style: italic; font-variant: small-caps; line-height: 50px;}
+     span{font-size: 24px/2 "돋움",Dotum,sans-serif;}
+     /* 예) /2 = 행간을 2 넣은것 행간을 넣을때 / 하면된다. */
+     span{letter-spacing: 10px;/* letter-spacing=자간 */
+          word-spacing: 50px;
+          text-decoration: overline;
+          text-transform: uppercase;
+          border: 1px solid;}
+          section{text-align: justify; text-indent: 20px;}
+          img{vertical-align: middle;}    
+    a{color: #000; text-decoration: none; font-size: 32px;
+      text-shadow: 10px 10px 10px #000,
+                   0 0 20px #f00,
+                   -10px -10px 10px #0f0,
+                   50px 50px 10px rgba(red, green, blue, alpha);}
+                   /* 새도우 순서 가로 세로 음영*/
+                   /*rgba로도 넣을수있다 예) 0(레드) 0(그린) 0(블루) 4(알파)*/
+    </style>
+<!-- 
+font-style->font-variant->font-weight
+->font-size/line-height->font-family
+폰트 사이즈,패밀리는 생략불가 필수 나머지는 생략가능(없으면 안써도됨) 순서 중요
+만약 사이즈 안쓸거면 패밀리만 써도된다. -->
+</head>
+<body>
+    <div>
+        <p>font<br>size</p>
+        <span>인라인 태그 inline</span>
+    </div>
+    <section>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</section>
+    <p><img src="images/cake.jpg" alt="케이크">cake</p>
+    <a href="#">링크태그</a>
+</body>
+</html>

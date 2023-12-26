@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    body{padding: 50px;}
+    p{color: #f00 !important;}
+    #one{color: chartreuse;}
+    p.txt{color: #00f;}
+    a{columns: #000;}
+    body>ul.gnb>li>a{background-color: #ccc;}
+    /* .gnb ul .first + li{background-color: #ccc;} */
+    .gnb ul .first ~ li{background-color: #ccc;}
+    p,ul,.gnv,#one{border: 1px solid #000;}
+    </style>
+</head>
+<body>
+  <p  class="txt">문단태그</p>  
+  <p id="one"class="txt" style="color: #ccc;">문단태그</p>  
+  <p>문단태그</p> 
+  <ul>
+    <li class="txt">리스트</li>
+  </ul> 
+  <p><a href="#">링크태그</a></p>
+  <ul class="gnb">
+    <li><a href="#">메뉴1</a>
+    <ul>
+        <li class="first"><a href="#">서브메뉴1</a></li>
+        <li><a href="#">서브메뉴2</a></li>
+        <li><a href="#">서브메뉴3</a></li>
+        <li><a href="#">서브메뉴4</a></li>
+    </ul>
+</li>
+  </ul>
+</body>
+</html>

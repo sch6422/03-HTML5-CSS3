@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        *{margin:0; padding: 0;}
+        section{float: left;}
+        section{width: 370px; height: 148px;border: 1px solid #ccc; 
+        padding: 20px; padding-bottom: 0px; margin: 20px;} 
+        section:first-child{border-top: 2px solid #00f;}               
+        div{overflow: hidden; margin-top: 20px;}
+        div>p>img:first-child{float: right;}
+        div>p:last-child{float: left;}
+        section>p{
+            /* word-break: break-all */
+        word-break: keep-all;}    
+        section:nth-child(2){border-top: 2px solid #0f0;}
+        div{overflow: hidden; margin-top: 0px;}
+        div>p>img:first-child{float: right;}
+        div>p:last-child{float: left;}
+
+        #compliment{position: relative;}
+        #compliment div p:last-child{position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;}               
+        
+        #compliment div p img{width: 410px; height: 168px;}
+
+        #ssaa{position: relative;
+        left: -1356px;
+        top: 200px; background-color: lightblue;}
+
+        #ssaa div p img{position: relative; left: 280px; top: -23px;}
+
+        #ssa{position: relative;
+        left: -453px; top: -10px;}
+        #ssa div p img{position: relative; left: 230px; top: -80px;}
+
+        #sa{width: 160px; height: 148px;background-color: #ccc;
+        position: relative; left: -450px; top: -10px;}
+        #sa div p img{position: relative; left: 100px; top: 8px;}
+
+        #s{width: 160px; height: 148px;background-color: #ccc;
+        position: relative; left: -480px; top: -10px;}
+        #s div p img{position: relative; left: 100px; top: 8px;}
+
+        
+        
+    </style>
+</head>
+<body>
+   
+     <section>
+        <h1>설문조사</h1>
+        <div>
+        <p><img src="새 폴더/sm01_icon_01.gif" alt="노트"></p>
+        <p>대전광역시 설문 및 공모페이지로<br>안내합니다</p>        
+    </div>
+     </section> 
+     <section>
+        <h1>시민시정제안</h1>
+        <div>
+            <p><img src="새 폴더/sm01_icon_02.gif" alt="전구"></p>
+            <p>실/국,시청의 현안과제는 물론<br>생활공감 등 자유롭게제안하세요</p>
+        </div>
+     </section> 
+     <section id="compliment">
+        <h1>칭찬합시다</h1>
+        <div>
+            <p>잊지 못할 한사람의 친절에<br>감사함을 느끼셧나요?</p>
+            <p><img src="새 폴더/sm01_bg_02.gif"alt="우체통" ></p>                     
+        </div>
+     </section>
+     <section id="ssaa">
+        <h1>대전시소</h1>
+        <div>
+            <p>시민의 생각이 정책이 되고<br>시민이 정챙과정에 참여합니다</p>
+            <p><img src="새 폴더/sm01_bg_07.png" alt="시소"></p>
+        </div>
+     </section>
+     <section id="ssa">
+        <h1>정책자문단</h1>
+        <div>
+            <p>대전의 지속적인 성장과 발전을<br>앞당기는 Think Tank</p>
+            <p><img src="새 폴더/sm01_bg_04.gif" alt="정책"></p>
+        </div>
+     </section>
+     <section id="sa">
+        <h1>대기환경 SNS</h1>
+        <div>
+        <p>대전광역시 미세먼지<br>정보를 받아보세요</p>
+        <p><img src="새 폴더/sm01_bg_05.png" alt="sns"></p>
+    </div>
+     </section>
+     <section id="s">
+        <h1>정책토론</h1>
+        <div>
+            <p>국민여러분과<br>함께하는 국민신문고</p>
+            <p><img src="새 폴더/sm01_bg_06.png" alt="신문"></p>
+        </div>
+     </section>
+</body>
+</html>

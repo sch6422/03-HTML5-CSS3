@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ddsadf</title>
+  </head>
+  <body>
+    <a href="https://www.naver.com/"
+      ><img src="images/짱뚱어.jpg" alt="짱둥어"
+    /></a>
+    <!--html5 29페이지 참고 coords에 있는 좌표는 그림판
+    실행 후 마우스 올리면 왼쪽 하단에 좌표생성-->
+    ><img src="images/2-22.jpg" alt="지도" usemap="#korea" /><map name="korea"
+      ><area
+        shape="rect"
+        coords="159,259,174,283"
+        href="https://www.daejeon.go.kr/"
+        alt="대전시청"
+        target="_blank" />
+      <area
+        shape="circle"
+        coords="92,516,30"
+        href="https://www.jejusi.go.kr/index.ac"
+        alt="제주"
+        target="_blank" /><area
+        shape="poly"
+        coords="244,316,273,306,267,333,254,339,240,340,253,314"
+        href="https://www.daegu.go.kr/index.do"
+        alt="대구"
+        target="_blank"
+    /></map>
+    <picture>
+      <source media="(min-width:1280px)" srcset="images/photo1.jpg" />
+      <!--디바이스가 1280이상이면 photo1이미지출력-->
+      <source media="(min-width:1024px)" srcset="images/photo2" />
+      <source media="(min-width:768px)" srcset="images/photo3.jpg" />
+      <source media="(min-width:500px)" srcset="images/photo4.jpg" />
+      <source media="(max-width:499px)" srcset="images/photo5.jpg" />
+      <img src="images/photo1.jpg.jpg" alt="Flowers" />
+    </picture>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+    <style>
+        section,p{width: 300px; border: 1px solid}
+        .normal{white-space: normal;} 
+        .nowrap{white-space: nowrap;} 
+        .pre{white-space: pre;} 
+        .pre-wrap{white-space: pre-wrap;} 
+        .pre-line{white-space: pre-line;} 
+        p{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        div{width: 200px;
+            border: 1px solid;
+            display: -webkit-box; /*display : 요소의 성격을 바꿔주는 속성 블록, 인라인 요소 변경*/
+            overflow: hidden; /*넘치는애들 자르는 거*/
+            text-overflow: ellipsis; /*text-overflow : 긴 텍스트에 말줄임 기호를 사용하고자 할 때 사용*/
+            -webkit-line-clamp: 3; 
+            -webkit-box-orient: vertical;  /*여러줄일때 필수*/
+        }
+    </style>
+</head>
+<body>   
+<section class="normal">nomal속성L       orem Ipsum is simply dummy text of
+         the printing and typesetting
+         industry</section>
+<section class="nowrap">nowp속성L       orem Ipsum is simply dummy text of
+         the printing and typesetting
+         industry</section>
+<section class="pre">pre속성L       orem Ipsum is simply dummy text of
+         the printing and typesetting
+         industry</section>
+<section class="pre-wrap">pre-wrap속성L       orem Ipsum is simply dummy text of
+         the printing and typesetting
+         industry</section>
+<section class="pre-line">pre-line속성L       orem Ipsum is simply dummy text of
+         the printing and typesetting
+         industry</section>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+<div>Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+</body>
+</html>

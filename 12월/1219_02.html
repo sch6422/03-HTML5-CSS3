@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1[class]{color: #f00;}
+        /* .box{background-color: #f00;}
+        .big{font-size: 32px;} */
+        /* p[class="box"]{background-color: #f00;} */
+        /* p[class~="box"]{background-color: #f00;} */
+        /* p[class|="box"]{background-color: #f00;} */
+        /* class명이 유일하게box이거나 box로 시작하는 p요소 */
+        /* p[class^="box"]{background-color: #f00;} */
+         /* class명이 box로 시작하는 p요소 */
+         /* p[class$="big"]{background-color: #f00;} */
+          /* class명이 big로 끝나는 p요소 */
+          /* p[class*="top"]{background-color: #f00;} */
+          /* class명이 top이 포함되어 있는 p요소 */
+          a[href^="mailto"]{color: green;}
+    </style>
+</head>
+<body>
+    <h1>제목태그</h1>
+    <h1 class="title">제목태그</h1>
+    <h1 class="bigtitle">제목태그</h1>
+    <h1 class="smalltitle">제목태그</h1>
+    <p class="box">문단태그</p>
+    <p class="box big">문단태그</p>
+    <p class="boxtop big">문단태그</p>
+    <p class="box-top big">문단태그</p>
+    <h1 class="txt">1111</h1>
+    <a href="mailto:aaa@naver.com">메일보내기</a>
+</body>
+</html>

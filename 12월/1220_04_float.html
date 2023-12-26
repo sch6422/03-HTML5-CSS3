@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+      *{margin: 0;padding: 0;} 
+      /*섹션 가로크기 1200px 가운데정렬
+      div 가로100px 세로100px 백그라운드 #ccc 가로로 배치*/  
+      section{width: 1200px; border: 1px solid; overflow: hidden;
+      margin: 0 auto;}
+      section>div{background-color:#ccc;
+      width: 100px;height: 100px; float: left;
+      margin-right: calc((1200px - 400px) / 3);}
+       /* margin-right: 266.67px;} */
+      section>div:last-child{margin-right: 0;}
+      /*calc 연산자 왼쪽 오른쪽 공백처리 우선순위 연산은 ()묶어주고
+      수치에 단위(px등등)*/
+          
+    </style>
+</head>
+<body>
+      <section>
+        <div>one</div>
+        <div>two</div>
+        <div>three</div>
+        <div>four</div>
+      </section>
+</body>
+</html>

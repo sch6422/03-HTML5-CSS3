@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::before{content: "앞에"; border: 1px solid; width: 100px;
+    display: inline-block; height: 50px;}
+        /* p태그 자식요소 앞선택 */
+        p::after{content: "뒤에";}
+        p::selection{background-color: yellow;}
+    </style>
+</head>
+<body>
+    <p>문단태그</p>
+</body>
+</html>
