@@ -8,29 +8,46 @@
     <style>
      *{margin: 0; padding: 0;}
      body{font: 1em Arial,"맑은 고딕",sans-serlf; background-color: #d3222a;}
+
      .wrap{width: 1000px; margin: 0 auto;}
+
      ul{list-style: none; }
+
+     ul.con{position: relative; top: 82px; height: 625px;}
+     
      .top{ height: 23px;
            text-align: right;}
-     .pattern02{ height: 82px;background: url(images/pattern.gif); }
-     ul li{float: left;}
-     .copyright{clear: left; height: 100px;  background:#fff; text-align: center; line-height: 100px;}
-     ul li:last-child{width: 514px; height: 625px; background: url(images/index_main_02.gif);}
+
+     .bg{width: 100vw; height: 82px; position: absolute; left: 0;
+         background: url(images/pattern.gif);}
+
+     .pattern02{width: 1000px; height: 82px; margin: 0 auto; }
+
+     ul li{float: left; height: 100%;}
+
+     .copyright{clear: left; height: 100px;  background:#fff;
+                text-align: center; line-height: 100px; top: 82px;}
+
+     ul li:last-child{width: 514px; background: url(images/index_main_02.gif);}
    
     </style>
   </head>
   <body>
     <div class="wrap">
-    <div class="top"><img src="images/index_top.gif" alt="top"></div>   
-   <div class="pattern02"><img src="images/index_pattern.gif" alt="index_pattern"></div>   
-    <ul class="content">
-        <li><img src="images/index_main_01.gif" alt="index"></li>
-        <li>
-            <!-- <img src="images/index_main_02.gif" alt="index"> -->Home 메인페이지입니다
-        </li>
-        
+    <div class="top"><img src="images/index_top.gif" alt="top"></div>  
+    <div class="bg"> 
+   <div class="pattern02"><img src="images/index_pattern.gif" alt="index_pattern"></div>
+   </div>  
+    <ul class="con">
+      <ul class="content">
+          <li><img src="images/index_main_01.gif" alt="index"></li>
+          <li>
+              <!-- <img src="images/index_main_02.gif" alt="index"> -->Home 메인페이지입니다
+          </li>
+      
+      </ul>
+      <div class="copyright"><img src="images/copyright.gif" alt="copyright"></div>
+      </div>
     </ul>
-    <div class="copyright"><img src="images/copyright.gif" alt="copyright"></div>
-    </div>
 </body>
 </html>
