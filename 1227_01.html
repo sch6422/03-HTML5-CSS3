@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     *{margin: 0; padding: 0;}
+     body{font: 1em Arial,"맑은 고딕",sans-serlf; background-color: #d3222a;}
+
+     .wrap{}
+        /* width: 1000px; margin: 0 auto;} */
+
+     ul{list-style: none; }
+
+     ul.con{height: 625px; width: 1000px; margin: 0 auto;}
+     
+     ul.con>li{float: left; height: 100%; position: relative;}
+
+     ul.con>li ul.left_menu{position: absolute; left: 40px; top: 230px;}
+     
+     ul.con>li:last-child{width: 514px; background: url(images/index_main_02.gif);
+                          color: #fff; font-size: 32px; font-weight: bold;}     
+    
+     ul.left_menu li a{color: black; font-size: 12px;
+                       text-decoration: none; }
+     
+     ul.left_menu li a:hover{color: #fff;
+                             text-decoration: underline; }
+
+     .top{ height: 23px; width: 1000px; margin: 0 auto;}
+
+     ul.top_menu{height: 23px; float: right;} 
+
+     ul.top_menu li{ float: left;}
+
+     ul.top_menu li a{color: #fff; font-size: 12px;
+                      text-decoration: none;} 
+
+    ul.top_menu a:hover{color: black;
+                        text-decoration: underline;}
+
+     ul.top_menu li a::after{content: "|"; padding: 0 10px;}
+    
+     ul.top_menu li:last-child a::after{content: "";}
+     
+     .bg{height: 82px;
+         background: url(images/pattern.gif);}
+         
+     .pattern02{width: 1000px; height: 82px; margin: 0 auto; }
+
+     
+
+     .bottom_bg{height: 100px;  background:#fff;text-align: center;}
+
+     .copyright{width: 1000px; margin: 0 auto;
+                 line-height: 100px;}
+
+     
+
+     
+
+     
+   
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+    <div class="top">
+        <!-- <img src="images/index_top.gif" alt="top">  -->
+    <ul class="top_menu">
+        <li><a href="#">회원가입</a> </li>
+        <li><a href="#">로그인</a> </li>        
+        <li><a href="#">JAPANESE</a> </li>
+        <li><a href="#">CHINESE</a> </li>
+        <li><a href="#">ITALIAN</a> </li>        
+    </ul>
+    </div>  
+    <div class="bg"> 
+    <div class="pattern02"><img src="images/index_pattern.gif" alt="index_pattern"></div>
+    </div>  
+    <ul class="con">
+      
+          <li><img src="images/index_main_01.gif" alt="index">
+          <ul class="left_menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Instory</a></li>
+            <li><a href="#">Portofolio</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Illustrator</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+          <li>
+              <!-- <img src="images/index_main_02.gif" alt="index"> -->Home 메인페이지입니다
+          </li>
+      
+    </ul>
+    <div class="bottom_bg">
+    <div class="copyright"><img src="images/copyright.gif" alt="copyright"></div>
+    </div>
+    </ul>
+</body>
+</html>
