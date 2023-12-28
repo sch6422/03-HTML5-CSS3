@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .wrap {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 0;
+      }
+      .row1 {
+        height: 24px;
+      }
+      .row2 {
+        height: 13px;
+      }
+      .row2 > div {
+        float: left;
+      }
+      .row2 > div:nth-child(2) {
+        /* padding-left: 260px; */
+        width: calc(100% - 151px);
+        text-align: right;
+      }
+      .row2 > div:last-child {
+        float: right;
+      }
+      .row3 {
+        height: 744px;
+        clear: left;
+        font-size: 16px;
+      }
+      .row3 > div {
+        float: left;
+      }
+      .row3 > div:nth-child(3) {
+        padding-top: 150px;
+      /* border-left: 1px solid #000; box-sizing: border-box; */
+      }
+
+        .row3 h1{width: 100px; height: 100px; border-radius: 50%;
+                 background: #fddee1; text-align: center;
+                 line-height: 100px;
+                 color : #e0a0a6;
+                 margin: 0 auto;}
+
+        .row3 p{width: 130px; 
+                height: 20px; 
+                background: #fddee1;
+                margin: 10px auto 0 auto;
+                padding: 5px;}
+                /* box-sizing: border-box; */
+     
+      .row4 {
+        height: 35px;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="row1"><img src="images/food_img/top.gif" alt="top" /></div>
+      <div class="row2">
+        <div><img src="images/food_img/food_01.gif" alt="food_01" /></div>
+        <div><img src="images/food_img/directory.gif" alt="directory" /></div>
+        <div><img src="images/food_img/food_02.gif" alt="food_02" /></div>
+      </div>
+      <div class="row3">
+        <div><img src="images/food_img/note.gif" alt="note" /></div>
+        <div><img src="images/food_img/image.gif" alt="image" /></div>
+        <div>
+          <!-- <div><img src="images/food_img/number.gif" alt="number" /></div> -->
+          <h1>08</h1>
+          <p>food & diet</p>
+          <div>
+            <img src="images/food_img/navigation.gif" alt="navigation" />
+          </div>
+        </div>
+        <div><img src="images/food_img/page.gif" alt="page" /></div>
+      </div>
+      <div class="row4">
+        <img src="images/food_img/bottom.gif" alt="bottom" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #notice,
+      #gallery {
+        display: none;
+        width: 400px;
+      }
+      #notice table {
+        table-layout: fixed;
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid;
+      }
+      #notice table td:first-child {
+        width: 70%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      #notice table td:last-child {
+        width: 30%;
+      }
+      #gallery ul {
+        list-style: none;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      #gallery ul li {
+        display: inline-block;
+      }
+      #gallery img {
+        width: 100px;
+      }
+      /*내부링크의 목적지요소 #notice가 선택*/
+      #notice:target,
+      #gallery:target {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#notice" target="_new">공지사항</a>
+    <a href="#gallery" target="_new">갤러리</a>
+    <div id="notice">
+      <table>
+        <tr>
+          <td>애스크로 서비스 변경 약관을 확인하세요</td>
+          <td>2019-10-10</td>
+        </tr>
+        <tr>
+          <td>배송 택배사 변경 및 배송방식 변경에 따른 공지</td>
+          <td>2019-09-27</td>
+        </tr>
+        <tr>
+          <td>여름 이월상품 정리 세일 안내</td>
+          <td>2019-09-07</td>
+        </tr>
+        <tr>
+          <td>여름 바캉스 상품 정리 세일 안내</td>
+          <td>2019-08-24</td>
+        </tr>
+        <tr>
+          <td>반품 및 교환 조건 변경 공지</td>
+          <td>2019-07-27</td>
+        </tr>
+        <tr>
+          <td>상품별 사이즈표 보는 방법과 치수 공지</td>
+          <td>2019-05-25</td>
+        </tr>
+      </table>
+    </div>
+    <div id="gallery">
+      <ul>
+        <li><img src="images/photo1.jpg" alt="1" /></li>
+        <li><img src="images/photo2.jpg" alt="2" /></li>
+        <li><img src="images/photo3.jpg" alt="3" /></li>
+      </ul>
+    </div>
+  </body>
+</html>
