@@ -1,4 +1,4 @@
-https://github.com/withme1004/03-HTML5-CSS
+https://github.com/withme1004/green1123
 https://github.com/sch6422/03-HTML5-CSS
 
 GitHub
@@ -13,3 +13,7 @@ github.com
 Sign Up
 
 git : 소스코드를 내 컴퓨터에서 인터넷으로 올려주는 역할
+
+git config --global user.email "이메일주소"
+git config --global user.name "닉네임"
+git config --list

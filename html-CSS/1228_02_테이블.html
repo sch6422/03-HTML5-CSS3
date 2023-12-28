@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{border-collapse: ;
+              border-top: 1px solid;
+              border-bottom: 1px solid;}
+
+        td{text-align: center;
+           border: 1px solid;
+           padding:0 50px;}
+        
+        tr td:first-child{border-left: none;
+                          background: #ccc;}
+        
+        tr td:last-child{border-right: none;}
+
+           
+    </style>
+</head>
+<body>
+  <!-- <table border="1" cellpadding="50" cellspacing="10"> -->
+    <table>
+    <tr>
+        <td colspan="2">셀11셀12</td>        
+        <td>셀13</td>
+    </tr>
+    <tr>
+        <td rowspan="2">셀21   셀31</td>
+        <td>셀22</td>
+        <td>셀23</td>
+    </tr>
+    <tr>       
+        <td>셀32</td>
+        <td>셀33</td>
+    </tr>
+  </table>
+</body>
+</html>

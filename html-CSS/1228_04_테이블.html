@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      table{border: 1px solid #b7b7b7; border-top: 2px solid #656565;
+             border-collapse: collapse;} 
+      td{border: 1px solid;}    
+      .a{background-color: #f5f5f5; width:200px; height: 25px;
+        text-align: center;}
+      .b{background-color: #f5f5f5; width:300px; height: 25px;
+         text-align: center;}
+      .c{width: 1000px; height: 25px; padding: 10px;}
+      
+      .ddd{border-collapse: collapse; border: 1px solid #b7b7b7;
+           position: relative; top: 100px;}
+      .dd{background-color: #f5f5f5; width: 155px; height: 75px; text-align: center;}
+      .d{width: 1000px; height: 25px; padding: 10px;}
+    </style>
+</head>
+<body>
+  <table>
+    <tr>
+        <td class="a" rowspan="2">일반버스</td>
+        <td class="b">교통카드</td>
+        <td class="c">일반 : 1,250원 / 청소년 : 750원 / 어린이 : 350원</td>
+    </tr>
+    <tr>        
+        <td class="b">현금요금</td>
+        <td class="c">일반 : 1,400원 / 청소년 : 900원 / 어린이 : 400원</td>
+    </tr> 
+ </table>    
+  <table class="ddd"> 
+ <tr>
+        <td class="dd" rowspan="3">택시</td>
+        <td class="d">기본요금 : 2km / 3,300원</td>
+    </tr> 
+    <tr>
+        
+        <td class="d">거리요금 : 133m / 100원</td>
+    </tr> 
+    <tr>
+        
+        <td class="d">시간요금 : 34초 / 100원</td>
+    </tr> 
+  </table> 
+</body>
+</html>
