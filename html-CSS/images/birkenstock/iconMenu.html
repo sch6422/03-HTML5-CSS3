@@ -30,19 +30,21 @@
       ul#product{width: 1182px; margin: 0 auto;
                  overflow: hidden;}
 
-      ul#product li{float:left; width: calc(100% / 3);
-                    position: relative; cursor: pointer;}
+      ul#product li{float:left;
+                    width: calc(100% / 3);
+                    height: 333px;
+                    position: relative;
+                    cursor: pointer;
+                    text-align: center;}
     
-      ul#product li p{position: absolute; display: none;
-                      top: 0px; left: 0px;
-                      width: 394px; height: 333px;
-                      background: #000; opacity: 50%;
-                      text-align: center;
-                      color: #fff;                     
-                      padding-top: 120px;
-                      box-sizing: border-box;}
+      ul#product li p{position: relative;
+                      display: none;
+                      top: -333px; left: 0px;      
+                      color: #fff;}
 
-      ul#product li:hover p{display: block;}
+      ul#product li:hover p{display: table-cell; width: 394px; height: 333px;
+                            background: rgba(0, 0, 0, 0.8);
+                            vertical-align: middle;}
 
       
 
