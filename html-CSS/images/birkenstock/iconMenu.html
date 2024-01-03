@@ -10,18 +10,42 @@
       a{color: #333; text-decoration: none;}
 
       ul#iconmenu{width: 837px; margin: 0 auto;
-                  border: 1px solid; overflow: hidden;}
+                  overflow: hidden;}
 
       ul#iconmenu li{float: left; width: calc(100% / 4);
-                     text-align: center; position: relative;} 
+                     text-align: center; position: relative;
+                     cursor: pointer;} 
 
       ul#iconmenu li p{position: absolute;
-                       left: 54px; top: 5px;
-                       width: 100px; height: 100px; 
+                       display: none;
+                       left: 53px; top: 1px;
+                       width: 109px; height: 109px; 
                        background: #fff;
                        border: 1px solid #ccc;
                        border-radius: 50%;
-                       line-height: 100px;}  
+                       line-height: 100px;
+                       text-transform: uppercase;}  
+      ul#iconmenu li:hover p {display: block;}
+
+      ul#product{width: 1182px; margin: 0 auto;
+                 overflow: hidden;}
+
+      ul#product li{float:left; width: calc(100% / 3);
+                    position: relative; cursor: pointer;}
+    
+      ul#product li p{position: absolute; display: none;
+                      top: 0px; left: 0px;
+                      width: 394px; height: 333px;
+                      background: #000; opacity: 50%;
+                      text-align: center;
+                      color: #fff;                     
+                      padding-top: 120px;
+                      box-sizing: border-box;}
+
+      ul#product li:hover p{display: block;}
+
+      
+
     </style>
 </head>
 <body>
@@ -41,6 +65,23 @@
         <li>
             <img src="images/icon4.png" alt="icon4">
             <p>SERVIES</p>
+        </li>
+    </ul>
+    <ul id="product">
+        <li>
+            <img src="images/sub1.png" alt="sub1">
+            <p>2018년 여름신상 <br> 지금 바로 만나보세요! <br>
+                +</p>
+        </li>
+        <li>
+            <img src="images/sub2.png" alt="sub2">
+            <p>상품구매하기</p>
+        </li>
+        <li>
+            <img src="images/sub3.png" alt="sub3">
+            <p>이보다 더 'Cool'<br>
+                할수는 없다<br>
+                +</p>
         </li>
     </ul>
 </body>
