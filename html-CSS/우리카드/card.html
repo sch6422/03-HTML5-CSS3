@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color: #333;}
+        ul{list-style: none;}
+
+        .quick{background: #e2fdfe;}
+
+        ul#quickmenu{width: 1080px; margin: 0 auto;
+                     background: #e2fdfe; overflow: hidden;
+                     padding: 50px 0;}
+
+        ul#quickmenu li{width: calc(100% / 6);
+                        float: left;  text-align: center;
+                        position: relative;}
+
+        ul#quickmenu li::after{content:"";
+                               position: absolute;
+                               top: -10px; right: 0;
+                               width: 1px; height: 100px;
+                               background: #ccc;}
+
+        ul#quickmenu li:last-child::after{width: 0;}
+        ul#quickmenu li:hover{cursor: pointer; display: block;}
+
+        ul#specialmenu1,
+        ul#specialmenu2{width: 1080px; 
+                        margin: 0 auto;
+                        overflow: hidden;
+                        padding: 50px 0;
+                        cursor: pointer;}
+
+        ul#specialmenu1 li,
+        ul#specialmenu2 li{position: relative;
+                           float: left;
+                           width: calc(100% / 4);
+                           text-align: center;
+                           letter-spacing: -2px;}
+
+        ul#specialmenu1 li>p{position: relative;
+                             padding-bottom: 50px;}
+                                               
+        ul#specialmenu1 li span img{position: absolute;
+                                    bottom: 20px;
+                                    right: 0;}
+
+        ul#specialmenu1 li .desc p,
+        ul#specialmenu2 li .desc p{margin-top: 30px;}
+
+        ul#specialmenu2 li::after{content: "";
+                                  position: absolute;
+                                  top: 130px;
+                                  right: 0;
+                                  width: 1px;
+                                  height: 180px;
+                                  background: #e1e1e1;}
+
+        ul#specialmenu2 li:last-child:after{width: 0;}      
+
+    </style>
+</head>
+<body>
+    <div class="quick">
+        <ul id="quickmenu">
+            <li>
+                <img src="images/ico_quick_menu1.png" alt="menu1">
+                <p>이용대금명세서</p>
+            </li>
+            <li>
+                <img src="images/ico_quick_menu2.png" alt="menu2">
+                <p>결제예상금액</p>
+            </li>
+            <li>
+                <img src="images/ico_quick_menu3.png" alt="menu3">
+                <p>이용내역조회</p>
+            </li>
+            <li>
+                <img src="images/ico_quick_menu4.png" alt="menu4">
+                <p>내정보변경</p>
+            </li>
+            <li>
+                <img src="images/ico_quick_menu5.png" alt="menu5">
+                <p>카드분실신고</p>
+            </li>
+            <li>
+                <img src="images/ico_quick_menu6.png" alt="menu6">
+                <p>카드사용등록</p>
+            </li>
+        </ul>
+    </div>
+    <div class="special1">
+        <ul id="specialmenu1">
+            <li>
+                <p>
+                    <img src="images/special_mlon_1_bg.png" alt="bg">
+                    <span>
+                        <img src="images/special_mlon_1_shd.png" alt="shd">
+                        <img src="images/special_mlon_1_obj.png" alt="obj">
+                    </span>
+                </p>
+                <div class="desc">
+                    <h2>단기카드대출</h2>
+                    <h4>(현금서비스)</h4>
+                    <p>현금이 급할 때 바로 찾아쓰는,<br>
+                        편리한 생활자금 마련방법</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mlon_2_bg.png" alt="bg">
+                    <span>
+                        <img src="images/special_mlon_2_shd.png" alt="shd">
+                        <img src="images/special_mlon_2_obj.png" alt="obj">
+                    </span>
+                </p>
+                <div class="desc">
+                    <h2>장기카드대출</h2>
+                    <h4>(카드론)</h4>
+                    <p>목돈이 필요할 때<br>
+                        복잡한 심사 과정 없이 간편하게</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mlon_3_bg.png" alt="bg">
+                    <span>
+                        <img src="images/special_mlon_3_shd.png" alt="shd">
+                        <img src="images/special_mlon_3_obj.png" alt="obj">
+                    </span>
+                </p>
+                <div class="desc">
+                    <h2>일부결제금액이월약정</h2>
+                    <h4>(리볼빙)</h4>
+                    <p>원하는 만큼만 결제하고 매월<br>
+                        결제금액을 계획적으로 관리
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mlon_4_bg.png" alt="bg">
+                    <span>
+                        <img src="images/special_mlon_4_shd.png" alt="shd">
+                        <img src="images/special_mlon_4_obj.png" alt="obj">
+                    </span>
+                </p>
+                <div class="desc">
+                    <h2>올인원대출</h2>
+                    <h4>(신용대출)</h4>
+                    <p>우리카드가 없어도 서류없이,<br>
+                        방문없이, 내 신용만으로
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="special2">
+        <ul id="specialmenu2">
+            <li>
+                <p>
+                    <img src="images/special_mbnf_1_obj.png" alt="bg">                    
+                </p>
+                <div class="desc">
+                    <h2>해외이용의 정석</h2>                   
+                    <p>여행, 직구, 항공<br>
+                        무엇이든 우리카드로</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mbnf_2_obj.png" alt="bg">                  
+                </p>
+                <div class="desc">
+                    <h2>MY Pick 서비스</h2>                    
+                    <p>혜택도 맞춤!br
+                        나만을 위한 맞춤 혜택</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mbnf_3_obj.png" alt="bg">                    
+                </p>
+                <div class="desc">
+                    <h2>우리V클럽</h2>                   
+                    <p>특별함을 원하는<br>
+                        고객을 위한 VIP우대 혜택
+                </div>
+            </li>
+            <li>
+                <p>
+                    <img src="images/special_mbnf_4_obj.png" alt="bg">                    
+                </p>
+                <div class="desc">
+                    <h2>우리 Point</h2>                    
+                    <p>차곡차곡 쌓아<br>
+                        다양한 곳에서 사용가능
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
