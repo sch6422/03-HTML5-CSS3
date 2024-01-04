@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input#menu{display: none;}
+
+        .container {display: inline-block;
+                    cursor: pointer;}
+        
+        .bar1, .bar2, .bar3 {display: block;
+                            width: 35px;
+                             height: 5px;
+                             background-color: #333;
+                             margin: 6px 0;
+                             transition: 0.4s; }
+          
+        #menu:checked ~ .container .bar1,
+        label.container:hover .bar1{transform: translate(0, 11px) rotate(-45deg);}
+      
+        
+        #menu:checked ~ .container .bar2,
+        label.container:hover .bar2{opacity: 0;}
+        
+        #menu:checked ~ .container .bar3,
+        label.container:hover .bar3{transform: translate(0, -11px) rotate(45deg);}       
+        </style>
+</head>
+<body>
+    <input type="checkbox" id="menu">
+    <label class="container" for="menu">
+    <div class="container">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+    </div>
+ </label> 
+ <p class="titlte">제목</p>
+</body>
+</html>

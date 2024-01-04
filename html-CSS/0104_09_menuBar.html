@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    input{display: none;}
+    /* label{display: none;} */
+    p.photo{width: 500px; height: 300px; overflow: hidden;}
+    p.photo img{top: 0px;
+                display: none;
+                width: 100%;}
+                /* height: 300px;} */
+             
+               
+    #one:checked ~ p img:first-child,
+    #two:checked ~ p img:nth-child(2),      
+    #three:checked ~ p img:nth-child(3),      
+    #aa:checked ~ p img:nth-child(4),     
+    #aaa:checked ~ p img:nth-child(5),      
+    #aaaa:checked ~ p img:last-child{display: block;}
+    
+    label{display: block;
+          width: calc(500px / 6);
+          line-height: 30px;
+          background: #9cc;
+          float: left;
+          text-align: center;}
+
+    label:hover{background: #669;
+                cursor: pointer;}
+                
+                 
+    #one:checked ~ p.title label:first-of-type,
+    #two:checked ~ p.title label:nth-of-type(2),
+    #three:checked ~ p.title label:nth-of-type(3),
+    #aa:checked ~ p.title label:nth-of-type(4),
+    #aaa:checked ~ p.title label:nth-of-type(5),
+    #aaaa:checked ~ p.title label:last-of-type{color: #669; 
+                                               background-color: #699;}     
+    </style>
+</head>
+<body>
+       <input type="radio" name="photo" id="one" checked>
+       <input type="radio" name="photo" id="two">
+       <input type="radio" name="photo" id="three">
+       <input type="radio" name="photo" id="aa">
+       <input type="radio" name="photo" id="aaa">
+       <input type="radio" name="photo" id="aaaa">         
+   <p class="photo">
+       <img src="images/photo1.jpg" alt="photo1">
+       <img src="images/photo2.jpg" alt="photo2">
+       <img src="images/photo3.jpg" alt="photo3">
+       <img src="images/photo4.jpg" alt="photo4">
+       <img src="images/photo5.jpg" alt="photo5">
+       <img src="images/photo6.jpg" alt="photo6">
+  </p>
+   <p class="title">
+       <label for="one">photo1</label>
+       <label for="two">photo2</label>
+       <label for="three">photo3</label>
+       <label for="aa">photo4</label>
+       <label for="aaa">photo5</label>
+       <label for="aaaa">photo6</label>
+  </p>
+</body>
+</html>

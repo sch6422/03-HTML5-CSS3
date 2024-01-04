@@ -6,25 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      input[type="text"] {
-        width: 100%;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url("images/searchicon.png");
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
-        padding: 12px 20px 12px 40px;
+      /* input[type="text"] { */
+      #photo {
+        display: none;
+      }
+      label {
+        cursor: pointer;
+      }
+      #photo:checked ~ label {
+        color: #f00;
+      }
+      p img {
+        width: 100px;
+      }
+      #photo:checked ~ p img {
+        display: none;
+      }
+      p span {
+        display: block;
       }
     </style>
   </head>
   <body>
-    <h2>Input field with an icon inside</h2>
-
-    <form>
-      <input type="text" name="search" placeholder="Search.." />
-    </form>
+    <input type="checkbox" id="photo" />
+    <label for="photo">이미지</label>
+    <p>
+      <img src="images/photo1.jpg" alt="photo1" />
+      <span>photo1 이미지입니다.</span>
+    </p>
   </body>
 </html>
