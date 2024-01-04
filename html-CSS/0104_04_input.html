@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* input[type="text"] { */
+      #photo {
+        display: none;
+      }
+      label {
+        cursor: pointer;
+      }
+      #photo:checked ~ label {
+        color: #f00;
+      }
+      p img {
+        width: 100px;
+      }
+      #photo:checked ~ p img {
+        display: none;
+      }
+      p span {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <input type="checkbox" id="photo" />
+      <label for="photo">이미지</label>
+      <p>
+        <img src="images/photo1.jpg" alt="photo1" />
+        <span>photo1 이미지입니다.</span>
+      </p>
+    </div>
+    <p class="title">제목입니다</p>
+  </body>
+</html>
