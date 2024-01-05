@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <style>
+    p{width: 200px;
+      height: 20px; 
+      background: #ccc;
+      transition: all 1s cubic-bezier(.17,.67,.81,.19) 1s;}
+
+
+    p:hover{width: 400px;
+            height: 200px;
+            /* transition-property: width,height;
+            transition-duration: 1s,3s;
+            transition-timing-function: linear;
+            transition-delay: 0.5s;} */} 
+            
+    div{width: 200px;
+        height: 20px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #8ac007; 
+        cursor: pointer;
+        transition: all 1s;}
+
+    div:first-of-type:hover{background: #8ac007;
+                            color: #fff;}
+    div:nth-of-type(2):hover{margin-left: 50px;}
+    div:nth-of-type(3):hover{border-width: 10px;}
+    div:nth-of-type(4):hover{width: 400px; height: 600px;}
+ </style>
+</head>
+<body>  
+  <p></p>
+  <div>color change</div>
+  <div>offest change</div>
+  <div>border change</div>
+  <div>size change</div>
+</body>
+</html>

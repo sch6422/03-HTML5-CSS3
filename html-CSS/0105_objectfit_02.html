@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     p{width: 100px; height: 100px;
+       background: #ccc; margin: 20px;} 
+     p:first-child{
+        /* transform: translate(100px , -50px); */
+           /* transform: translateX(100px); */ 
+           transform: translateY(-50px); }
+        /*X(가로) Y(세로)*/
+     p:nth-child(2){
+        /* transform: scale(0.5 , 1); */
+        transform: scaleX(0.5);}
+
+     p:nth-child(3){transform: rotateX(80deg);}
+
+     p:nth-child(4){
+        /* transform: skew(10deg , 20deg)} */
+        transform: skewX(-20deg);}
+     p:nth-child(5){transform: translate(50%,50%)
+                    scale(1.5)
+                    rotate(30deg) 
+                    skew(10deg);}
+ 
+      </style> 
+</head>
+<body>
+    <p></p>   
+    <p></p>   
+    <p>rotate</p>   
+    <p></p>   
+    <p></p>   
+    
+</body>
+</html>

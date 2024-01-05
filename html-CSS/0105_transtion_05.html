@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <style>
+  *{margin: 0; padding: 0;}
+  ul{list-style: none;
+     width: 1200px;
+     margin: 50px auto;
+     height: 200px;
+     border: 1px solid;}
+
+  ul li{float: left;
+        width: 25%;
+        height: 100%;
+        overflow: hidden;}
+
+  ul li img{width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 1s;}
+            
+
+  ul#two li img{transform-origin: right bottom;}
+
+  ul#one li:hover img{transform: scale(1.5);}
+
+  ul#two li:hover img{transform: scale(2) rotate(360deg);}
+
+  ul#three li:hover img{transform: rotateY(180deg);}
+
+  ul#four li{position: relative;}
+
+  ul#four li .box{position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  left: 0; top: 0; 
+                  background: rgba(0, 0, 0, 0.5);
+                  color: #fff;
+                  text-align: center;
+                  transition: all 1s;}
+
+  ul#four li .box p:first-child{font-size: 24px;
+                               padding: 50px 0; box-sizing: border-box;} 
+
+  ul#four li:first-child .box{left: 100%;}
+  ul#four li:first-child:hover .box{left: 0;}
+
+  ul#four li:nth-child(2) .box{top: -100%;}
+  ul#four li:nth-child(2):hover .box{top: 0;}
+
+  ul#four li:nth-child(3) .box{transform: scale(0);}
+  ul#four li:nth-child(3):hover .box{transform: scale(1);}
+
+  ul#four li:nth-child(4) .box{left: -100%;}
+  ul#four li:nth-child(4):hover .box{left: 0;}
+
+  
+
+  
+  
+
+  
+</style>
+</head>
+<body>  
+  <ul id="one">
+    <li>
+        <img src="images/photo1.jpg" alt="photo1">
+    </li>
+    <li>
+        <img src="images/photo2.jpg" alt="photo2">
+    </li>
+    <li>
+        <img src="images/photo3.jpg" alt="photo3">
+    </li>
+    <li>
+        <img src="images/photo4.jpg" alt="photo4">
+    </li>
+  </ul>
+  <ul id="two">
+    <li>
+        <img src="images/photo1.jpg" alt="photo1">
+    </li>
+    <li>
+        <img src="images/photo2.jpg" alt="photo2">
+    </li>
+    <li>
+        <img src="images/photo3.jpg" alt="photo3">
+    </li>
+    <li>
+        <img src="images/photo4.jpg" alt="photo4">
+    </li>
+  </ul>
+  <ul id="three">
+    <li>
+        <img src="images/photo1.jpg" alt="photo1">
+    </li>
+    <li>
+        <img src="images/photo2.jpg" alt="photo2">
+    </li>
+    <li>
+        <img src="images/photo3.jpg" alt="photo3">
+    </li>
+    <li>
+        <img src="images/photo4.jpg" alt="photo4">
+    </li>
+  </ul>
+  <ul id="four">
+    <li>
+        <img src="images/photo1.jpg" alt="photo1">
+        <div class="box">
+            <p>이미지제목</p>
+            <p>이미지설명</p>
+        </div>
+    </li>
+    <li>
+        <img src="images/photo2.jpg" alt="photo2">
+        <div class="box">
+            <p>이미지제목</p>
+            <p>이미지설명</p>
+        </div>
+    </li>
+    <li>
+        <img src="images/photo3.jpg" alt="photo3">
+        <div class="box">
+            <p>이미지제목</p>
+            <p>이미지설명</p>
+        </div>
+    </li>
+    <li>
+        <img src="images/photo4.jpg" alt="photo4">
+        <div class="box">
+            <p>이미지제목</p>
+            <p>이미지설명</p>
+        </div>
+    </li>
+  </ul>
+</body>
+</html>
