@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <style>
+  *{margin: 0; padding: 0;}
+
+  ul{list-style: none;}
+
+  body{padding: 500px 0;}
+
+  .mid{width: 100%;
+       min-width:1280px;
+       margin: 0 auto;
+       padding: 120px 0;
+       background: url(images/mid_bg_img1.jpg) center/cover fixed;
+       filter: brightness(80%);}
+
+   div.desc{width: 1280px;
+            margin: 0 auto;
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 70px;}
+
+   div.info{width: 1280px;
+            margin: 0 auto;
+            color: #fff;}
+
+   div.info ul{width: 1080px;
+               margin: 0 auto;
+               height: 200px;
+               text-align: center;}
+
+   div.info ul li{position: relative;
+                  float: left;
+                  width: 25%;
+                  height: 100%;}
+                                 
+   div.info ul li .col{position: absolute;
+                       left: 20%;
+                       top: 50%; 
+                       transform: translate(-50% -50%);
+                       width: 100%;
+                       cursor: pointer;}
+
+   div.info ul li .col::after{content: "";
+                              position: absolute;
+                              width: 1px;
+                              height: 80px;
+                              background: #fff;
+                              right: 0;
+                              top: 20px;}
+
+div.info ul li:last-child .col::after{width: 0;}
+
+div.info ul li .col .title{line-height: 50px;
+                           margin: 0 auto 20px;
+                           position: relative;
+                           width: 150px;
+                           height: 50px;}
+
+.line{position: absolute;
+      background: #fff;}
+  
+  .line-top{width: 100%;
+            height: 1px;
+            left: 0;
+            top: 0;
+            transform: scaleX(0);           
+            transition: all 1s}
+
+   ul li:hover .line-top{transform: scale(1);
+                         transition: all 1s} 
+                         
+  .line-right{width: 1px;
+              height: 100%;
+              right: 0;
+              top: 0;
+              transform: scaleY(0);              
+              transition: all 1s}
+
+   ul li:hover .line-right{transform: scaleY(1);
+                           transition: all 1s}
+
+  .line-bottom{width: 100%;
+               height: 1px;
+               bottom: 0;
+               left: 0;               
+               transform: scaleX(0);               
+               transition: all 1s}
+  
+  ul li:hover .line-bottom{transform: scaleX(1);
+                          transition: all 1s}
+
+  .line-left{width: 1px;
+             height: 100%;
+             left: 0;
+             top: 0;
+             transform: scaleY(0);             
+             transition: all 1s;}
+
+   ul li:hover .line-left{transform: scaleY(1);
+                          transition: all 1s}
+   
+
+</style>
+</head>
+<body>
+    <div class="mid">
+    <div class="desc">
+        <p>개개인의 특성과 능력을 중시하는 극동건설은
+            여러분의 <strong>성장의 터</strong>를 마련합니다.</p>
+    </div>
+    <div class="info">
+        <ul>
+            <li>
+                <div class="col">
+                    <div class="title">
+                        <h2>인재상</h2>
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </div>
+                    <p class="desc">극동건설이 추구하는 인재상을<br>
+                        여러분께 소개합니다</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="col">
+                    <div class="title">
+                        <h2>인사제도                            </h2>
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </div>
+                    <p class="desc">임직원의 역량향상과 동기부여를<br>
+                         위해 다양한 제도를 운영합니다</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="col">
+                    <div class="title">
+                        <h2>채용안내</h2>
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </div>
+                    <p class="desc">극동건설의 채용제도 및 절차를<br>
+                         자세히 소개합니다.</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="col">
+                    <div class="title">
+                        <h2>채용공고</h2>
+                        <span class="line line-top"></span>
+                        <span class="line line-right"></span>
+                        <span class="line line-bottom"></span>
+                        <span class="line line-left"></span>
+                    </div>
+                    <p class="desc">극동건설의 채용공고를<br>
+                        소개합니다</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>  
+ 
+</body>
+</html>
