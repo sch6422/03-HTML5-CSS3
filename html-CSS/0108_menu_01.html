@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+    input#menu{display: none;}
+
+    .container {display: block;
+                cursor: pointer;
+                z-index: 1;
+                position: relative;
+                left: 0;               
+                transition: all 0.5s;}
+
+    #menu:checked ~ .container{left: 20%;}
+        
+        .bar1, .bar2, .bar3 {display: block;
+                             width: 35px;
+                             height: 5px;
+                             background-color: #333;
+                             margin: 6px 0;
+                             transition: 0.4s;}
+
+        #menu:checked ~ .container .bar1,
+        label.container:hover .bar1{transform: translate(0, 11px) rotate(-45deg);}
+      
+        
+        #menu:checked ~ .container .bar2,
+        label.container:hover .bar2{opacity: 0;}
+        
+        #menu:checked ~ .container .bar3,
+        label.container:hover .bar3{transform: translate(0, -11px) rotate(45deg);}
+
+        #side{position: fixed;
+              width: 20%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              left: -20%;
+              top: 0;
+              transition: all 0.5s;}
+
+        #menu:checked ~ #side{left: 0;}
+        p{width: 200px;
+          height: 200px;
+          background: #8ac007;
+          transition: all 0.5s;
+          opacity: 0;
+         }
+
+        #menu:checked ~ p{opacity: 1;}
+    </style>
+  </head>
+  <body>    
+    <input type="checkbox" id="menu">
+    <label class="container" for="menu">
+    <div class="container">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+    </div>
+ </label> 
+    <div id="side"></div>
+    <p></p>
+  </body>
+</html>

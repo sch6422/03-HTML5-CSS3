@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .prcenter {
+        width: 1280px;
+        height: 570px;
+        margin: 100px auto;
+      }
+      .prcenter > ul > li:first-child {
+        float: left;
+      }
+      .prcenter > ul > li:last-child {
+        float: right;
+      }
+      .prcenter > ul > li:first-child li {
+        width: 340px;
+        height: 550px;
+        float: left;
+        transition: all 0.5s;
+      }
+      .prcenter > ul > li:first-child li:first-child {
+        background: url(images/pr_img1.jpg) center/100% no-repeat;
+        background-size: 100%;
+        margin-top: -30px;
+      }
+      .prcenter > ul > li:first-child li:last-child {
+        background: url(images/pr_img2.jpg) center/100% no-repeat;
+      }
+      .prcenter > ul > li li > div img {
+        transition: all 0.5s;
+      }
+      .prcenter > ul > li li > div:hover img {
+        margin-left: 30px;}
+    
+      .prcenter > ul > li:first-child{color: #fff;
+                                      cursor: pointer;}
+      .prcenter > ul > li:first-child li{position: relative;}
+      .prcenter > ul > li:first-child li:hover{background-size: 120%;}
+      .prcenter > ul > li:first-child li div{position: absolute;
+                                           top: 100px;
+                                           left: 0;}
+
+      .prcenter > ul > li li .right > div {
+        float: left;
+        padding: 40px 30px;
+        background: #f0f0f0;
+      }
+      .prcenter > ul > li li .right > div:first-child {
+        margin-right: 20px;
+      }
+      .prcenter > ul > li li .right {
+        overflow: hidden;
+        letter-spacing: -0.5px;
+      }
+      .prcenter > ul > li li:first-child {
+        margin-bottom: 20px;
+      }
+      .prcenter > ul > li li .right h1 {
+        font-size: 25px;
+        font-weight: normal;
+      }
+      .prcenter > ul > li li .right h1 span {
+        font-weight: bold;
+        display: block;
+      }
+      .prcenter > ul > li li .right p:nth-child(2) {
+        padding: 30px 0;
+      }
+      .prcenter > ul > li li .right > div img {
+        transition: all 0.5s;
+      }
+      .prcenter > ul > li li .right > div:hover img {
+        margin-left: 30px;
+      }
+      .prcenter > ul > li li .right > div {
+        position: relative;
+      }
+      .line {
+        position: absolute;
+        background: #07348c;
+      }
+      .line-top {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        top: 0;
+        transform: scaleX(0);
+        transform-origin: 0 0;
+        transition: all 0.2s ease-in-out 0.6s;
+      }
+      .prcenter > ul > li li .right > div:hover .line-top {
+        transform: scaleX(1);
+        transition: all 0.2s ease-in-out;
+      }
+      .line-right {
+        width: 5px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 0;
+        transition: all 0.2s ease-in-out 0.4s;
+      }
+      .prcenter > ul > li li .right > div:hover .line-right {
+        transform: scaleY(1);
+        transition: all 0.2s ease-in-out 0.2s;
+      }
+      .line-bottom {
+        width: 100%;
+        height: 5px;
+        left: 0;
+        bottom: 0;
+        transform: scaleX(0);
+        transform-origin: 100% 0;
+        transition: all 0.2s ease-in-out 0.2s;
+      }
+      .prcenter > ul > li li .right > div:hover .line-bottom {
+        transform: scaleX(1);
+        transition: all 0.2s ease-in-out 0.4s;
+      }
+      .line-left {
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transform-origin: 0 100%;
+        transition: all 0.2s ease-in-out;
+      }
+      .prcenter > ul > li li .right > div:hover .line-left {
+        transform: scaleY(1);
+        transition: all 0.2s ease-in-out 0.6s;
+      }
+      @media screen and (max-width:1279px){
+       .prcenter{width: 1100px;}       
+       .prcenter > ul > li:first-child li:first-child{margin-top: 0;}
+       .prcenter > ul > li:first-child li{float: none;
+                                          width: 500px;
+                                          height: 265px;} }
+  
+   
+    </style>
+  </head>
+  <body>
+    <div class="prcenter">
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <div>
+                <h1>극동뉴스</h1>
+                <p>극동건설의 다양한 소식을 가장 빠르게<br> 전달해드립니다.</p>
+                <p><img src="images/next_bar_bk.png" alt="as"></p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h1>R&D</h1>
+                <p>끊임없는 신기술 개발과 혁신으로<br> 극동건설이 건축기술의 진보를 위해<br> 노력하고 있습니다</p>
+                <p><img src="images/next_bar_bk.png" alt="as"></p>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li>
+              <div class="right">
+                <div>
+                  <section>
+                    <h1>언론속의<span>극동</span></h1>
+                    <p>언론에 소개되는 극동의 소식을<br />안내해드립니다</p>
+                    <p><img src="images/next_bar_bk.png" alt="다음" /></p>
+                  </section>
+                  <span class="line line-top"></span>
+                  <span class="line line-right"></span>
+                  <span class="line line-bottom"></span>
+                  <span class="line line-left"></span>
+                </div>
+                <div>
+                  <h1>입주고객<br />A/S안내</h1>
+                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다</p>
+                  <p><img src="images/next_bar_bk.png" alt="다음" /></p>
+                  <span class="line line-top"></span>
+                  <span class="line line-right"></span>
+                  <span class="line line-bottom"></span>
+                  <span class="line line-left"></span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="right">
+                <div>
+                  <h1>극동건설<br />인재채용</h1>
+                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다</p>
+                  <p><img src="images/next_bar_bk.png" alt="다음" /></p>
+                  <span class="line line-top"></span>
+                  <span class="line line-right"></span>
+                  <span class="line line-bottom"></span>
+                  <span class="line line-left"></span>
+                </div>
+                <div>
+                  <h1>기업<br />홍보영상</h1>
+                  <p>언론에 소개되는 극동의 소식을<br />안내해드립니다</p>
+                  <p><img src="images/next_bar_bk.png" alt="다음" /></p>
+                  <span class="line line-top"></span>
+                  <span class="line line-right"></span>
+                  <span class="line line-bottom"></span>
+                  <span class="line line-left"></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

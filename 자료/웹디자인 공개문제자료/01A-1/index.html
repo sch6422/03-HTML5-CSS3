@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #333;}
+        body{font-family: "돋움",Dotum,sans-serif;}
+
+        header{width: 1200px; margin: 0 auto;
+               height: 100px; }
+              
+        header>div{float: left;}
+
+        header>div.logo{width: 200px;
+                        height: 100px;
+                        background: #ccc;}   
+
+        header>div.menu{width: 1000px;}    
+        
+        header>div.menu>ul{float: right; width: 800px;
+                           margin-top: 20px;
+                           margin-right: 20px;}
+
+        header>div.menu>ul>li{float: left; width: 25%; text-align: center;
+                              position: relative;}
+
+        header>div.menu>ul>li>a{display: block;
+                                line-height: 40px;
+                                border: 1px solid #333;
+                                border-left: none;}
+
+        header>div.menu>ul>li:first-child>a{border-left: 1px solid #333;} 
+
+        header>div.menu>ul>li .sub{background: #fff;
+                                   margin-bottom: 30px;
+                                   height: 0;
+                                   overflow: hidden;
+                                   transition: height 0.5s;
+                                   position: absolute;
+                                   width: 100%;}
+
+        header>div.menu>ul:hover .sub{height: 150px;
+                                      border-bottom: 1px solid #333;}
+
+        header>div.menu>ul>li:first-child .sub{border-left: 1px solid #333;} 
+
+        header>div.menu>ul>li:last-child .sub{border-right: 1px solid #333;}      
+        
+        header>div.menu>ul>li .sub a{line-height: 30px;
+                                     display: block;}
+
+        header>div.menu>ul>li:hover>a,
+        header>div.menu>ul>li .sub a:hover,
+        header>div.menu>ul>li>a:hover
+                                     {background: #000;
+                                      color: #fff;}
+                                      
+        .slide{width: 1200px; 
+               margin: 0 auto;
+               height: 300px;}
+
+    </style>
+</head>
+<body>
+ <div class="wrap">
+    <header>
+        <div class="logo"></div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#">탑</a>
+                    <ul class="sub">
+                        <li><a href="#">블라우스</a></li>
+                        <li><a href="#">티</a></li>
+                        <li><a href="#">셔츠</a></li>
+                        <li><a href="#">니트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">악세사리</a>
+                    <ul class="sub">
+                        <li><a href="#">귀고리</a></li>
+                        <li><a href="#">목걸이</a></li>
+                        <li><a href="#">반지</a></li>
+                        <li><a href="#">팔찌</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">아우터</a>
+                    <ul class="sub">
+                        <li><a href="#">자켓</a></li>
+                        <li><a href="#">코트</a></li>
+                        <li><a href="#">가디건</a></li>
+                        <li><a href="#">머플러</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">팬츠</a>
+                    <ul class="sub">
+                        <li><a href="#">청바지</a></li>
+                        <li><a href="#">짧은바지</a></li>
+                        <li><a href="#">긴바지</a></li>
+                        <li><a href="#">레긍스</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="slide"><img src="images/slide02.jpg" alt="slide"></div>
+ </div>
+</body>
+</html>
