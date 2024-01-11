@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      body {
+        text-align: center;
+      }
+      p {
+        width: 0;
+        height: 0;
+        border: 10px solid #000;
+        border-right: none;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+        /* border: 30px solid #000;
+        border-right: none;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent; */
+        margin: 50px auto;
+        animation-name: move;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      label {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-radius: 100px;
+      }
+      #stop:checked ~ p {
+        animation-play-state: paused;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(10px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="btn" id="start" checked />
+    <input type="radio" name="btn" id="stop" />
+    <p></p>
+    <label for="start">start</label>
+    <label for="stop">stop</label>
+  </body>
+</html>
