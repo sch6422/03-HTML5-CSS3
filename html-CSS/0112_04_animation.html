@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .ladybug{position: relative;
+             margin-left: auto;
+             margin-right: auto;
+             margin-top: 200px;
+             width: 288px;
+             height: 320px; 
+             font-size: 1em; /* definition em size */
+             border: 1px solid #000;
+             /* border-radius */
+             border-radius: 50%;
+            /* background: radial-gradient() */
+             background: radial-gradient(rgba(0,0,0,1) 30%,
+             transparent 33%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 50%,
+             transparent 55%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 50%,
+             transparent 55%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 40%,
+             transparent 43%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 40%,
+             transparent 43%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 45%,
+             transparent 50%, transparent 100%),
+             radial-gradient(rgba(0,0,0,1) 45%,
+             transparent 50%, transparent 100%);
+             background-color: #e11; 
+             background-repeat: no-repeat; 
+             background-position: 105px 32px, 48px 96px, 160px 96px, 144px 176px, 64px 176px, 176px 240px, 32px 240px; /* 1, 2, ... */
+             background-size: 80px 80px;}
+
+    .ladybug::before{content: "";
+                     display: block;
+                     position: absolute;
+                     left: 48px;
+                     top: -38px;
+                     width: 192px;
+                     height: 80px;
+                     background: #000;
+                     border-radius: 50% 50% 0 0 / 100% 100% 0 0;}
+                     /*border-top-left-radius: 50% 100%;
+                     border-top-right-radius: 50% 100%;
+                     border-bottom-left-radius: 0 0;
+                     border-bottom-right-radius: 0 0; */  
+
+    .ladybug::after{content: "";
+                    display: block; 
+                    position: absolute; 
+                    left: 80px; top: -16px; 
+                    height: 16px; width: 16px; 
+                    background: #000; 
+                    border-radius: 50%; 
+                    box-shadow: 0 0 0 16px 
+                    #fff, 0 0 0 20px #000,
+                    112px 0 0 0 #000,
+                    112px 0 0 16px #fff,
+                    112px 0 0 20px #000,
+                    192px 80px 0 3px #000,
+                    216px 176px 0 3px #000,
+                    192px 264px 0 3px #000,
+                    -80px 80px 0 3px #000,
+                    -104px 176px 0 3px #000,
+                    -80px 264px 0 3px #000}
+
+    .ladybug:hover {animation: ladybug 1s;}
+    @keyframes ladybug{0%{background-position: 105px 32px, 48px 96px, 160px 96px, 144px 176px, 64px 176px, 176px 240px, 32px 240px; }
+                       50% { background-position: 105px 128px, 105px 128px, 105px 128px, 105px 128px, 105px 128px, 105px 128px, 105px 128px; }
+                       100% { background-position: 105px 32px, 48px 96px, 160px 96px, 144px 176px, 64px 176px, 176px 240px, 32px 240px; }}
+
+    .ladybug{float: left;
+             margin: 50px;
+             position: relative;
+             width: 18em; height: 20em; 
+             border: 1px solid #000; 
+             border-radius: 50%; 
+             cursor: pointer;
+             background:radial-gradient(rgba(0,0,0,1) 30%, transparent 33%, transparent 100%),
+                        radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%), 
+                        radial-gradient(rgba(0,0,0,1) 50%, transparent 55%, transparent 100%), 
+                        radial-gradient(rgba(0,0,0,1) 40%, transparent 45%, transparent 100%), 
+                        radial-gradient(rgba(0,0,0,1) 40%, transparent 45%, transparent 100%), 
+                        radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%), 
+                        radial-gradient(rgba(0,0,0,1) 45%, transparent 50%, transparent 100%);
+            background-color: #e11;
+            background-position:6.6em 2em,3em 6em,10em 6em,
+                                4.1em 11em, 9em 11em, 2em 15.6em,11em 15.6em;
+            background-size: 5em 5em; 
+            background-repeat: no-repeat;}
+
+    .ladybug::before{content: ""; 
+                     display: block; 
+                     position: absolute; 
+                     width: 12em; height: 5em; 
+                     background: #000; 
+                     left: 3em; top: -2.4em; 
+                     /*border-bottom-left-radius: 0 0; 
+                     border-bottom-right-radius: 0 0; 
+                     border-top-left-radius: 50% 100%; 
+                     border-top-right-radius: 50% 100%;*/
+                    border-radius: 50% 50% 0 0/100% 100% 0 0;}
+
+    .ladybug::after{content: ""; 
+                    display: block; 
+                    width: 1em; height: 1em; 
+                    border-radius: 50%; 
+                    background: #000; 
+                    position: absolute; 
+                    left: 5em; top: -1em;
+                    box-shadow:0 0 0 1em #fff,
+                               0 0 0 1.3em #000, 
+                               7em 0 0 0 #000, 
+                               7em 0 0 1em #fff, 
+                               7em 0 0 1.3em #000, 
+                               12.4em 5em 0 0.2em #000, 
+                               13.5em 11.3em 0 0.2em #000,
+                               11.3em 17.5em 0 0.2em #000, 
+                               -5.3em 5em 0 0.2em #000, 
+                               -6.6em 11.3em 0 0.2em #000, 
+                               -4.4em 17.5em 0 0.2em #000;}
+
+    .ladybug:hover {animation: ladybug 1s;}
+
+    @keyframes ladybug{0%{background-position: 6.6em 2em,3em 6em,10em 6em,4.1em 11em, 9em 11em, 2em 15.6em,11em 15.6em;} 
+                       50%{background-position: 6.6em 8em;} 
+                       100%{background-position: 6.6em 2em,3em 6em,10em 6em,4.1em 11em, 9em 11em,}}
+    </style>
+</head>
+<body>
+    <div class="ladybug"></div>
+</body>
+</html>

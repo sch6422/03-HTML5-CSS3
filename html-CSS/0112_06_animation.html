@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin: 0; padding: 0;}
+   
+    ul{list-style: none;
+       position: relative;}
+    
+    ul.menu{background: red;
+            width: 100%;}
+
+    ul.menu li{width: 1480px; 
+               height: 30px;
+               text-align: center;} 
+                          
+                          
+    ul.menu li a{text-decoration: none;
+                 color: #fff;
+                 width: 100px;
+                 height: 10px;                 
+                 float: right;}
+
+    .menu1{width: 1025px;
+           height: 50px;
+           margin: 10px auto;}
+
+    .menu1 .logo{float: left;}     
+    .menu1 ul{float: right;}
+    .menu1 ul li{float: left;}
+    .menu1 ul li a{text-decoration: none;
+                   color: red; 
+                   font-size:16px;
+                   padding: 0 20px;
+                   line-height: 50px;}
+
+    .asd{margin: 20px auto;
+         width: 1025px;}
+
+    .asd img{border-radius: 30px;}
+
+    ul.one{width: 1025px;
+           margin: 0 auto;           
+           overflow: hidden;}
+
+    ul.one li{float: left;
+              width: 25%;
+              text-align: center;}
+
+       
+    .banner li{float: left;}
+    .banner li img{position: relative;
+                   left: 100px;}
+    
+    .warp{text-align: left;                  
+          float: right;
+          position: relative;
+          left: -100px;}  
+
+    .warp li{width: 400px;
+             overflow: hidden;
+             white-space: nowrap;
+             text-overflow: ellipsis;}
+
+    .warp li h3{margin: 10px 0;}
+
+    .warp li> a{text-decoration: none;
+               color: #333;
+               padding: 20px 0;} 
+
+    .no{width: 1025px; margin: 20px auto;}
+    .no>div{float: left;}
+    
+    p{border: 1px solid #333;
+      width: 1025px;
+      height: 50px;
+      margin: 0 auto;
+      background-color: goldenrod;
+      line-height: 50px;           
+      clear: both;
+      padding: 0 20px;}
+    
+
+</style>
+</head>
+<body>
+<ul class="menu">    
+     <li>
+        <a href="#">로그인</a>
+        <a href="#">회원가입</a>
+        <a href="#">English</a> 
+    </li>   
+</ul>
+<div class="menu1">
+    <div class="logo">
+        <img src="images/CGV/image/logo.gif" alt="logo">
+    </div>
+    <ul>
+        <li><a href="#"><strong>영화예매</strong></a></li>
+        <li><a href="#"><strong>신작개봉</strong></a></li>
+        <li><a href="#"><strong>이벤트</strong></a></li>
+        <li><a href="#"><strong>공지사항</strong></a></li>
+        <li><a href="#"><strong>CGV매점</strong></a></li>
+    </ul>
+</div>
+<div class="asd"><img src ="images/CGV/image/visual.jpg" alt="visual"></div> 
+<ul class="one">
+    <li>
+        <img src="images/CGV/image/img01.png" alt="one"> </li>
+       <li> <img src="images/CGV/image/img02.png" alt="two"></li>
+       <li><img src="images/CGV/image/img03.png" alt="three"></li> 
+        <li><img src="images/CGV/image/img04.png" alt="fo"></li>   
+</ul>
+<div class="no">
+    <ul class="banner">
+            <li><h3>이벤트</h3></li>
+            <li><img src="images/CGV/image/banner.jpg" alt="banner"></li>
+    </ul>
+    <ul class="warp">
+        <li><h3>공지사항</h3></li>
+        <li><a href="#">공지사항 제목이 들어갑니다. 2017-08-07</a></li>
+        <li><a href="#">공지사항 제목이 들어갑니다. 2017-08-07</a></li>
+        <li><a href="#">공지사항 제목이 들어갑니다. 2017-08-07</a></li>
+        <li><a href="#">공지사항 제목이 들어갑니다. 2017-08-07</a></li>
+        <li><a href="#">공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.공지사항 제목이 들어갑니다.2017-08-07</a></li>
+    </ul>
+</div>
+<p>All Copyrights Reserved.</p>
+</body>
+</html>

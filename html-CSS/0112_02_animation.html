@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body{background: #333;}
+
+    a.banner{position: relative;
+             display: block;
+             width: 728px;
+             height: 176px;
+             border: 1px solid #555;
+             margin: 50px auto;
+             text-align: center;
+             font-family: 'Nanum Pen Script', cursive;
+             background: url(images/banner_arrow.png) -100% 80% no-repeat,
+             url(images/banner_photo.png) -300px 10px no-repeat,
+             url(images/banner_09.png) 20px -400px no-repeat,
+             url(images/banner_bg.png);
+             transition: 1s;}
+    
+    a.banner:hover{background-position: 50% 80%, -40px 10px, 20px -30px, 0 0;}
+
+    .arrow:hover{animation-name: arrow;
+                 animation-duration: 1s;
+                 animation-direction: alternate;
+                 animation-iteration-count: infinite;
+                 position: relative;}
+
+    @keyframes arrow{0%{left: 0;}
+                     50%{left: 10px;}
+                     100%{left: 0;}}
+
+    a.banner span{position: absolute;
+                  left: 50%;
+                  top: 20px;
+                  transform: translateX(-50%);
+                  font-size: 40px;
+                  color: dodgerblue;
+                  opacity: 0;
+                  transition: 1s;}
+
+    a.banner:hover span{opacity: 1;}
+                 
+
+    a.banner img{position: absolute;
+                 left: 50%;
+                 top: 50%;
+                 transform: translate(-50%, -50%);
+                 transition: 1s;}
+
+    a.banner:hover img{left: 650px;}
+    </style>
+  </head>
+  <body>
+    <div>
+        <a href="#" class="banner">
+            <img src="images/banner_logo.png" alt="logo">
+            <span>Animation Banner Design <br>웹폰트를 활용한 스타일</span>
+        </a>
+    </div>
+    <div class="arrow"></div>
+  </body>
+</html>
