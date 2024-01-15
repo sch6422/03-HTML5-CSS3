@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.clearfix::before,.clearfix::after{content: "";
+display: block;}
+.clearfix::after{clear: both;}
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+body{font-family:Arial, "맑은 고딕",sans-serif;}
+header{background: url(images/colorbag/images/color_topbg.jpg);
+height: 128px;}
+header .top{width: 999px; margin: 0 auto; height: 92px;}
+header .top .logo{text-align: center;}
+header .top ul{width: 242px; margin: 0 auto;}
+header .top ul li{float: left;}
+header nav{width: 999px; margin: 0 auto;}
+header nav ul li{float: left;}
+header nav ul li a::after{content: url(images/colorbag/images/color_topmenuline.jpg);}
+header nav ul li:last-child a::after{content: "";}
+input[type="radio"]{display: none;}
+.visual{width: 999px; margin: 20px auto;}
+.visual .top{height: 377px;}
+.visual .top li{display: none;}
+#bag1:checked ~ .visual .top li:first-child,
+#bag2:checked ~ .visual .top li:nth-child(2),
+#bag3:checked ~ .visual .top li:nth-child(3){display: block;}
+.visual .bottom li{float: left; width: 33.333%; height: 40px; 
+                   line-height: 40px; background: #9cc; 
+                   cursor: pointer; text-align: center; 
+                   color: #fff;}
+.visual .bottom li label{display: block; width: 100%; height: 100%; cursor: pointer;}
+.visual .bottom li:hover{background: #ccc;}
+#bag1:checked ~ .visual .bottom li:first-child,
+#bag2:checked ~ .visual .bottom li:nth-child(2),
+#bag3:checked ~ .visual .bottom li:nth-child(3){background: #699;}
