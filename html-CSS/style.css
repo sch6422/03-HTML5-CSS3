@@ -33,3 +33,15 @@ input[type="radio"]{display: none;}
 #bag1:checked ~ .visual .bottom li:first-child,
 #bag2:checked ~ .visual .bottom li:nth-child(2),
 #bag3:checked ~ .visual .bottom li:nth-child(3){background: #699;}
+.pro1{width: 960px; margin: 0px auto;
+    overflow: hidden;}
+.pro1 ul li{float: left;
+          text-align: center;}
+.pro2{width: 960px; margin: 10px auto;
+    overflow: hidden;}
+.pro2 ul li{float: left;
+          text-align: center;}
+.pro3{width: 960px; margin: 10px auto;
+    overflow: hidden;}
+.pro3 ul li{float: left;
+          text-align: left;}
