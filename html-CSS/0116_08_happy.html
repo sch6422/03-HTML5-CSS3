@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .clearfix::before,.clearfix::after{content: ""; display: block;}                                      
+    .clearfix::after{clear: both;}
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body{font-family:Arial, "맑은 고딕",sans-serif;}
+    .top_menu{height: 200px; background: #633c6f;}
+    .top_menu ul{width: 1000px; margin: 0 auto; overflow: hidden;}
+    .top_menu .menu1 ul li{float: right; background: #fff;}
+    .top_menu .menu1 ul li:first-child{border-left: 1px solid; height: 19px;}
+    .top_menu .menu1 ul li:nth-child(2){border-left: 1px solid;}
+    .top_menu .menu1 ul li:nth-child(3){border-left: 1px solid;}    
+    .top_menu .menu1 ul li a{font-size: 14px; padding: 10px; color: #000;}
+    .logo{width: 82px; margin: 0 auto;}
+    .top_menu .menu ul{width: 1000px; margin: 10px auto; text-align: center;}
+    .top_menu .menu ul li{float: left; width: 200px;}
+    .top_menu .menu ul li a{color: #fff;}
+    .top_menu .visual{width: 1000px;  margin: 20px auto;}
+    .mid .img1{width: 485px; height: 330px; margin: 0 auto; text-align: center;}
+    .img1 ul{float: left;}
+    </style>
+</head>
+<body>
+   <div class="top_menu">
+    <div class="menu1">
+        <ul>
+            <li><a href="#"><img src="images/happybath/images/search.png" alt="search"></a></li>
+            <li><a href="#">구입처안내</a></li>
+            <li><a href="#">온라인샵</a></li>
+            <li><a href="#">로그인</a></li>
+        </ul>
+    </div>
+    <div class="logo"> <img src="images/happybath/images/logo.jpg" alt="logo"></div>
+    <div class="menu">
+        <ul>
+        <li><a href="">해피바스 이야기</a></li>
+        <li><a href="">해피바스 선물</a></li>
+        <li><a href="">해피바스 뷰티톡</a></li>
+        <li><a href="">해피바스 제품</a></li>
+        <li><a href="">해피바스 함께하기</a></li>
+     </ul>
+    </div>
+    <div class="visual"><img src="images/happybath/images/visual.jpg" alt=""></div>
+  </div>
+  <div class="mid">
+    <div class="img1">
+        <ul>
+            <li><a href="#">해피바스 선물</a></li>
+            <li><img src="images/happybath/images/img1.jpg" alt="img1"></li>
+        </ul>
+    </div>
+  </div>
+</body>
+</html>

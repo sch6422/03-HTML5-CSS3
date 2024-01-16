@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .txt{position: relative;
+             font-size: 70px;
+             font-weight: bold;
+             line-height: 1.3;}
+        .txt span{display: block;}
+        .txt span.black_txt{color: #000;}
+        .txt span.gray_txt{color: #e6e6e6;}
+        .txt span.hide{position: absolute;
+        width: 0; left: 0; top: 0; overflow: hidden;
+        white-space: nowrap;
+        animation: txt 3s infinite forwards;}
+        @keyframes txt{0%{width: 0;}
+                       100%{width: 100%;}}
+        .img_box{position: relative;
+        width: 250px; height: 145px; overflow: hidden;}
+        .img_box img{width: 100%; object-fit: cover;}
+        .blue_box{position: absolute;
+        left: 50%; top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%; height: 100%; z-index: 2;}
+    </style>
+</head>
+<body>
+ <div class="txt">
+     <span class="black_txt hide">Harness Your Data to</span>
+     <span class="gray_txt">Harness Your Data to</span>
+ </div>
+     <div class="img_box">
+        <img src="/files/insight/2023/12/7d2f6e27-c79d-424c-be8e-804ee2cf0dba.jpg" alt="insights image" " alt="img">
+    </div>
+        <div class="blue_box"><img src=/files/insight/2023/12/7d2f6e27-c79d-424c-be8e-804ee2cf0dba.jpg"  alt="img">
+        </div>
+     
+</body>
+</html>

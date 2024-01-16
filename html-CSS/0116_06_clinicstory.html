@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .clearfix::before,.clearfix::after{content: ""; display: block;}                                      
+    .clearfix::after{clear: both;}
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body{font-family:Arial, "맑은 고딕",sans-serif;}
+    header{height: 360px;
+           background: url(images/clinicstory/images/bg_main.png)center no-repeat,
+           url(images/clinicstory/images/bg2.gif);}    
+    nav{width: 1001px; margin: 0 auto;}
+    nav ul li{float: left;}
+    nav ul li a{color: #fff; line-height: 70px; display: block; padding: 0 20px;}
+    nav ul li a:hover{background: #f00;}
+    nav ul li:first-child a{background: #f00;}
+    .mid{width: 1001px; margin: 0 auto;}
+    .mid .one li a{color: gray; font-size: 20px;}
+    .mid .one li p{color: gray; font-size: 14px; padding: 10px;}
+    .mid .one li:last-child{border: 1px solid; width: 100px; background: #ccc; text-align: center; margin: 0 auto; position: relative; left: 50px; top: 30px;}
+    .mid .one li:last-child a{font-size: 14px; color: #000;}
+    .mid .two{float: right; position: relative; top: -180px;}
+    .mid .two li:first-child a:first-child{color: gray;}
+    .mid .two li:nth-child(2),
+    .mid .two li:nth-child(3),
+    .mid .two li:nth-child(4),
+    .mid .two li:nth-child(5),
+    .mid .two li:nth-child(6),
+    .mid .two li:nth-child(7),
+    .mid .two li:nth-child(8),
+    .mid .two li:nth-child(9),
+    .mid .two li:nth-child(10),
+    .mid .two li:nth-child(11),
+    .mid .two li:nth-child(12),
+    .mid .two li:nth-child(13){color: skyblue;}   
+    .asdf li:first-child p{font-size: 20px; color: gray; padding: 10px 0px;}
+    .asdf li:nth-child(2) p{padding: 10px; color: gray;}
+    .asdf li:nth-child(3) p{border: 1px solid; width: 100px; height: 18px; background: #ccc; text-align: center; margin: 0 auto; position: relative; left: 53px; top: 30px; list-style: none; font-size: 14px;}    
+    .mid .asd{float: right; position: relative; left: 140px; top: -20px;}
+    .mid .asd li:first-child a:first-child{color: gray;}
+    .mid .asd li a{color: skyblue;}   
+    .bottom{width: 2000px;}
+    .bottom footer{height: 50px; background: #ccc; line-height: 50px; text-align: center; margin: 100px 0px;}
+    .bottom footer p{width: 600px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Clinic Test</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+ </header>
+  <div class="mid">
+    <ul class="one">
+      <li><a href="#">Food Story For Growth</a></li> 
+      <li><a href="#">해독 기능이 뛰어난 여름철 수박 껍질 차</a></li>
+      <li><p>수박 껍질 차는 아무리 먹어도 살이 찌지 않기 때문에 한여름의 갈증을 없애고 스트레스로 갑<br>갑증을 풀어주며 무더위를 날려 주는 데는 최고의 식품이다. 수박 껍질 속의 시트룰린 성분은<br> 간에서 효소의 생성을 촉진하므로 과잉 생성된 성호르몬의 분해에 도움이 되며, 혈압을 낮추는<br> 효과가 있다. 특히 수박 껍질차는 급성만성 신장염에 효과가 있으며 시트룰린이 많아 소변도<br> 잘 나오게 한다.</p></li>
+      <li><a href="#">More Read</a></li>
+    </ul>
+    <ul class="two">
+      <li><a href="#"><h2>Clinic Category</h2></a></li>
+      <li><a href="#"></a>자가진단</li>
+      <li><a href="#"></a>성장 장애</li>
+      <li><a href="#"></a>발육 표준치</li>
+      <li><a href="#"></a>성장 상식</li>
+      <li><a href="#"></a>예상키 검사</li>
+      <li><a href="#"></a>비만도 검사</li>
+      <li><a href="#"></a>키크는 식품</li>
+      <li><a href="#"></a>키크는 운동</li>
+      <li><a href="#"></a>음식 백과</li>
+      <li><a href="#"></a>성장 장애 예방법</li>
+      <li><a href="#"></a>성장 장애 FAQ</li>
+      <li><a href="#"></a>상담실</li>
+    </ul>
+    <ul class="asdf">
+        <li><p>천식에는 오미자차</p></li>
+        <li><p>오미자는 음혈이 허약하고 부족하며 심신이 불안하여 유발된 불면증 치료에 좋은 효과가 있으<br>며, 각종 알레르기 증세로 인해 숙면을 취하지 못하는 경우에도 많이 응용되고 있다.</p></li>
+        <li><p>More Read</p></li>      
+    </ul>
+    <ul class="asd">
+        <li><a href="#"><h3>Link Site</h3></a></li>
+        <li><a href="#">보건 복지부</a></li>
+        <li><a href="#">의료 보험 공단</a></li>
+        <li><a href="#">질병 관리 보험 본부</a></li>
+        <li><a href="#">국립 보건 연구원</a></li>  
+    </ul>
+  </div>
+  <div class="bottom">
+      <footer><p>Copyright ⓒ 2012. The Growth Clinic Story. Since 1998.</p></footer>
+  </div>
+</body>
+</html>

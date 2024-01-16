@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .info {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+        margin: 50px auto;
+      }
+      .info .desc {
+        position: absolute;
+        left: 40%; top: 40%;
+        transform: translate(-50%, -50%); }
+      .info .desc p:first-child{font-size: 25px; padding: 20px 0px;}   
+      .info svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .info svg rect {
+        width: 300px;
+        height: 300px;
+        fill: none;
+        stroke: #000;
+        stroke-width: 10px;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        transition: 1s;}
+      .info svg:hover rect{stroke-dashoffset: 0;}
+      .info svg polyline{transition: 0.5s;}
+      .info svg:hover polyline{transform: translateX(50px);}
+    </style>
+  </head>
+  <body>
+    <div class="info">
+      <div class="desc">
+        <p>언론속의 <br />극동</p>
+        <p>언론에 소개되는 극동의 소식을 안내해드립니다</p>
+      </div>
+      <svg>
+        <g>
+          <rect />
+          <polyline points="40,250 100,250 80,230"
+          stroke-width="1" stroke="#000"
+          fill="none"/>
+        </g>
+      </svg>
+    </div>
+    <svg>
+      <line x1="10" y1="10" x2="200" y2="10" stroke="#000" stroke-width="1" stroke-dasharray="20,10,5,5,5,10"/>
+    </svg>
+  </body>
+</html>

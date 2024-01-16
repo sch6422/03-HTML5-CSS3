@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    svg{width: 500px;
+        height: 500px;}
+    .txt{position: relative;width: 500px;
+         height: 500px;
+         border: 1px solid;}
+    .txt p,
+    .svg1{position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);}  
+    </style>
+</head>
+<body>
+    <svg height="30" width="200">
+        <text x="0" y="15" fill="red">I love SVG!</text>
+    </svg>
+    <svg>
+        <circle cx="250" cy="250" r="100" stroke="#000" fill="none" stroke-dasharray="100"/>
+        <text x="210" y="255" fill="red">I love SVG!</text>
+    </svg>
+    <div class="txt">
+        <p>I love SVG!</p>
+        <svg class="svg1">
+            <circle cx="250" cy="250" r="100" stroke="#000" fill="none"/>            
+        </svg>
+        <svg>
+            <path d="M5 50 l215 0" stroke="#000" stroke-dasharray="100" stroke-dashoffset="0"/>
+            <path d="M5 70 l215 0" stroke="#000" stroke-dasharray="100" stroke-dashoffset="100"/>
+            <path d="M5 90 l215 0" stroke="#000" stroke-dasharray="200" stroke-dashoffset="200"/>
+        </svg>
+    </div>
+</body>
+</html>

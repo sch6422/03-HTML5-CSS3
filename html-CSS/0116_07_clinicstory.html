@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .clearfix::before,.clearfix::after{content: ""; display: block;}                                      
+    .clearfix::after{clear: both;}
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;}
+    body{font-family:Arial, "맑은 고딕",sans-serif;}
+    header{height: 360px;
+           background: url(images/clinicstory/images/bg_main.png) center no-repeat,
+           url(images/clinicstory/images/bg2.gif);}    
+    nav{width: 1001px; margin: 0 auto;}
+    nav ul li{float: left;}
+    nav ul li a{color: #fff; line-height: 70px; display: block; padding: 0 20px;}
+    nav ul li a:hover{background: #f00;}
+    nav ul li:first-child a{background: #f00;}
+    </style>
+</head>
+<body>
+ <header>
+    <nav>
+        <ul>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Clinic Test</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+ </header>
+</body>
+</html>
