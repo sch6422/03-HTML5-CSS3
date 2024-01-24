@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Shifter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        display: grid;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        grid-template-columns: 20% 80%;
+        grid-auto-rows: 200px;
+      }
+      #box_a {
+        height: 400px;
+        background: #aaa;
+      }
+      #box_b {
+        height: 200px;
+        background: #bbb;
+      }
+      #box_c {
+        height: 200px;
+        background: #ccc;
+        grid-row: 2/3;
+        grid-column: 2/3;
+      }
+      @media screen and (max-width: 1024px) {
+      }
+      @media screen and (max-width: 768px) {
+        #wrap {
+          grid-template-columns: 100%;
+          /* grid-template-rows: 400px; */
+        }
+        #box_a {
+          grid-row: 3;
+        }
+        #box_b {
+          grid-row: 2;
+        }
+        #box_c {
+          grid-row: 1;
+          grid-column: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="box_a">1</div>
+      <div id="box_b">2</div>
+      <div id="box_c">3</div>
+    </div>
+  </body>
+</html>

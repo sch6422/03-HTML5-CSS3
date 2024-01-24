@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tiny Tweaks</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      ul {
+        list-style: none;
+      }
+      #box_a {
+        height: 400px;
+        background: #aaa;
+      }
+      .list_man {
+        margin: 0 auto;
+        padding-top: 50px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      .list_man li {
+        background: #fff;
+        flex-basis: 18%;
+        margin-bottom: 1%;
+      }
+      @media screen and (max-width: 1024px) {
+        /* li 4개 */
+        .list_man {
+          width: 95%;
+        }
+        .list_man li {
+          flex-basis: 23%;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        /* li 3개 */
+        .list_man li {
+          flex-basis: 31.333%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        /* li 2개 */
+        .list_man li {
+          flex-basis: 48%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box_a">
+      <ul class="list_man">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+        <li>i</li>
+        <li>j</li>
+      </ul>
+    </div>
+  </body>
+</html>

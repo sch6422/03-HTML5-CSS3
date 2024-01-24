@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul.history {
+        width: 100%;
+        max-width: 1400px;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+      ul.history > li {
+        flex-basis: 385px;
+        height: 363px;
+      }
+      ul.history > li > div {
+        width: 100%;
+        height: 100%;
+        background: url(images/section-box.png) center/contain no-repeat;
+      }
+      @media screen and (max-width: 1280px) {
+        ul.history > li {
+          flex-basis: 30%;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        ul.history > li {
+          flex-basis: 100%;
+          height: 400px;
+        }
+        ul.history > li > div {
+          height: 363px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        ul.history > li {
+          height: 363px;
+        }
+        ul.history > li > div {
+          width: 300px;
+          height: 283px;
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="history">
+      <li><div></div></li>
+      <li><div></div></li>
+      <li><div></div></li>
+    </ul>
+  </body>
+</html>
