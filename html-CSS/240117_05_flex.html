@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex,
+      .flex1 {
+        background: #ccc;
+        margin: 20px;
+        display: flex;
+        height: 500px;
+      }
+      .flex div,
+      .flex1 div {
+        width: 100px;
+        background: red;
+        border: 1px solid;
+      }
+      .flex1 {
+        height: 500px;
+        flex-direction: column;
+      }
+      .container1 {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .container2 {
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      .container3 {
+        justify-content: center;
+        align-items: center;
+      }
+      .container4 {
+        justify-content: space-between;
+        align-items: stretch;
+      }
+      .container5 {
+        justify-content: space-around;
+        align-items: baseline;
+      }
+      .container6 {
+        justify-content: space-evenly;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container1">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container2">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container3">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container4">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container5">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+    <div class="flex1 container6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+    </div>
+  </body>
+</html>

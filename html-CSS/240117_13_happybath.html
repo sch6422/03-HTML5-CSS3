@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font-family: Arial, "맑은 고딕", sans-serif;
+      }
+      .happy {
+        width: 990px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+      }
+      .happy > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 436px;
+        height: 400px;
+      }
+      .happy > div ul {
+        width: 100%;
+        height: 306px;
+        display: flex;
+        border: 1px solid transparent;
+      }
+      .happy > div ul li {
+        position: relative;
+        flex: 1 1 30%;
+        transition: flex-basis 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        cursor: pointer;
+      }
+      .happy > div ul li.first {
+        background: url(images/sample01.jpg);
+      }
+      .happy > div ul li.second {
+        background: url(images/sample02.jpg);
+      }
+      .happy > div ul li.third {
+        background: url(images/sample03.jpg);
+      }
+      .happy > div ul li .title {
+        text-align: center;
+        line-height: 306px;
+        font-size: 20px;
+        color: #fff;
+      }
+      .happy > div ul li .box {
+        display: none;
+      }
+      .happy > div ul:hover li:hover {
+        flex-basis: 60%;
+      }
+      .happy > div ul:hover li:not(:hover) {
+        flex-basis: 20%;
+      }
+      .happy > div ul:hover .title {
+        display: none;
+      }
+      .happy > div li:hover .box {
+        display: block;
+      }
+      .happy > div li .box {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: calc(463px * 0.6);
+        color: #fff;
+        text-align: center;
+      }
+      .happy > div:hover ul {
+        border-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="happy">
+      <div class="left">
+        <h2>해피바스 선물</h2>
+        <ul>
+          <li class="first">
+            <p class="title">내추럴 성분</p>
+            <div class="box">
+              <p>
+                해피바스가 담고 있는<br />
+                '내추럴성분'이 궁금하다면?
+              </p>
+            </div>
+          </li>
+          <li class="second">
+            <p class="title">풍부한 향</p>
+            <div class="box">
+              <p>
+                해피바스에서 펼쳐지는<br />
+                '풍성한 향'이 궁금하다면?
+              </p>
+            </div>
+          </li>
+          <li class="third">
+            <p class="title">즐거운 경험</p>
+            <div class="box">
+              <p>
+                해피바스가 이끄는<br />
+                '즐거운'경험이 궁금하다면?
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>

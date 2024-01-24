@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+          "logo menu menu menu menu"
+          "slide slide slide slide slide"
+          "notice notice gallery banner banner"
+          "ft_logo copyright copyright copyright sns";
+        grid-template-columns: 200px 200px 400px 200px 200px;
+        grid-template-rows: 100px 300px 200px 100px;
+      }
+
+      .logo {
+        grid-area: logo;
+        background: #aaa;
+      }
+      .menu {
+        grid-area: menu;
+        background: #bbb;
+      }
+      .slide {
+        grid-area: slide;
+        background: #ccc;
+      }
+      .notice {
+        grid-area: notice;
+        background: #ddd;
+      }
+      .gallery {
+        grid-area: gallery;
+        background: #eee;
+      }
+      .banner {
+        grid-area: banner;
+        background: #f0f0f0;
+      }
+      .ft_logo {
+        grid-area: ft_logo;
+        background: #ccc;
+      }
+      .copyright {
+        grid-area: copyright;
+        background: #ddd;
+      }
+      .sns {
+        grid-area: sns;
+        background: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="logo">logo</div>
+      <div class="menu">menu</div>
+      <div class="slide">slide</div>
+      <div class="notice">공지사항</div>
+      <div class="gallery">갤러리</div>
+      <div class="banner">바로가기</div>
+      <div class="ft_logo">logo</div>
+      <div class="copyright">copyright</div>
+      <div class="sns">sns</div>
+    </div>
+  </body>
+</html>

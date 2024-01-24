@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .bg {
+        height: 500px;
+        background: url(images/photo1.jpg) center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .bg .text {
+        font-size: 100px;
+        background: #fff;
+        font-weight: bold;
+        text-align: center;
+        mix-blend-mode: screen;
+      }
+
+      .text2 {
+        /* height: 500px; */
+        background: url(images/photo1.jpg) center/cover;
+        font-size: 100px;
+        font-weight: bold;
+        text-align: center;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="text">mix-blend-mode</div>
+    </div>
+
+    <div class="text2">mix-blend-mode</div>
+  </body>
+</html>
