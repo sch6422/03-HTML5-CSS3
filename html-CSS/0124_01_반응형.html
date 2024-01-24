@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1280px;
+        background: #ccc;
+        height: 500px;
+        margin: 0 auto;
+      }
+      #wrap .main {
+        display: flex;
+      }
+      #wrap .main > div {
+        width: 640px;
+        flex-shrink: 1;
+      }
+      #wrap .main .left {
+        background: red;
+      }
+      #wrap .main .right {
+        background: blue;
+      }
+      @media only screen and (max-width: 500px) {
+        #wrap .main {
+          display: block;
+        }
+        #wrap .main > div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main">
+        <div class="left">left</div>
+        <div class="right">right</div>
+      </div>
+    </div>
+  </body>
+</html>

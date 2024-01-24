@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      #wrap {
+        width: 100%;
+        max-width: 1280px;
+        background: #ccc;
+        height: 500px;
+        margin: 0 auto;
+      }
+      #wrap .main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      #wrap .main .left {
+        background: red;
+        /* width: 300px; */
+        flex-basis: 300px;
+      }
+      #wrap .main .center {
+        background: yellow;
+        /* flex-grow: 1; */
+        flex-basis: calc(100% - 600px);
+      }
+      #wrap .main .right {
+        /* width: 300px; */
+        flex-basis: 300px;
+        background: blue;
+      }
+      @media only screen and (max-width: 768px) {
+        #wrap .main .left {
+          flex-basis: 50%;
+        }
+        #wrap .main .center {
+          flex-basis: 50%;
+        }
+        #wrap .main .right {
+          flex-basis: 100%;
+        }
+      }
+      @media only screen and (max-width: 500px) {
+        #wrap .main {
+          display: block;
+        }
+        #wrap .main > div {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="main">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+      </div>
+    </div>
+  </body>
+</html>
