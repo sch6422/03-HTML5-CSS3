@@ -1,0 +1,101 @@
+@charset "utf-8";
+@font-face {
+  font-family: Pretendard;
+  src: url(../../webfonts/Pretendard-Regular.woff) format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+body {
+  font-family: Arial, Helvetica, "맑은고딕", sans-serif;
+}
+.top {
+  text-align: center;
+  width: 100%;
+  min-width: 1420px;
+  margin: 0 auto;
+}
+.ecoImages {
+  width: 100%;
+  min-width: 1420px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.top {
+  margin: 20px;
+  color: #222;
+}
+.ecoImages > a {
+  display: block;
+  border-radius: 30px;
+}
+.ecoTitle p {
+  font-size: 36px;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+span {
+  font-size: 24;
+  color: #fff;
+  position: relative;
+  top: 50px;
+  left: 40px;
+}
+.ecoTitle img {
+  position: relative;
+  top: -40px;
+}
+.ecoTitle img:first-of-type {
+  position: relative;
+  left: -70px;
+}
+.imgBlock_01 {
+  width: 503px;
+  height: 513px;
+  background: url(../images/energy_1.jpg) center no-repeat;
+  margin: 0 auto;
+}
+.imgBlock_01 img {
+  width: 70px;
+  height: 70px;
+  float: right;
+}
+.imgBlock_02 {
+  width: 526px;
+  height: 391px;
+  background: url(../images/energy_2.jpg) center no-repeat;
+  margin: 0 auto;
+}
+.imgBlock_02 img {
+  width: 70px;
+  height: 70px;
+  float: right;
+}
+.imgBlock_03 {
+  width: 420px;
+  height: 492px;
+  background: url(../images/energy_3.jpg) center no-repeat;
+  margin: 0 auto;
+}
+.imgBlock_03 img {
+  width: 70px;
+  height: 70px;
+  float: right;
+}
+
+.ecoimages .ecoTitle {
+  font-weight: bold;
+}
