@@ -1,0 +1,35 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sec03_warp {
+  width: 100%;
+  min-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  height: calc(800px + 2.4rem);
+}
+.sec03_warp > li {
+  position: relative;
+  width: calc(25% - 1.8rem);
+  overflow: hidden;
+  height: calc(50% - 1.2rem);
+}
+/* .sec03_warp > li:first-child,
+.sec03_warp > li:nth-child(4) {
+  width: calc(50%);
+} */
+.sec03_warp > li:nth-child(3n + 1) {
+  width: calc((25% - 1.8rem) * 2);
+}
