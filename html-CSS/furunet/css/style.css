@@ -1,0 +1,115 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.top {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.top ul {
+  position: relative;
+  width: 356px;
+  height: 500px;
+  cursor: pointer;
+  transition: all 1s;
+  margin: 0 auto;
+}
+.top ul:hover {
+  margin-top: -50px;
+}
+.top ul li div {
+  width: 100px;
+  height: 66px;
+  background: url(../images/badge-bg02.png) center/cover no-repeat;
+  position: absolute;
+}
+.top ul li section {
+  width: 356px;
+  height: 500px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  position: absolute;
+}
+.top ul li h3 {
+  color: #586cf6;
+  font-size: 24px;
+  position: absolute;
+  left: 70px;
+  top: 50px;
+}
+.top ul li p {
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  left: 50px;
+}
+.top ul li a {
+  position: absolute;
+  border: 1px solid #ccc;
+  width: 136px;
+  height: 38px;
+  top: 220px;
+  left: 100px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #586cf6;
+  color: #fff;
+}
+.top ul li.wrap img {
+  width: 357px;
+  height: 202px;
+  position: absolute;
+  top: 300px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.top ul:nth-child(2) li div {
+  width: 100px;
+  height: 66px;
+  background: url(../images/badge-bg01.png) center/cover no-repeat;
+  position: absolute;
+}
+.top ul li .material-symbols-outlined {
+  position: relative;
+  top: 6px;
+  left: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 30px;
+  }
+  .top {
+    justify-content: center;
+  }
+  .top ul {
+    margin: 20px 0;
+  }
+  .top ul li {
+    width: 320px;
+  }
+  .top ul:hover {
+    margin-top: 0px;
+  }
+}
