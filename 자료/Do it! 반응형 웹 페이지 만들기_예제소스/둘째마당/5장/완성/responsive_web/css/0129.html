@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset2.css" />
+    <style>
+      #wrap {
+        width: 95%;
+        min-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        height: 100px;
+      }
+      #wrap > div {
+        width: 33.33%;
+        height: 100%;
+      }
+      #wrap > div:first-child {
+        background: #aaa;
+      }
+      #wrap > div:nth-child(2) {
+        background: #bbb;
+      }
+      #wrap > div:nth-child(3) {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div><a href="#">하나</a></div>
+      <div><a href="#">둘</a></div>
+      <div><a href="#">셋</a></div>
+    </div>
+  </body>
+</html>
