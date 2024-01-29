@@ -186,9 +186,8 @@ section .row2 .search span {
   border: none;
 }
 .section row3 ul li.next {
-  background: url(../images/s_images/list_next_btn.png) center no-repeat;
+  background: #2ecc71 url(../images/s_images/list_next_btn.png) center no-repeat;
   border: none;
-  background-color: #2ecc71;
 }
 .section row3 ul li a {
   display: block;
@@ -200,29 +199,41 @@ section .row2 .search span {
 .section row3 ul li a:hover {
   color: #fff;
   background: #219af7;
-  @media screen and (min-width: 768px) {
-    header .logo_wrap .logo {
-      height: 150px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding: 0 30px;
-      background: #2ecc71;
-    }
-    header .menu {
-      position: absolute;
-      right: 0;
-      top: 150px;
-      width: 40%;
-    }
-    section .row1 ul li {
-      flex-basis: 45%;
-    }
-    section .row2 .search span:hover ~ ul {
-      display: block;
-    }
+}
+@media screen and (min-width: 768px) {
+  header .logo_wrap .logo {
+    height: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 30px;
+    background: #2ecc71;
+  }
+  header .menu {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 40%;
+  }
+  section .row1 ul li {
+    flex-basis: 45%;
+  }
+  section .row2 .search span:hover ~ ul {
+    display: block;
   }
 }
+.footer {
+  width: 90%;
+  display: flex;
+  background: #2c3e50;
+  margin: 0 auto;
+}
+.footer footer {
+  height: 93px;
+  padding: 40px;
+  color: #fff;
+}
+
 @media screen and (min-width: 960px) {
   header #info {
     position: absolute;

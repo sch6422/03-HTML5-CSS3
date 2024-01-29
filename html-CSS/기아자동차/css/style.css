@@ -10,3 +10,33 @@ a {
   text-decoration: none;
   color: #333;
 }
+.wrap {
+  position: relative;
+}
+.wrap .menu {
+  width: 100%;
+  margin: 0 auto;
+}
+.wrap .menu .menu1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap .menu .menu1 a {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+.wrap .kv ul {
+  position: absolute;
+  top: 0;
+}
+.wrap .kv .kv_02,
+.wrap .kv .kv_03,
+.wrap .kv .kv_04,
+.wrap .kv .kv_05,
+.wrap .kv .kv_06,
+.wrap .kv .kv_07,
+.wrap .kv .kv_08 {
+  display: none;
+}
