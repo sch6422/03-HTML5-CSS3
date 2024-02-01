@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        display: flex;
+      }
+      article {
+        display: flex;
+        justify-content: center;
+      }
+      .svg1 {
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <dotlottie-player
+          src="https://lottie.host/6d8043e4-567f-4707-a8c7-72e9790641f4/XHEtxaYf82.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div>
+        <dotlottie-player
+          src="https://lottie.host/8323520e-ef07-4d55-a9a8-92aafce0ad12/KNWcBzuLpe.json"
+          background="transparent"
+          speed="5"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div>
+        <lottie-player
+          src="https://lottie.host/75ef33e9-5a12-47d5-8545-55aa329f823f/S3MOdNJiSg.json"
+          background="##FFFFFF"
+          speed="0.5"
+          style="width: 300px; height: 300px"
+          loop
+          controls
+          autoplay
+          direction="1"
+          mode="normal"
+        ></lottie-player>
+      </div>
+    </section>
+    <article>
+      <dotlottie-player
+        class="svg1"
+        src="https://lottie.host/abebf73b-429a-400b-9272-1cc9be858fec/oLMbL37tie.json"
+        background="transparent"
+        speed="1"
+        style="width: 300px; height: 300px"
+        loop
+        autoplay
+      ></dotlottie-player>
+    </article>
+  </body>
+</html>

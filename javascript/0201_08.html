@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .example {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="my" class="list">classlist 속성</div>
+    <p id="demo">demo</p>
+    <p id="p01" class="a1 b1 c1">1</p>
+    <p id="p01"></p>
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle">toggle</button>
+    <button id="replace">replace</button>
+    <script>
+      let ele = document.getElementById("demo").classList;
+      console.log(ele);
+      document.getElementById("add").onclick = function () {
+        document.getElementById("demo").classList.add("list");
+      };
+      document.getElementById("remove").addEventListener("click", function () {
+        document.getElementById("demo").classList.remove("list");
+      }); //선택자.addEventListener("이벤트이름",function(){
+      //실행구문
+      //})
+      //선택자.onclick=function(){실행구문}
+      document.getElementById("toggle").onclick = function () {
+        document.getElementById("demo").classList.toggle("example");
+      };
+      document.getElementById("replace").addEventListener("click", function () {
+        document.getElementById("my").classList.replace("list", "new");
+      });
+      let x = document.getElementById("p01").classList.length;
+      document.write("p01아이디의 클래스 개수 : " + x);
+      let y = document.getElementById("p01").classList.contains("a1");
+      document.write("p01아이디의 a01클래스 포함여부 : " + y);
+      let c = document.getElementById("p01").classList;
+      let d;
+      let e;
+      c.forEach(function (keys, items) {
+        d = keys;
+        e = items;
+        console.log(d + "and" + e);
+      });
+    </script>
+  </body>
+</html>

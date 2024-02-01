@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="example">하나</p>
+    <p class="example">둘</p>
+    <p class="example">셋</p>
+    <p class="example">넷</p>
+    <p class="example">다섯</p>
+    <div>
+      <p class="example">하나</p>
+      <p class="example">둘</p>
+      <p class="example">셋</p>
+      <p class="example">넷</p>
+      <p class="example">다섯</p>
+    </div>
+    <h3>제목태그</h3>
+    <h4>제목태그</h4>
+    <script>
+      //   document.getElementsByClassName("example")[0].style.color = "red";
+      //   document.getElementsByClassName("example")[1].style.color = "magenta";
+      //   document.getElementsByClassName("example")[2].style.color = "blue";
+      //   document.getElementsByClassName("example")[3].style.color = "yellow";
+      //   document.getElementsByClassName("example")[4].style.color = "green";
+      //   document.querySelector(".example").style.color = "red";
+      //   document.querySelector("div>p").style.color = "red";
+      document.querySelectorAll("div>p")[3].style.color = "red";
+      document.querySelector("h3,h4").style.color = "red";
+    </script>
+  </body>
+</html>

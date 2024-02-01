@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.title = "javascript";
+      //   document.getElementById("demo").innerHTML = "변경전";
+      console.log("테스트1234+1234"); //문자데이터의 + 연산자 역할은 결합연산자
+      console.log(1234 + 1234); //숫자데이터의 + 연산자 역할은 결합연산자
+    </script>
+    <style>
+      #demo {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo">A Paragraph</p>
+    <script>
+      document.getElementById("demo").innerHTML = "변경하였습니다";
+      document.getElementById("demo").style.color = "red";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #demo1,
+      #demo2 {
+        display: none;
+      }
+    </style>
+    <script>
+      function myfnc1() {
+        document.getElementById("demo1").style.display = "block";
+        document.getElementById("demo2").style.display = "none";
+      }
+      function myfnc2() {
+        document.getElementById("demo2").style.display = "block";
+        document.getElementById("demo1").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+    <p id="demo1">demo1</p>
+    <p id="demo2">demo2</p>
+    <button type="button" onclick="myfnc1()">demo1</button>
+    <button type="button" onclick="myfnc2()">demo2</button>
+  </body>
+</html>

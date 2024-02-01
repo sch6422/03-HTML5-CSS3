@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Animation</title>
+    <style>
+      #lottie-container {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <div id="lottie-container"></div>
+    <script>
+      // Lottie 애니메이션을 표시할 컨테이너 요소 가져오기
+      var lottieContainer = document.getElementById("lottie-container");
+
+      // Lottie 애니메이션 파일 경로 설정
+      var animationData = {
+        container: lottieContainer,
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "ottogi.json", // Lottie JSON 파일 경로 설정
+      };
+      // Lottie 애니메이션 초기화 및 표시
+      var anim = lottie.loadAnimation(animationData);
+    </script>
+  </body>
+</html>

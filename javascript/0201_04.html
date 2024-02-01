@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+    <p class="demo" name="fname">demo1</p>
+    <p class="demo">demo2</p>
+    <button type="button" onclick="myfnc1()">demo1</button>
+    <button type="button" onclick="myfnc2()">demo2</button>
+    <script>
+      document.getElementsByTagName("body")[0].innerHTML = "변경하였습니다.";
+      window.alert("경고");
+      // window.alert("경고"); window객체는 생략가능
+      window.confirm("확인"); // window객체는 생략가능
+      window.prompt("성별", "남", "여"); // window객체는 생략가능
+    </script>
+  </body>
+</html>

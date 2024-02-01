@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+      }
+      div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: fadeOut 1s forwards;
+      }
+      div img.on {
+        /* display: none; */
+        animation: fadeIn 1s forwards;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes fadeOut {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div><img src="images/photo1.jpg" alt="photo" /></div>
+    <button id="btn">이미지보이기/이미지숨기기</button>
+    <script>
+      document.getElementById("btn").onclick = function () {
+        document.getElementsByTagName("img")[0].classList.toggle("on");
+      };
+    </script>
+  </body>
+</html>

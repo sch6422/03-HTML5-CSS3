@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        display: none;
+      }
+      /* label{display: none;} */
+      p {
+        position: relative;
+      }
+      p img {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        top: 0;
+        display: none;
+      }
+      p img.on {
+        display: block;
+      }
+      label {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="one">photo1</label>
+    <label for="two">photo2</label>
+    <label for="three">photo3</label>
+    <label for="aa">photo4</label>
+    <label for="aaa">photo5</label>
+    <label for="aaaa">photo6</label>
+    <p>
+      <img src="images/photo1.jpg" alt="photo1" />
+      <img src="images/photo2.jpg" alt="photo2" />
+      <img src="images/photo3.jpg" alt="photo3" />
+      <img src="images/photo4.jpg" alt="photo4" />
+      <img src="images/photo5.jpg" alt="photo5" />
+      <img src="images/photo6.jpg" alt="photo6" />
+    </p>
+    <script>
+      document.getElementsByTagName("img")[0].classList.add("on");
+      let menu = document.querySelectorAll("label");
+      let img = document.querySelectorAll("img");
+      menu.forEach(function (keys, items) {
+        keys.onclick = function () {
+          img.forEach(function (key, item) {
+            key.classList.remove("on");
+          });
+          img[items].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>
