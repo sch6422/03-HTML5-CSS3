@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../롯데중앙연구회/css/style2.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="btn">
+        <li>Better Food</li>
+        <li>Better Life</li>
+      </ul>
+      <section>
+        <div>
+          <ul class="mid">
+            <li>
+              <h2>
+                롯데중앙연구소의 노력 끝에 탄생한 Better Food를 소개합니다.
+                <br />
+                개발부터 출시까지, 그 이면에 숨겨진 생생한 이야기를 만나보세요.
+              </h2>
+            </li>
+          </ul>
+          <ul class="food">
+            <li><img src="images/food1.jpg" alt="food" /></li>
+            <li><img src="images/food2.jpg" alt="food" /></li>
+            <li><img src="images/food3.jpg" alt="food" /></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mid">
+            <li>
+              <h2>
+                최고의 R&D 역량으로 모두의 Better Life에 기여하겠습니다. <br />
+                롯데중앙연구소의 주요 연구 성과를 소개합니다.
+              </h2>
+            </li>
+          </ul>
+          <ul class="logo">
+            <li>
+              <img
+                src="images/1692251062_m0245740_20230817144422.jpg"
+                alt="food"
+              />
+            </li>
+            <li><h1>온라인 수입식품 안전관리 RPA 시스템 구축</h1></li>
+            <li>
+              <p>
+                최근 크게 성장하는 국내 이커머스 시장과 더불어 온라인 해외상품
+                직접 구매(직구)나 구매 대행 시장도 매년 <br />
+                성장하고 있습니다. 전체 해외 직구 상품 중 식품은 27%를 차지하고
+                있으며, 건강 기능 식품의 선호도가 가장 <br />
+                높은 것으로 나타났습니다. 해외 직구 건강 기능 식품 중에서는 국내
+                허가되지 않은 원료나 성분 등을 <br />
+                함유하여 부작용이 발생할 수 있는 위해 상품들도 많습니다. 해외
+                직구 상품은 정식 수입품과 달리 안전성 <br />
+                확인 절차나 원료 등의 표시사항이 미비하므로, 소비자 보호를
+                위해서는 온라인 플랫폼 사업자의 선제적이고 <br />
+                자발적인 상품 안전관리 활동이 필요합니다. 따라서 롯데
+                안전센터에서는 자사 온라인몰 롯데ON에서 <br />
+                판매하는 해외 직구 식품의 안전관리를 위하여 RPA 시스템을
+                도입하였습니다.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script>
+      function myfnc() {
+        menu.forEach(function (keys, items) {
+          keys.classList.remove("on");
+        });
+      }
+      document.querySelector(".btn li").classList.add("on");
+      document.querySelector("section div").classList.add("on");
+
+      let menu = document.querySelectorAll(".btn li");
+      let bg = document.querySelectorAll("section>div");
+      menu.forEach(function (keys, items) {
+        keys.onclick = function () {
+          myfnc();
+          console.log("items:" + items);
+          bg.forEach(function (key, item) {
+            key.classList.remove("on");
+          });
+          menu[items].classList.add("on");
+          bg[items].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

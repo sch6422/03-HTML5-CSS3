@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
       document.title = "javascript";
-      //   document.getElementById("demo").innerHTML = "변경전";
+      //document.getElementById("demo").innerHTML = "변경전";
       console.log("테스트1234+1234"); //문자데이터의 + 연산자 역할은 결합연산자
-      console.log(1234 + 1234); //숫자데이터의 + 연산자 역할은 결합연산자
+      console.log(1234 + 1234); //숫자데이터의 + 연산자 역할은 덧셈연산자
+      console.log(1234 + "\n" + 1234);
     </script>
     <style>
       #demo {
@@ -20,7 +22,7 @@
     <h2>Demo JavaScript in Body</h2>
     <p id="demo">A Paragraph</p>
     <script>
-      document.getElementById("demo").innerHTML = "변경하였습니다";
+      document.getElementById("demo").innerHTML = "변경후";
       document.getElementById("demo").style.color = "red";
     </script>
   </body>

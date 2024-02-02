@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      section.bg {
+        background: url(images/photo1.jpg) center/cover;
+      }
+      section p {
+        width: 100px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 20px;
+      }
+      section p.on {
+        background: rgba(255, 0, 0, 0.5);
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p>클릭</p>
+      <div></div>
+    </section>
+    <script>
+      //   document.querySelector("p").onclick = function () {
+      //     document.querySelector("section").classList.toggle("bg");
+      //     document.querySelector("p").classList.toggle("on");
+      //   };
+      document.getElementsByTagName("p")[0].onclick = function () {
+        document.getElementsByTagName("section")[0].classList.toggle("bg");
+        document.getElementsByTagName("p")[0].classList.toggle("on");
+      };
+    </script>
+  </body>
+</html>

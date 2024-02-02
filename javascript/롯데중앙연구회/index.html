@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../롯데중앙연구회/css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <ul class="top">
+        <li>연구개발</li>
+        <li>기초연구</li>
+        <li>패키지연구</li>
+        <li>기술연구</li>
+        <li>안전관리</li>
+        <li>연구전략</li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban1.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>연구개발</strong></p>
+        </li>
+        <li>
+          <p>
+            소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을
+            개선합니다.
+          </p>
+        </li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban2.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>기초연구</strong></p>
+        </li>
+        <li>
+          <p>
+            바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을
+            개척합니다.
+          </p>
+        </li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban3.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>패키지연구</strong></p>
+        </li>
+        <li>
+          <p>
+            제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를
+            이룹니다.
+          </p>
+        </li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban4.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>기술연구</strong></p>
+        </li>
+        <li>
+          <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+        </li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban5.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>안전관리</strong></p>
+        </li>
+        <li>
+          <p>
+            위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을
+            책임집니다.
+          </p>
+        </li>
+      </ul>
+      <ul class="ban">
+        <li><img src="images/research-ban6.jpg" alt="ban" /></li>
+        <li>
+          <p><strong>연구전략</strong></p>
+        </li>
+        <li>
+          <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function myfnc() {
+        menu.forEach(function (keys, items) {
+          keys.classList.remove("on");
+        });
+      }
+      document.querySelector(".top li").classList.add("on");
+      document.querySelector(".ban").classList.add("on");
+
+      let menu = document.querySelectorAll(".top li");
+      let bg = document.querySelectorAll(".ban");
+      menu.forEach(function (keys, items) {
+        keys.onclick = function () {
+          myfnc();
+          console.log("items:" + items);
+          bg.forEach(function (key, item) {
+            key.classList.remove("on");
+          });
+          menu[items].classList.add("on");
+          bg[items].classList.add("on");
+        };
+      });
+
+      // document.getElementsByTagName("a")[0].onclick = function () {
+      //   document.getElementsByTagName("a")[1].classList.remove("on");
+      //   document.getElementsByTagName("li")[1].classList.remove("on");
+      //   document.getElementsByTagName("a")[0].classList.toggle("on");
+      //   document.getElementsByTagName("li")[0].classList.toggle("on");
+      //   document.getElementsByClassName("ban")[1].classList.remove("on");
+      //   document.getElementsByClassName("ban")[0].classList.toggle("on");
+      // };
+      // document.getElementsByTagName("a")[1].onclick = function () {
+      //   document.getElementsByTagName("a")[0].classList.remove("on");
+      //   document.getElementsByTagName("li")[0].classList.remove("on");
+      //   document.getElementsByTagName("a")[1].classList.toggle("on");
+      //   document.getElementsByTagName("li")[1].classList.toggle("on");
+      //   document.getElementsByClassName("ban")[0].classList.remove("on");
+      //   document.getElementsByClassName("ban")[1].classList.toggle("on");
+      // };
+      // document.getElementsByTagName("a")[2].onclick = function () {
+      //   document.getElementsByTagName("a")[1].classList.remove("on");
+
+      //   document.getElementsByTagName("li")[1].classList.remove("on");
+      //   document.getElementsByTagName("a")[2].classList.toggle("on");
+      //   document.getElementsByTagName("li")[2].classList.toggle("on");
+
+      //   document.getElementsByClassName("ban")[1].classList.remove("on");
+      //   document.getElementsByClassName("ban")[2].classList.toggle("on");
+      // };
+      // document.getElementsByTagName("a")[3].onclick = function () {
+      //   document.getElementsByTagName("a")[2].classList.remove("on");
+      //   document.getElementsByTagName("li")[2].classList.remove("on");
+      //   document.getElementsByTagName("a")[3].classList.toggle("on");
+      //   document.getElementsByTagName("li")[3].classList.toggle("on");
+      //   document.getElementsByClassName("ban")[2].classList.remove("on");
+      //   document.getElementsByClassName("ban")[3].classList.toggle("on");
+      // };
+      // document.getElementsByTagName("a")[4].onclick = function () {
+      //   document.getElementsByTagName("a")[3].classList.remove("on");
+      //   document.getElementsByTagName("li")[3].classList.remove("on");
+      //   document.getElementsByTagName("a")[4].classList.toggle("on");
+      //   document.getElementsByTagName("li")[4].classList.toggle("on");
+      //   document.getElementsByClassName("ban")[3].classList.remove("on");
+      //   document.getElementsByClassName("ban")[4].classList.toggle("on");
+      // };
+      // document.getElementsByTagName("a")[5].onclick = function () {
+      //   document.getElementsByTagName("a")[4].classList.remove("on");
+      //   document.getElementsByTagName("li")[4].classList.remove("on");
+      //   document.getElementsByTagName("a")[5].classList.toggle("on");
+      //   document.getElementsByTagName("li")[5].classList.toggle("on");
+      //   document.getElementsByClassName("ban")[4].classList.remove("on");
+      //   document.getElementsByClassName("ban")[5].classList.toggle("on");
+      // };
+    </script>
+  </body>
+</html>

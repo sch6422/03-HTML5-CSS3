@@ -41,9 +41,12 @@
     <div><img src="images/photo1.jpg" alt="photo" /></div>
     <button id="btn">이미지보이기/이미지숨기기</button>
     <script>
-      document.getElementById("btn").onclick = function () {
+      // document.getElementById("btn").onclick = function () {
+      //   document.getElementsByTagName("img")[0].classList.toggle("on");
+      // };
+      document.getElementById("btn").addEventListener("click", function () {
         document.getElementsByTagName("img")[0].classList.toggle("on");
-      };
+      });
     </script>
   </body>
 </html>
