@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contents li {
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        opacity: 0;
+        transition: 1s;
+      }
+      .contents li.on {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="btn">
+      <li>photo1</li>
+      <li>photo2</li>
+      <li>photo3</li>
+      <li>photo4</li>
+    </ul>
+    <ul class="contents">
+      <li></li>
+    </ul>
+    <script>
+      let menu = document.querySelectorAll(".btn li");
+      let img = document.querySelector(".contents li");
+      img.classList.add("on");
+      img.style.background = "url(images/photo1.jpg)";
+      menu.forEach(function (o, i) {
+        o.onclick = function () {
+          img.style.background = "url(images/photo" + (i + 1) + ".jpg)";
+        };
+      });
+    </script>
+  </body>
+</html>

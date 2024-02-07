@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 문자열을 숫자로 변환
+      // 전역 메서드 Number()는 변수(또는 값)를 숫자로 변환합니다.
+      // 숫자 문자열(예: "3.14")은 숫자(예: 3.14)로 변환됩니다.
+      //  Number("3.14")
+      // 빈 문자열(예: "")은 0으로 변환됩니다.
+      //  Number(" ")
+      // 숫자가 아닌 문자열(예: "John")은 NaN(Not a Number)로 변환됩니다.
+      //  Number("John")
+      let a = "123";
+      let b = 123;
+      let c = Number(a);
+      let d = String(b);
+      let e = Number("");
+      let f = Number("문자");
+      let g = parseFloat(10.333);
+      let h = parseFloat("10.333");
+      //Number() 인수에서 변환된 숫자를 반환합니다.
+      document.write("문자123 : " + Number(a), "<br>");
+      document.write("숫자123 : " + String(b), "<br>");
+      document.write("c의 type :" + typeof c, "<br>");
+      document.write("d의 type :" + typeof d, "<br>");
+      document.write("e :" + e, "<br>");
+      document.write("f :" + f, "<br>");
+      //parseFloay()문자열을 구문 분석하고 부동 소수점 숫자를 반환합니다.
+      document.write("parseFloat() :" + typeof g, "<br>");
+      document.write("parseFloat() :" + typeof h, "<br>");
+      let int1 = parseFloat(10.533);
+      let int2 = parseFloat("10.533");
+      document.write("int1 : " + typeof int1 + int1, "<br>");
+      document.write("int2 : " + typeof int2 + int2, "<br>");
+      //단항 + 연산자를 사용하여 다음을 수행할 수 있습니다. 변수를 숫자로 변환
+      let y = "abc";
+      //   let y = "5"; // y is a string
+      let x = +y; // x is a number
+      document.write(x + "<br>");
+      //   document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
+      document.write("123" + "123", "<br>");
+      document.write(String(123) + String(123), "<br>");
+      document.write(String(123 + 123), "<br>");
+      document.write((123).toString(), "<br>");
+      document.write((123 + 123).toString(), "<br>");
+      // 숫자를 문자열로 변환-->String()
+      // 전역 메서드는 숫자를 문자열로 변환할 수 있습니다.
+      // 모든 유형의 숫자, 리터럴, 변수 또는 표현식에 사용할 수 있습니다.
+      //  let x = 123;
+      //  document.getElementById("demo").innerHTML =
+      //  String(x) + "<br>" +
+      //  String(123) + "<br>" +
+      //  String(100 + 23);
+      //  toString() 메서드는 숫자를 문자열로 변환합니다.
+      //  <p id="demo"></p>
+      //  let x = 123;
+      //  document.getElementById("demo").innerHTML =
+      //  x.toString() + "<br>" +
+      //  (123).toString() + "<br>" +
+      //  (100 + 23).toString();
+      let num1 = 5.345678;
+      let num2 = 10000000;
+      document.write(num1.toExponential(3), "<br>"); //toExponential()지수 표기법을 사용하여 반올림되고 작성된 숫자가 포함된 문자열을 반환합니다
+      document.write(num1.toFixed(3), "<br>"); //toFixed 숫자를 반올림하고 지정된 소수점 이하 자릿수로 쓴 문자열을 반환합니다.
+      document.write(num1.toPrecision(3), "<br>"); //toPrecision 지정된 길이로 쓰여진 숫자가 포함된 문자열을 반환합니다.
+      document.write(num2.toExponential(3), "<br>");
+      document.write(num2.toFixed(3), "<br>");
+      document.write(num2.toPrecision(3), "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      function clock() {
+        let x = new Date();
+        let hour = x.getHours();
+        let minute = x.getMinutes();
+        let second = x.getSeconds();
+        let time =
+          hour.toString().padStart(2, "0") +
+          "시" +
+          minute.toString().padStart(2, "0") +
+          "분" +
+          second.toString().padStart(2, "0") +
+          "초";
+        //padStart()메서드는 처음부터 문자열을 채워줌 주어진 길이에 도달할때까지 채움
+        document.getElementById("demo").innerHTML = time;
+      }
+      //   setInterval(function () {
+      //     clock();
+      //   }, 1);
+      //setInterval(실행문,시간(초))
+      setInterval(clock, 1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #content {
+        width: 630px;
+        height: 630px;
+        margin: 50px auto;
+      }
+      #clock {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #clock li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #clock li#base {
+        background: url(images/clock_bg.png);
+      }
+      #clock li#hour {
+        background: url(images/hour.png);
+      }
+      #clock li#minute {
+        background: url(images/minute.png);
+      }
+      #clock li#second {
+        background: url(images/second.png) center/ 630px 630px;
+      }
+      #clock li#center {
+        background: url(images/center_bg.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <ul id="clock">
+        <li id="base"></li>
+        <li id="hour"></li>
+        <li id="minute"></li>
+        <li id="second"></li>
+        <li id="center"></li>
+      </ul>
+    </div>
+    <script>
+      function clock() {
+        let x = new Date();
+        let hour = x.getHours();
+        let minute = x.getMinutes();
+        let second = x.getSeconds();
+        hour = hour > 12 ? hour - 12 : hour;
+        time(hour, minute, second);
+      }
+      function time(h, m, s) {
+        h = (360 / 12) * h + m * 0.5;
+        m = (360 / 60) * m;
+        s = (360 / 60) * s;
+        let hour = document.getElementById("hour");
+        let minute = document.getElementById("minute");
+        let second = document.getElementById("second");
+        hour.style.transform = "rotate(" + h + "deg)";
+        minute.style.transform = "rotate(" + m + "deg)";
+        second.style.transform = "rotate(" + s + "deg)";
+      }
+      setInterval(clock, 1);
+    </script>
+  </body>
+</html>

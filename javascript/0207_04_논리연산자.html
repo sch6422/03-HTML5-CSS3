@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //&& = 교집합(논리곱) || = 합집합(논리합) ! = 부정(논리부정)
+      let a = 10;
+      let b = 20;
+      let c = "10";
+      let d = a > b && a == c;
+      document.write("논리곱 :" + d, "<br>");
+      //하나라도 false이면 false값 // 모두 true 이어야 true반환
+      d = a > b || a == c; // 함수 재선언
+      document.write("논리합 :" + d, "<br>");
+      //하나라도 true이면 true값 // 모두 false 이어야 false반환
+      d = !(a > b) && a == c; // 함수 재선언
+      document.write("논리합 :" + d, "<br>");
+
+      //유형 연산자
+      //typeof Returns the type of a variable(변수의 유형을 반환합니다.)
+      document.write("c의 typeof :" + typeof c, "<br>"); //string = 문자
+      document.write("a의 typeof :" + typeof a, "<br>"); //number = 숫자
+      let e = 10.33;
+      document.write("10.33의 typeof :" + typeof e, "<br>");
+    </script>
+  </body>
+</html>

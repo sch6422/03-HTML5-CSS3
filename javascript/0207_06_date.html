@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = new Date();
+      document.write(x + "<br>");
+      document.write("년도 :" + x.getFullYear() + "<br>");
+      document.write("월 :" + (x.getMonth() + 1) + "<br>");
+      document.write("일 :" + x.getDate(), "<br>");
+      document.write("요일 :" + x.getDay() + "<br>");
+      document.write(
+        "오늘날짜 :" +
+          x.getFullYear() +
+          "년" +
+          (x.getMonth() + 1) +
+          "월" +
+          x.getDate() +
+          "일",
+        "<br>"
+      );
+      document.write(x.getHours() + "<br>"); //시간
+      document.write(x.getMilliseconds() + "<br>"); //밀리초
+      document.write(x.getMinutes() + "<br>"); //분
+      document.write(x.getMonth() + "<br>"); //월
+      document.write(x.getSeconds() + "<br>"); //초
+      document.write(x.getTime() + "<br>"); //시간가져오기
+      document.write(
+        "현재시간 :" +
+          x.getHours() +
+          "시" +
+          x.getMinutes() +
+          "분" +
+          x.getSeconds() +
+          "초" +
+          "<br>"
+      );
+    </script>
+  </body>
+</html>

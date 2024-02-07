@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      .btn {
+        display: flex;
+        width: 100%;
+      }
+      .btn p {
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+      }
+      .btn p:first-child {
+        background: red;
+      }
+      .btn p:nth-child(2) {
+        background: blue;
+      }
+      .btn p:nth-child(3) {
+        background: green;
+      }
+      .btn p:nth-child(4) {
+        background: yellow;
+      }
+      .btn p.on {
+        color: #fff;
+      }
+      .con {
+        position: relative;
+      }
+      .con li {
+        height: 300px;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: none;
+      }
+      .con li:first-child {
+        background: red;
+      }
+      .con li:nth-child(2) {
+        background: blue;
+      }
+      .con li:nth-child(3) {
+        background: green;
+      }
+      .con li:nth-child(4) {
+        background: yellow;
+      }
+      .con li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="btn">
+      <p>하나</p>
+      <p>둘</p>
+      <p>셋</p>
+      <p>넷</p>
+    </div>
+    <ul class="con">
+      <li>하나</li>
+      <li>둘</li>
+      <li>셋</li>
+      <li>넷</li>
+    </ul>
+    <script>
+      document.querySelector(".con li").classList.add("on");
+      document.querySelector(".btn p").classList.add("on");
+      function myfnc() {
+        btn.forEach(function (o, i) {
+          o.classList.remove("on");
+        });
+      }
+      let btn = document.querySelectorAll(".btn p");
+      let con = document.querySelectorAll(".con li");
+      btn.forEach(function (o, i) {
+        // console.log(o);
+        // console.log(i);
+        o.onclick = function () {
+          myfnc();
+          //   console.log(o);
+          console.log(i);
+          con.forEach(function (keys, items) {
+            // console.log(o);
+            // console.log(i);
+            keys.classList.remove("on");
+          });
+          con[i].classList.add("on");
+          btn[i].classList.add("on");
+        };
+      });
+    </script>
+  </body>
+</html>

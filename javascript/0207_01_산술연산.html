@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = 10; //const(재할당안됨)
+      let b = 20;
+      a = 20;
+      document.write("a : " + a);
+      document.write("a + b : " + (a + b) + "<br>");
+      document.write("a + b : ", a + b, "<br>");
+      document.write("a : " + (a - b) + "<br>");
+      document.write("a : " + a * b + "<br>");
+      document.write("a : " + a / b + "<br>");
+      document.write("a : " + (a % b) + "<br>");
+      document.write("a : " + a ** b + "<br>");
+      let c = 20;
+      document.write("c = c + 1 :", (c = c + 1) + "<br>");
+      document.write("c = c + 1 :", (c += 1), "<br>");
+      document.write("c = c - 1 :", (c -= 1) + "<br>");
+      document.write("c = c * 1 :", (c *= 1) + "<br>");
+      document.write("c = c / 1 :", (c /= 1) + "<br>");
+      document.write("++c :", ++c, "<br>"); //전위연산
+      //c = c+1 c+=1 ++c 전부 같은말
+      document.write("c :" + c, "<br>");
+      document.write("c++ :", c++, "<br>"); //후위연산
+      //c를 출력후 더하기 연산
+      document.write("c :" + c, "<br>");
+    </script>
+  </body>
+</html>

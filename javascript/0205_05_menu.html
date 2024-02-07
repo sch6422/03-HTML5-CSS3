@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      .gnb {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .gnb ul {
+        display: flex;
+        height: 50px;
+        align-items: center;
+      }
+      .gnb ul li {
+        width: 20%;
+        line-height: 50px;
+        text-align: center;
+      }
+      .gnb ul li:hover,
+      .gnb ul li.on {
+        background: #ccc;
+      }
+      .lnb {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: rgba(0, 0, 0, 1);
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s;
+      }
+      .lnb.on {
+        height: 200px;
+      }
+      .lnb .sub {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .lnb .sub > ul {
+        display: flex;
+      }
+      .lnb .sub > ul > li {
+        width: 20%;
+        text-align: center;
+      }
+      .lnb .sub > ul > li a {
+        color: #fff;
+      }
+      .lnb .sub > ul > li li {
+        line-height: 40px;
+      }
+      .visual img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gnb">
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <li><a href="#">메뉴5</a></li>
+      </ul>
+    </div>
+    <div class="lnb">
+      <div class="sub">
+        <ul>
+          <li>
+            <ul>
+              <li><a href="#">서브메뉴1</a></li>
+              <li><a href="#">서브메뉴1</a></li>
+              <li><a href="#">서브메뉴1</a></li>
+              <li><a href="#">서브메뉴1</a></li>
+              <li><a href="#">서브메뉴1</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#">서브메뉴2</a></li>
+              <li><a href="#">서브메뉴2</a></li>
+              <li><a href="#">서브메뉴2</a></li>
+              <li><a href="#">서브메뉴2</a></li>
+              <li><a href="#">서브메뉴2</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#">서브메뉴3</a></li>
+              <li><a href="#">서브메뉴3</a></li>
+              <li><a href="#">서브메뉴3</a></li>
+              <li><a href="#">서브메뉴3</a></li>
+              <li><a href="#">서브메뉴3</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#">서브메뉴4</a></li>
+              <li><a href="#">서브메뉴4</a></li>
+              <li><a href="#">서브메뉴4</a></li>
+              <li><a href="#">서브메뉴4</a></li>
+              <li><a href="#">서브메뉴4</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li><a href="#">서브메뉴5</a></li>
+              <li><a href="#">서브메뉴5</a></li>
+              <li><a href="#">서브메뉴5</a></li>
+              <li><a href="#">서브메뉴5</a></li>
+              <li><a href="#">서브메뉴5</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="visual">
+      <img src="images/photo1.jpg" alt="photo" />
+    </div>
+    <script>
+      let menu = document.querySelectorAll(".gnb ul li");
+      let subMenu = document.querySelector(".lnb");
+      let sub = document.querySelectorAll(".lnb .sub>ul>li");
+      let img = document.querySelector(".visual img");
+      menu.forEach(function (o, i) {
+        o.onmouseenter = function () {
+          //선택한 개체에 마우스 오버시
+          document.querySelector(".lnb").classList.add("on");
+        };
+        o.onmouseleave = function () {
+          //선택한 개체에 마우스 이탈시
+          document.querySelector(".lnb").classList.remove("on");
+        };
+        o.onclick = function () {
+          img.src = "images/photo" + (i + 1) + ".jpg";
+        };
+      });
+      sub.forEach(function (o, i) {
+        o.onmouseenter = function () {
+          //선택한 개체에 마우스 오버시
+          subMenu.classList.add("on");
+          menu[i].classList.add("on");
+        };
+        o.onmouseleave = function () {
+          //선택한 개체에 마우스 오버시
+          subMenu.classList.remove("on");
+          menu[i].classList.remove("on");
+        };
+        o.onclick = function () {
+          img.src = "images/photo" + (i + 1) + ".jpg";
+        };
+      });
+    </script>
+  </body>
+</html>
