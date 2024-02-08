@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      //String:자바스크립트에서 문자열을 다루는 객채
+      let str = new String("nice M to meet to you");
+      let str1 = "nice to meet you";
+      document.write(str.search("m") + "<br>"); //확인 해보면 8이라고 나오는데 nice to meet you 왼쪽서부터 0으로시작해서 8번재에 m이 있음(공백도 문자)
+      document.write(str.search(/m/i) + "<br>");
+      document.write(str.search("happy") + "<br>");
+      let text = "Mr. Blue has a blue house blue";
+      document.write(text.search(/blue/) + "<br>");
+      document.write(text.search(/blue/i) + "<br>");
+      document.write(text.replace("blue", "red") + "<br>");
+      document.write(text.replace(/blue/i, "red") + "<br>");
+      document.write(text.replace(/blue/g, "red") + "<br>");
+      document.write(text.replace(/blue/gi, "red") + "<br>");
+      document.write(text.replaceAll("blue", "red") + "<br>");
+      document.write(text.replaceAll(/blue/gi, "red") + "<br>");
+      document.write(str.indexOf("to") + "<br>");
+      document.write(str.lastIndexOf("to") + "<br>");
+      document.write(str.match("to") + "<br>");
+      document.write(str.charAt(3) + "<br>");
+      document.write(str.substr(0, 4) + "<br>");
+      document.write("str음수" + str.substr(-1, 4) + "<br>");
+      //음수인수는 앞순서 0,1,2 뒷순서 1,2,3
+      document.write(str.substring(2, 8) + "<br>");
+      document.write("strring음수" + str.substring(-2, 8) + "<br>");
+      //substring() 인수값에 음수가 입력되면 0으로 처리
+      let txt = "123456-1234567"; //주민번호 뒤 6자리 *로 변경
+      document.write(txt.substr(-6) + "<br>");
+      document.write(txt.substr(-6).replace("234567", "******") + "<br>");
+      document.write(txt.substring(8) + "<br>");
+      document.write(txt.replace(txt.substr(-6), "******") + "<br>");
+      document.write(txt.replace(txt.substring(8), "******") + "<br>");
+      document.write(txt.replace(txt.length - 6), "******" + "<br>");
+      document.write(txt.substring(0, txt.length - 6), "******" + "<br>");
+      document.write(txt.substr(0, txt.length - 6) + "<br>");
+      let result = "Hello world!";
+      document.write(result.slice(0) + "<br>");
+      document.write(result.slice(0, 5) + "<br>");
+      document.write(result.slice(-2, -1) + "<br>"); //음수 입력시 뒤 숫자가 더 크면안됨 예) (-3,-5) <=안됨 (-3,-1) <=가능
+      document.write(result.toUpperCase() + "<br>");
+      document.write(result.toLowerCase() + "<br>");
+      let pre_num = "123456-1234567";
+      document.write(pre_num.slice(0, 8).padEnd(pre_num.length, "*") + "<br>");
+      let text1 = "Hello world!";
+      let result1 = text1.repeat(10);
+      document.write(result1.toUpperCase() + "<br>");
+      let text2 = "How are you doing today?";
+      document.write(text2.split(" ", 2) + "<br>");
+      document.write(text2.split(" ")[1] + "<br>");
+      document.write(text2.split(" ").length + "<br>");
+    </script>
+  </body>
+</html>

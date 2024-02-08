@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>레드</p>
+    <p>블루</p>
+    <p>CCC</p>
+    <p>그린</p>
+    <script>
+      //   const color = ["red", "blue", "#ccc", "green"];
+      const color = ["photo1", "photo2", "photo3", "photo4"];
+      let bg = document.querySelectorAll("p");
+      bg.forEach(function (value, index) {
+        // value.style.backgroundImage = "url(images/" + color[index] + ".jpg)";
+        value.style.backgroundImage =
+          "url(images/photo" + (index + 1) + ".jpg)";
+      });
+    </script>
+  </body>
+</html>
