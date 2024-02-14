@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+      /*document.write(numbers[0] + "<br>");
+      document.write(numbers[1] + "<br>");
+      document.write(numbers[2] + "<br>");
+      document.write(numbers[3] + "<br>");
+      document.write(numbers[4] + "<br>");*/
+      for (let i = 0; i <= 4; i++) {
+        document.write(numbers[i] + "<br>");
+      }
+      for (let i in numbers) {
+        document.write(numbers[i] + "<br>");
+      }
+      const person = { fname: "John", lname: "Doe", age: 25 };
+      /*document.write(person.fname + "<br>");
+      document.write(person.lname + "<br>");
+      document.write(person.age + "<br>");*/
+      for (let i in person) {
+        document.write(`${i}:${person[i]}` + "<br>");
+      }
+    </script>
+  </body>
+</html>

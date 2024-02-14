@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .contents li {
+        padding: 50px;
+        text-align: center;
+        display: none;
+      }
+      .btn {
+        display: flex;
+      }
+      .btn li {
+        width: 25%;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="contents">
+      <li><h1>contents1</h1></li>
+      <li><h1>contents2</h1></li>
+      <li><h1>contents3</h1></li>
+      <li><h1>contents4</h1></li>
+    </ul>
+    <ul class="btn">
+      <li>contents1</li>
+      <li>contents2</li>
+      <li>contents3</li>
+      <li>contents4</li>
+    </ul>
+    <script>
+      let bg = ["red", "blue", "green", "yellow"];
+      let con = document.querySelectorAll(".contents li");
+      let btn = document.querySelectorAll(".btn li");
+      con[0].style.display = "block";
+      function myfnc() {
+        con.forEach(function (value, index) {
+          value.style.display = "none";
+        });
+      }
+      btn.forEach(function (value, index) {
+        value.style.background = bg[index];
+        con[index].style.background = bg[index];
+        value.onclick = function () {
+          myfnc();
+          con[index].style.display = "block";
+        };
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .contents li {
+        padding: 50px;
+        text-align: center;
+        display: none;
+      }
+      .contents li.on {
+        display: block;
+      }
+      .btn {
+        display: flex;
+      }
+      .btn li {
+        width: 25%;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+      }
+      .btn li.on {
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="contents">
+      <li><h1>contents1</h1></li>
+      <li><h1>contents2</h1></li>
+      <li><h1>contents3</h1></li>
+      <li><h1>contents4</h1></li>
+    </ul>
+    <ul class="btn">
+      <li>contents1</li>
+      <li>contents2</li>
+      <li>contents3</li>
+      <li>contents4</li>
+    </ul>
+    <script>
+      let bg = ["red", "blue", "green", "yellow"];
+      let btn = document.querySelectorAll(".btn li");
+      let con = document.querySelectorAll(".contents li");
+      document.querySelector(".contents li").classList.add("on");
+      document.querySelector(".btn li").classList.add("on");
+      function myfnc() {
+        btn.forEach(function (o, i) {
+          o.classList.remove("on");
+        });
+      }
+      btn.forEach(function (o, i) {
+        o.onclick = function () {
+          myfnc();
+          con.forEach(function (keys, items) {
+            keys.classList.remove("on");
+          });
+          con[i].classList.add("on");
+          btn[i].classList.add("on");
+        };
+      });
+      document.querySelectorAll(".contents li")[0].style.backgroundColor =
+        "red";
+      document.querySelectorAll(".contents li")[1].style.backgroundColor =
+        "blue";
+      document.querySelectorAll(".contents li")[2].style.backgroundColor =
+        "green";
+      document.querySelectorAll(".contents li")[3].style.backgroundColor =
+        "yellow";
+      document.querySelectorAll(".btn li")[0].style.backgroundColor = "red";
+      document.querySelectorAll(".btn li")[1].style.backgroundColor = "blue";
+      document.querySelectorAll(".btn li")[2].style.backgroundColor = "green";
+      document.querySelectorAll(".btn li")[3].style.backgroundColor = "yellow";
+    </script>
+  </body>
+</html>

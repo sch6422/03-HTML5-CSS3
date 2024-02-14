@@ -24,20 +24,18 @@
       let photo = document.getElementsByTagName("img")[0];
       let i = 1;
       function slide() {
-        // photo.src = "images/photo" + i + ".jpg";
-        // i = i + 1;
         photo.setAttribute("src", `images/photo${i}.jpg`);
         photo.setAttribute("alt", `photo${i}`);
-        // photo.src = `images/photo${i}.jpg`;
-        // photo.alt = `photo${i}`;
         i++;
-        // if (i > 6) {
-        //   i = 1;
-        // }
         if (i > 6) i = 1;
       }
-      //   slide();
-      setInterval(slide, 1000);
+      let interval = setInterval(slide, 1000);
+      photo.onmouseenter = function () {
+        clearInterval(interval);
+      };
+      photo.onmouseleave = function () {
+        interval = setInterval(slide, 1000);
+      };
     </script>
   </body>
 </html>

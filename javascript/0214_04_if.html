@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 300px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      p {
+        display: inline-block;
+      }
+      p button {
+        padding: 10px 20px;
+        border: 1px solid #ccc;
+        background: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="images/photo1.jpg" alt="photo1" />
+      <p id="btn">
+        <button id="prev">이전</button>
+        <button id="next">다음</button>
+      </p>
+    </div>
+
+    <script>
+      let photo = document.getElementsByTagName("img")[0];
+      photo.classList.add("on");
+      let btn = document.getElementById("btn");
+      let next = document.getElementById("next");
+      let prev = document.getElementById("prev");
+      let i = 1;
+      function slide() {
+        photo.classList.add("on");
+        photo.setAttribute("src", `images/photo${i}.jpg`);
+        photo.setAttribute("alt", `photo${i}`);
+        i++;
+        if (i > 6) i = 1;
+      }
+      let interval;
+      function startInterval() {
+        interval = setInterval(function () {
+          slide();
+        }, 1000);
+      }
+      function stopInterval() {
+        clearInterval(interval);
+      }
+      photo.onmouseenter = stopInterval;
+      btn.onmouseenter = stopInterval;
+      photo.onmouseleave = startInterval;
+      btn.onmouseleave = startInterval;
+      next.onclick = slide;
+      prev.onclick = function () {
+        photo.setAttribute("src", `images/photo${i}.jpg`);
+        photo.setAttribute("alt", `photo${i}`);
+        i--;
+        if (i < 1) i = 6;
+      };
+    </script>
+  </body>
+</html>
