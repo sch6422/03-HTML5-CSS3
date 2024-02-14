@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>show/hide</button>
+    <p id="demo"></p>
+    <script>
+      let btn = document.querySelector("button");
+      let bool = true;
+      btn.onclick = function () {
+        if (bool) {
+          document.getElementById("demo").innerHTML =
+            '<img src="images/photo1.jpg">';
+          this.innerHTML = "Hide";
+        } else {
+          document.getElementById("demo").innerHTML = "";
+          this.innerHTML = "Show";
+        }
+        bool = !bool;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write(typeof "abc" + "<br>");
+      document.write(typeof 123 + "<br>");
+      document.write(typeof NaN + "<br>");
+      document.write(typeof true + "<br>");
+      document.write(typeof "true" + "<br>");
+      document.write(typeof [1, "abc", 2] + "<br>");
+      document.write(typeof { name: "홍길동", age: 20 } + "<br>");
+      function my() {
+        console.log("연습입니다");
+      }
+      document.write(typeof my + "<br>");
+      let x = 10;
+      let y = [1, 2, 3];
+      document.write(typeof x + "<br>");
+      document.write(typeof y + "<br>");
+      document.write(typeof null + "<br>");
+      document.write((y instanceof Array) + "<br>");
+      let z = { name: "홍길동", age: 20 };
+      document.write((z instanceof Object) + "<br>");
+      document.write((z instanceof String) + "<br>");
+      document.write((z instanceof Number) + "<br>");
+    </script>
+    <a href="javascript:void(0);">Useless link</a>
+    <p id="demo">
+      <a href="#">링크</a>
+    </p>
+    <script>
+      let menu = document.getElementById("demo").querySelector("a");
+      menu.onclick = function (event) {
+        event.preventDefault();
+        this.style.color = "red";
+        location.href = "http://www.naver.com";
+      };
+    </script>
+  </body>
+</html>

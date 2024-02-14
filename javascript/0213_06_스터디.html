@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .study {
+        width: 800px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+      }
+      .study .title {
+        position: relative;
+        font-size: 30px;
+        text-align: center;
+        padding: 20px 0;
+        background: #f3f5fb;
+        color: #6c768e;
+        border-bottom: 2px solid #ccc;
+        cursor: pointer;
+      }
+      .study .title::after {
+        content: url(icon-80-dropdown.png);
+        position: absolute;
+        left: 90%;
+        top: 0;
+        transform: scale(0.5) rotate(180deg);
+      }
+      .study .title.on::after {
+        transform: scale(0.5) rotate(0deg);
+      }
+      .contents {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 22px;
+        letter-spacing: -2px;
+        background: #fcfcfc;
+        color: #555;
+        display: none;
+      }
+      .contents > div {
+        padding: 24px 32px;
+      }
+      .contents .top {
+        line-height: 38px;
+        word-break: keep-all;
+      }
+      .contents .item ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .contents .item ul li {
+        flex-shrink: 0;
+        flex-basis: 45%;
+        line-height: 40px;
+      }
+      .contents .item ul li:nth-child(2n + 1) {
+        flex-grow: 1;
+      }
+      .contents .item ul li span.con {
+        display: inline-block;
+        width: 200px;
+        word-break: keep-all;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="study">
+      <div class="title">어떻게 연구했나요?</div>
+      <div class="contents">
+        <div class="top">
+          <p>
+            쥬니버스쿨을 꾸준히 사용한 만 3-6세 아동의 수학능력(수와 연산, 측정,
+            기하 영역) <br />
+            인지능력(처리속도, 언어이해, 시공간 영역)이 향상됨을 검증하였습니다.
+          </p>
+        </div>
+        <div class="item">
+          <strong>[논리]</strong>
+          <ul>
+            <li><strong>연구대상ㅣ</strong><span>3-6세 아동 100명</span></li>
+            <li><strong>연구기간ㅣ</strong><span>4주</span></li>
+            <li>
+              <strong>연구도구ㅣ</strong
+              ><span>한국 웩슬러 유아지능검사도구 </span>
+            </li>
+            <li>
+              <strong> 연구기관ㅣ</strong
+              ><span class="con"
+                >서울대 아동가족학과 <br />
+                박유정 교수 연구실</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <strong>[수학]</strong>
+          <ul>
+            <li><strong>연구대상ㅣ</strong><span>3-6세 아동 98명</span></li>
+            <li><strong>연구기간ㅣ</strong><span>10주</span></li>
+            <li>
+              <strong>연구도구ㅣ</strong
+              ><span>유아 그림수학능력 검사도구 </span>
+            </li>
+            <li>
+              <strong> 연구기관ㅣ</strong
+              ><span class="con"
+                >중앙대 유아교육과 <br />
+                조형숙 교수 연구실
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      let title = document.querySelector(".title");
+      let bool = false;
+      title.onclick = function () {
+        if (bool) {
+          document.querySelector(".contents").style.display = "none";
+          this.classList.remove("on");
+        } else {
+          document.querySelector(".contents").style.display = "block";
+          this.classList.add("on");
+        }
+        bool = !bool;
+      };
+    </script>
+  </body>
+</html>

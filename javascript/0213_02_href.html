@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="demo">
+      <li><a href="#" target="_new">네이버</a></li>
+      <li><a href="#" target="_new">다음</a></li>
+      <li><a href="#" target="_new">구글</a></li>
+    </ul>
+    <script>
+      let adr = [
+        "http://www.naver.com",
+        "http://www.daum.net",
+        "http://www.google.com",
+      ];
+      let link = document.querySelectorAll("#demo li a");
+      link.forEach(function (value, index) {
+        value.onclick = function (event) {
+          event.preventDefault();
+          this.style.color = "red";
+          console.log(index);
+          //location.href = adr[index];
+          window.open(adr[index], "_new");
+        };
+      });
+      const numbers = [45, 4, 9, 16, 25];
+      let txt1 = "";
+      numbers.forEach(myFunction);
+      document.write(txt1);
+      function myFunction(value, index, array) {
+        //txt += value + "<br>";
+        txt1 += numbers[index];
+      }
+    </script>
+  </body>
+</html>
