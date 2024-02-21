@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+ul.course {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+}
+ul.course li {
+  position: relative;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+}
+ul.course li > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30%;
+}
+ul.course li h3 {
+  padding: 50px 0;
+}
+ul.course li a {
+  display: block;
+}
+ul.course li a img {
+  width: 100%;
+  vertical-align: bottom;
+}
+ul.course li a {
+  padding: 20px 0;
+}
+ul.course li a:last-of-type {
+  padding-bottom: 0;
+}
+ul.course li a.btn {
+  background: #586cf6;
+  width: 180px;
+  line-height: 40px;
+  margin: 20px auto 10px;
+  border-radius: 100px;
+  color: #fff;
+  padding: 0;
+}
+ul.course li a.btn span {
+  vertical-align: middle;
+}
+@media screen and (max-width: 1024px) {
+  .mySwiper {
+    width: 80% !important;
+  }
+}

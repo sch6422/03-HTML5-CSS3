@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Demo styles -->
+    <style>
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .swiper {
+        width: 100%;
+        max-width: 1200px;
+      }
+      .mySwiper .swiper-pagination-bullet {
+      }
+      .mySwiper .swiper-pagination-bullet-active {
+        width: 30px;
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <ul class="swiper-wrapper course">
+        <li class="swiper-slide">
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+        <li>
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+        <li>
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+        <li class="swiper-slide">
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+        <li class="swiper-slide">
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+        <li class="swiper-slide">
+          <h3>리더스 내신만점</h3>
+          <a href="#"
+            >내신 대비 최적화된 학습강의<br /><strong
+              >전과목 내신, 개념부터 실전물제까지!!</strong
+            ></a
+          >
+          <a href="#" class="btn"
+            >강의 맛보기
+            <span class="material-symbols-outlined"> arrow_right_alt </span></a
+          >
+          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <img src="images/badge-bg01.png" alt="badge" />
+        </li>
+      </ul>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 1000,
+        },
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        breakpoints: {
+          // when window width is >= 640px
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
