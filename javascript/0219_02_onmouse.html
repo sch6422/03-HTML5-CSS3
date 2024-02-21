@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #over,
+      #enter {
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+        margin: 20px;
+      }
+      #over_inner,
+      #enter_inner {
+        width: 100px;
+        height: 100px;
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="over" onmouseover="overout()">
+      over
+      <div id="over_inner" onmouseover="overinner()">inner</div>
+    </div>
+    <div id="enter" onmouseenter="enterout()">
+      enter
+      <div id="enter_inner" onmouseenter="enterinner()">inner</div>
+    </div>
+    <script>
+      /*onmouseover:이벤트 버블링이 발생된다. 부모요소에서 자식요소로 이벤트가 전파된다.
+      onmouseenter:이벤트 버블링 발생되지 않는다. 부모요소에서 자식요소로 이벤트가 전파되지 않는다.마우스 포인터가 해당요소내에 들어갈때만 이벤트가 발생*/
+      function overout() {
+        console.log("over parent");
+      }
+      function overinner() {
+        console.log("over child");
+      }
+      function enterout() {
+        console.log("enter parent");
+      }
+      function enterinner() {
+        console.log("enter child");
+      }
+    </script>
+  </body>
+</html>

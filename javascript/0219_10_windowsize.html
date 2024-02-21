@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML =
+        "Browser inner window width: " +
+        window.innerWidth +
+        "px<br>" +
+        "Browser inner window height: " +
+        window.innerHeight +
+        "px";
+      let x = document.getElementById("demo").offsetHeight;
+      console.log(x);
+    </script>
+  </body>
+</html>

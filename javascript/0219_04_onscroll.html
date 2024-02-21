@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #demo {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+        overflow: auto;
+      }
+      #content {
+        width: 2000px;
+        height: 2000px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <div id="content">scroll me</div>
+    </div>
+    <p id="page"></p>
+    <button>원위치로</button>
+    <script>
+      let x = document.getElementById("demo");
+      x.onscroll = function () {
+        let scr_top = x.scrollTop;
+        let scr_left = x.scrollLeft;
+        document.getElementById(
+          "page"
+        ).innerHTML = `가로 : ${scr_left} 세로 : ${scr_top}`;
+      };
+      document.getElementsByTagName("button")[0].onclick = function () {
+        x.scrollTop = 0;
+        x.scrollLeft = 0;
+      };
+    </script>
+  </body>
+</html>

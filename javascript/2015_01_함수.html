@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">함수호출</p>
+    <script>
+      function myfnc() {
+        document.write("오늘은 평가일입니다");
+      }
+      /* document.getElementById("demo").onclick = function () {
+        myfnc();
+      };*/
+      document.getElementById("demo").onclick = myfnc;
+      myfnc();
+      (function my() {
+        document.write("자체호출");
+      })();
+      //my();
+      function myadd(a, b, c) {
+        return a * b + c;
+      }
+      document.write(myadd(9, 9, 7));
+      document.write(myadd(9, 2, 6));
+      const x = function (a, b) {
+        return a * b;
+      };
+      document.write(x(9, 2));
+      document.write(x());
+      function myFunction(a, b) {
+        return a * b;
+      }
+      let y = myFunction(4, 3);
+      document.getElementById("demo").innerHTML = y;
+      function myfnc1(a, b, c) {
+        return arguments.length;
+      }
+      document.write("<br>" + myfnc1(4, 3));
+      function myfnc2(f) {
+        return (5 / 9) * (f - 32);
+      }
+      document.write("<br>" + myfnc2(77));
+      document.write("<br>" + myfnc2);
+    </script>
+  </body>
+</html>

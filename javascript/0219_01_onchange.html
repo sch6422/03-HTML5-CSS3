@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="fname" />
+    <p id="demo">변경전</p>
+    <button onclick="my()">클릭1</button>
+    <button>클릭2</button>
+    <script>
+      const x = document.getElementById("fname");
+      console.log(x.value);
+      // function upperCase() {
+      //   const x = document.getElementById("fname");
+      //   x.value = x.value.toUpperCase();
+      // }
+      /* x.onchange = function () {
+        //x.value = x.value.toUpperCase();
+        this.value = this.value.toUpperCase();
+      };*/
+      x.addEventListener("change", function () {
+        //x.value = x.value.toUpperCase();
+        this.value = this.value.toUpperCase();
+      });
+      let txt = document.getElementById("demo");
+      function my() {
+        txt.innerHTML = "변경후1";
+      }
+      let btn = document.getElementsByTagName("button")[1];
+      /*btn.onclick = function () {
+        txt.innerHTML = "변경후2";
+      };*/
+      btn.addEventListener("click", function () {
+        txt.innerHTML = "변경후2";
+      });
+    </script>
+  </body>
+</html>

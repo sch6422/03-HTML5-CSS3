@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #over,
+      #enter {
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+        margin: 20px;
+      }
+      #over_inner,
+      #enter_inner {
+        width: 100px;
+        height: 100px;
+        background: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <script>
+      /*키보드의 키를 눌렀을때 발생하는 이벤트
+      keydown,keypress 키를 누르고 있을때도 이벤트 발생
+      keyup 키를 입력할때 발생되는 이벤트
+      */
+
+      let x = document.getElementsByTagName("input")[0];
+      /*x.onkeydown = function (e) {
+        console.log(e.keyCode);
+      };*/
+      /*x.onkeypress = function (e) {
+        console.log(e.keyCode);
+      };*/
+      x.onkeyup = function (e) {
+        console.log(e.keyCode);
+      };
+    </script>
+  </body>
+</html>

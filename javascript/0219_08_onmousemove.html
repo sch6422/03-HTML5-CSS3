@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 1000px;
+        padding-bottom: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" id="form1">
+      <p><input type="text" name="clientx" /></p>
+      <p><input type="text" name="clienty" /></p>
+      <p><input type="text" name="pagex" /></p>
+      <p><input type="text" name="pagey" /></p>
+      <p><input type="text" name="screenx" /></p>
+      <p><input type="text" name="screeny" /></p>
+    </form>
+    <script>
+      document.onmousemove = function (e) {
+        let form = document.getElementById("form1");
+        form.clientx.value = `clientx :${e.clientX}`;
+        form.clienty.value = `clienty :${e.clientY}`;
+        //브라우저 기준으로 좌표구함. 스크롤계산 안함
+        form.pagex.value = `pagex :${e.pageX}`;
+        form.pagey.value = `pagey :${e.pageY}`;
+        //브라우저 기준으로 좌표구함. 스크롤계산함
+        form.screenx.value = `screenx :${e.screenX}`;
+        form.screeny.value = `screeny :${e.screenY}`;
+        //스크린(모니터)기준으로 좌표구함
+      };
+    </script>
+  </body>
+</html>

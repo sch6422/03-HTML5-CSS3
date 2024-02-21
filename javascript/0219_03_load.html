@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // document.getElementById("demo").innerHTML = "변경하였습니다";
+      //DOMContentLoaded 이벤트는 HTML문서의 로드가 완료되어 DOM트리가 완전히 구성된 직후에 발생된다.외부 리소스(이미지,스타일) 로딩이 완료되지 않아도 발생됨
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("demo").innerHTML = "변경1";
+        console.log("DOMContentLoaded");
+      });
+      //window.onload 이벤트는 HTML문서의 모든 리소스가 로드되어 페이지가 완전히 준비된후에 발생
+      window.onload = function () {
+        document.getElementById("demo").innerHTML = "변경2";
+        console.log("onload");
+      };
+    </script>
+  </head>
+  <body>
+    <p id="demo">변경전</p>
+    <!-- <script>
+      document.getElementById("demo").innerHTML = "변경하였습니다";
+    </script> -->
+  </body>
+</html>

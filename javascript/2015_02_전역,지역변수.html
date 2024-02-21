@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 0; //전역변수
+      function myfnc() {
+        let num = 100; //지역변수 , 코드블록 안에서는 같은 이름 가능
+        document.write(num + "<br>");
+      }
+      function myfnc1() {
+        let num = 200;
+        document.write(num + "<br>");
+      }
+      myfnc1();
+      document.write(num + "<br>");
+    </script>
+  </body>
+</html>

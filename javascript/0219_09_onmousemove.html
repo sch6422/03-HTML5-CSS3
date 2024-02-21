@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        cursor: none;
+        height: 1000px;
+      }
+      .custom {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: red;
+        pointer-events: none;
+        z-index: 999;
+        animation: ani 2s infinite;
+      }
+      @keyframes ani {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom"></div>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        let pointer = document.querySelector(".custom");
+        pointer.style.left = x + "px";
+        pointer.style.top = y + "px";
+      });
+    </script>
+  </body>
+</html>

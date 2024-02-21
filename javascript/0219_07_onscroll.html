@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .top {
+        height: 500px;
+      }
+      .content {
+        height: 1000px;
+      }
+      .content img {
+        width: 300px;
+      }
+      @keyframes down {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes up {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+      }
+      .down {
+        animation: down 1s forwards;
+      }
+      .up {
+        animation: up 1s forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top"><h1>The onscroll Event</h1></div>
+    <hr />
+    <div class="content">
+      <img src="images/photo1.jpg" alt="photo1" />
+    </div>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        if (ht > 50) {
+          document.getElementsByTagName("img")[0].className = "down";
+        } else {
+          document.getElementsByTagName("img")[0].className = "up";
+        }
+      };
+    </script>
+  </body>
+</html>

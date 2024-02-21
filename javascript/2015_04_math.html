@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let food = ["피자", "햄버거", "돈가스", "김밥", "칼국수"];
+      let i = Math.floor(Math.random() * food.length);
+      console.log(i);
+      //0,1,2,3,4
+      document.write(food[i]);
+      let bg = ["red", "blue", "yellow", "green", "pink", "#ccc"];
+      let c = Math.floor(Math.random() * bg.length);
+      document.querySelector("body").style.background = bg[c];
+      document.querySelector("body").style.background = `url(images/photo${
+        c + 1
+      }.jpg)`;
+    </script>
+  </body>
+</html>

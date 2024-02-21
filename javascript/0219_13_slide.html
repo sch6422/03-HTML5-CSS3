@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #slideShow {
+        position: relative;
+        width: 1280px;
+        height: 300px;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      #slideShow > ul {
+        position: absolute;
+        left: 0;
+      }
+      #slideShow .slides img {
+        width: 1280px;
+        height: 300px;
+        object-fit: cover;
+      }
+      #slideShow .slides li {
+        float: left;
+      }
+      #slideShow .controller {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        color: #fff;
+        font-size: 24px;
+        box-sizing: border-box;
+      }
+      #slideShow .controller li {
+        cursor: pointer;
+      }
+      #slideShow .page {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        bottom: 10px;
+      }
+      #slideShow .page li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+      }
+      #slideShow .page li.on,
+      #slideShow .page li:hover {
+        background: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slideShow">
+      <ul class="slides">
+        <li><img src="images/photo1.jpg" alt="photo" /></li>
+        <li><img src="images/photo2.jpg" alt="photo" /></li>
+        <li><img src="images/photo3.jpg" alt="photo" /></li>
+        <li><img src="images/photo4.jpg" alt="photo" /></li>
+        <li><img src="images/photo5.jpg" alt="photo" /></li>
+        <li><img src="images/photo6.jpg" alt="photo" /></li>
+      </ul>
+      <ul class="controller">
+        <li class="prev">&lang;</li>
+        <li class="next">&rang;</li>
+      </ul>
+      <ul class="page">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script>
+      let slideani = document.getElementById("slideShow");
+      let slides = document.querySelector(".slides");
+      let slide = document.querySelectorAll(".slides li");
+      let dot = document.querySelectorAll(".page li");
+      let prev = document.querySelector(".prev");
+      let next = document.querySelector(".next");
+      let slideCount = slide.length;
+      console.log(slideCount);
+      let currentIdx = 0;
+      dot[0].className += "on";
+      let slidewidth = slideani.offsetWidth;
+      function makeClone() {
+        let clone_first = slide[0].cloneNode(true);
+        slides.append(clone_first);
+        let clone_last = slide[slideCount - 1].cloneNode(true);
+        slides.prepend(clone_last);
+      }
+      makeClone();
+      function initfnc() {
+        slides.style.width = slidewidth * (slideCount + 2) + "px";
+        slides.style.left = -slidewidth + "px";
+      }
+      initfnc();
+      function showSlide(n) {
+        for (let i = 0; i < slideCount; i++) {
+          dot[i].className = dot[i].className.replace("on", "");
+        }
+        dot[n].className += "on";
+        slides.style.left = -(n + 1) * slidewidth + "px";
+        slides.style.transition = "0.5s";
+      }
+      //showSlide(1);
+      next.onclick = function () {
+        if (currentIdx <= slideCount - 1) {
+          slides.style.left = -(currentIdx + 2) * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === slideCount - 1) {
+          setTimeout(function () {
+            slides.style.left = -slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = -1;
+        }
+        currentIdx++;
+        for (let i = 0; i < slideCount; i++) {
+          dot[i].className = dot[i].className.replace("on", "");
+        }
+        dot[currentIdx].className += "on";
+      };
+      dot.forEach(function (value, index) {
+        value.onclick = function () {
+          showSlide((currentIdx = index));
+        };
+      });
+      let interval = setInterval(function () {
+        next.onclick();
+      }, 1500);
+      slideani.onmouseenter = function () {
+        clearInterval(interval);
+      };
+      slideani.onmouseleave = function () {
+        interval = setInterval(function () {
+          next.onclick();
+        }, 1500);
+      };
+      prev.onclick = function () {
+        console.log(currentIdx);
+        if (currentIdx >= 0) {
+          slides.style.left = -currentIdx * slidewidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === 0) {
+          setTimeout(function () {
+            slides.style.left = -slideCount * slidewidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = slideCount;
+        }
+        currentIdx--;
+        for (let i = 0; i < slideCount; i++) {
+          dot[i].className = dot[i].className.replace("on", "");
+        }
+        dot[currentIdx].className += "on";
+      };
+    </script>
+  </body>
+</html>
