@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("div:has(p)").css("font-size", "50px");
+        // $(":empty").text("empty");
+        $("div:empty").text("empty");
+        //  $("p:empty").text("empty");
+        $("p:parent").css("color", "red");
+        $("p:last").hide();
+        $("p:hidden").show();
+        $("p:visible").text("visible");
+        // $("p[class$='3']").css("border", "1px solid");
+        //  $("p[class|='java']").css("border", "1px solid");
+        // $("p[class^='java']").css("border", "1px solid");
+        //   $("p[class~='java']").css("border", "1px solid");
+        $("p[class*='java']").css("border", "1px solid");
+      });
+    </script>
+  </head>
+  <body>
+    <div><p>문단태그</p></div>
+    <div>문단태그</div>
+    <div></div>
+    <p class="css">hidden</p>
+    <p class="css3">hidden</p>
+    <p class="css-3">hidden</p>
+    <p class="javascript">hidden</p>
+    <p class="java-script">hidden</p>
+    <p class="java">hidden</p>
+  </body>
+</html>

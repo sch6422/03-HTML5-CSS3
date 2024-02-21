@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //$("h1").remove();
+        let myParent = $("h1").parent().prop("nodeName");
+        console.log(myParent);
+      });
+    </script>
+  </head>
+  <body>
+    <div><h1>제목태그</h1></div>
+    <!-- <script>
+      //document.getElementsByTagName("h1")[0].remove();
+      let myParent = document.getElementsByTagName("h1")[0].parentNode.nodeName;
+      console.log(myParent);
+    </script> -->
+  </body>
+</html>

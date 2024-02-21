@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("a").click(function (e) {
+        //   e.preventDefault();
+        //   $(this).css("color", "red");
+        // });
+        let x = true;
+        $("a").click(function () {
+          if (x) {
+            $("p").hide();
+          } else {
+            $("p").show();
+          }
+          x = !x;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="#">링크1</a>
+    <p>페이지이동</p>
+  </body>
+</html>

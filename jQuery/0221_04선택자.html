@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        color: blue !important;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("ul li a:first").css("color", "red");
+        //  $("ul li a:first-child").css("color", "red");
+        //  $("ul li a:last").css("color", "red");
+        // $("ul li a:last-child").css("color", "red");
+        // $("ul li:nth-child(2) a").css("color", "red");
+        // $("*").css("color", "red");
+        //  $("[href]").css("color", "red");
+        // $('a[target="_blank"]').css("color", "red");
+        // $('a[target!="_blank"]').css("color", "red");
+        // $(":button").css("color", "red");
+        // $("ul li:even a").css("color", "red");
+        // $("ul li:odd a").css("color", "green");
+        let myfnc = $("ul li:nth-child(3) a").prop("target");
+        console.log(myfnc);
+      });
+    </script>
+  </head>
+  <body>
+    <header>header</header>
+    <nav>
+      <ul>
+        <li><a href="#" target="_blank">메뉴1</a></li>
+        <li><a href="#" target="_blank">메뉴2</a></li>
+        <li><a href="#" target="_new">메뉴3</a></li>
+        <li><a href="#" target="_blank">메뉴4</a></li>
+        <li><a href="#" target="_blank">메뉴5</a></li>
+      </ul>
+    </nav>
+    <section>section</section>
+    <footer>footer</footer>
+    <button>클릭</button>
+    <input type="button" value="제출" />
+  </body>
+</html>

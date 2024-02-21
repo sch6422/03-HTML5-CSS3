@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $("#demo").css("font-size", "50px").css("color", "red");
+        //$("#demo").css({속성이름(한개의 단어 따옴표생략):"속성값",속성이름:"속성값"})
+        $("#demo").css({
+          "font-size": "50px",
+          color: "red",
+          backgroundColor: "yellow",
+        });
+        // $("p").text("javascript");
+        $("p").html("<h1>javascript</h1>");
+        $("p:last").text("");
+        $("p:not(:empty)").text("제이쿼리");
+        $("p:not(:first)").text("not first 제이쿼리");
+        $("p:not(:last)").text("not last 제이쿼리");
+        $(":header").css("color", "red");
+        // $("input").focus();
+        $(":focus").css("background", "yellow");
+        $("input").focus(function () {
+          $(":focus").css("background", "yellow");
+        });
+        $(":contains('제이쿼리')").css("border", "1px solid");
+      });
+    </script>
+  </head>
+  <body>
+    <p id="demo">자바스크립트 & 제이쿼리</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h1>제목태그</h1>
+    <h2>제목태그</h2>
+    <h3>제목태그</h3>
+    <h4>제목태그</h4>
+    <input type="text" autofocus /> <br />
+    <input type="text" autofocus /> <br />
+    <input type="text" autofocus /> <br />
+  </body>
+</html>
