@@ -9,6 +9,24 @@ a {
   text-decoration: none;
   color: #333;
 }
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+}
+.mySwiper .swiper-pagination-bullet {
+}
+.mySwiper .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 50px;
+}
 ul.course {
   width: 100%;
   max-width: 1200px;
@@ -23,6 +41,10 @@ ul.course li {
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow: hidden;
+  transition: 0.5s;
+}
+ul.course li:hover {
+  transform: translateY(-10%);
 }
 ul.course li > img {
   position: absolute;

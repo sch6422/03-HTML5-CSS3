@@ -12,28 +12,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- Demo styles -->
-    <style>
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      }
-      .swiper {
-        width: 100%;
-        max-width: 1200px;
-      }
-      .mySwiper .swiper-pagination-bullet {
-      }
-      .mySwiper .swiper-pagination-bullet-active {
-        width: 30px;
-        border-radius: 50px;
-      }
-    </style>
   </head>
 
   <body>
@@ -54,7 +38,7 @@
           <a href="#"><img src="images/course1.png" alt="course" /></a>
           <img src="images/badge-bg01.png" alt="badge" />
         </li>
-        <li>
+        <li class="swiper-slide">
           <h3>리더스 내신만점</h3>
           <a href="#"
             >내신 대비 최적화된 학습강의<br /><strong
@@ -65,21 +49,7 @@
             >강의 맛보기
             <span class="material-symbols-outlined"> arrow_right_alt </span></a
           >
-          <a href="#"><img src="images/course1.png" alt="course" /></a>
-          <img src="images/badge-bg01.png" alt="badge" />
-        </li>
-        <li>
-          <h3>리더스 내신만점</h3>
-          <a href="#"
-            >내신 대비 최적화된 학습강의<br /><strong
-              >전과목 내신, 개념부터 실전물제까지!!</strong
-            ></a
-          >
-          <a href="#" class="btn"
-            >강의 맛보기
-            <span class="material-symbols-outlined"> arrow_right_alt </span></a
-          >
-          <a href="#"><img src="images/course1.png" alt="course" /></a>
+          <a href="#"><img src="images/course2.png" alt="course" /></a>
           <img src="images/badge-bg01.png" alt="badge" />
         </li>
         <li class="swiper-slide">
@@ -93,8 +63,8 @@
             >강의 맛보기
             <span class="material-symbols-outlined"> arrow_right_alt </span></a
           >
-          <a href="#"><img src="images/course1.png" alt="course" /></a>
-          <img src="images/badge-bg01.png" alt="badge" />
+          <a href="#"><img src="images/course3.png" alt="course" /></a>
+          <img src="images/badge-bg02.png" alt="badge" />
         </li>
         <li class="swiper-slide">
           <h3>리더스 내신만점</h3>
@@ -107,22 +77,8 @@
             >강의 맛보기
             <span class="material-symbols-outlined"> arrow_right_alt </span></a
           >
-          <a href="#"><img src="images/course1.png" alt="course" /></a>
-          <img src="images/badge-bg01.png" alt="badge" />
-        </li>
-        <li class="swiper-slide">
-          <h3>리더스 내신만점</h3>
-          <a href="#"
-            >내신 대비 최적화된 학습강의<br /><strong
-              >전과목 내신, 개념부터 실전물제까지!!</strong
-            ></a
-          >
-          <a href="#" class="btn"
-            >강의 맛보기
-            <span class="material-symbols-outlined"> arrow_right_alt </span></a
-          >
-          <a href="#"><img src="images/course1.png" alt="course" /></a>
-          <img src="images/badge-bg01.png" alt="badge" />
+          <a href="#"><img src="images/course2.png" alt="course" /></a>
+          <img src="images/badge-bg02.png" alt="badge" />
         </li>
       </ul>
       <div class="swiper-pagination"></div>
@@ -136,7 +92,7 @@
       var swiper = new Swiper(".mySwiper", {
         loop: true,
         autoplay: {
-          delay: 1000,
+          delay: 5000,
         },
         // If we need pagination
         pagination: {
