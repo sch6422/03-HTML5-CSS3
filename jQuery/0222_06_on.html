@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid;
+        cursor: pointer;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        $("p").on("click", function () {
+          console.log(i++);
+          if (i >= 5) {
+            $(this).off("click"); //off(이벤트 제거)
+          }
+        });
+        $("button").one("click", function () {
+          console.log(i++);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>클릭</p>
+    <button>클릭</button>
+  </body>
+</html>

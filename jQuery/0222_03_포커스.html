@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("input").val("아이디를 입력해주세요").css("color", "red");
+        $("input")
+          .focus(function () {
+            $(this).val("").css("color", "#000");
+          })
+          .blur(function () {
+            if ($(this).val() == "") {
+              $(this).val("아이디를 입력해주세요").css("color", "red");
+            }
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+  </body>
+</html>

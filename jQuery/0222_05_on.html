@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid;
+        cursor: pointer;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // $("p")
+        //   .mouseenter(function () {
+        //     $(this).css("color", "red");
+        //   })
+        //   .mouseleave(function () {
+        //     $(this)
+        //       .css({ color: "#000", fontSize: "16px" })
+        //       .text("클릭 & 마우스오버");
+        //   })
+        //   .click(function () {
+        //     $(this)
+        //       .css("font-size", "50px")
+        //       .text("크기변경")
+        //       .css("backgroundColor", "#ccc");
+        //   });
+        // $("p").on("click mouseenter",function(){})
+        $("p").on({
+          mouseenter: function () {
+            $(this).css("color", "red");
+          },
+          mouseleave: function () {
+            $(this)
+              .css({ color: "#000", fontSize: "16px" })
+              .text("클릭 & 마우스오버");
+          },
+          click: function () {
+            $(this).css("font-size", "50px").text("크기변경");
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>클릭 & 마우스오버</p>
+  </body>
+</html>
