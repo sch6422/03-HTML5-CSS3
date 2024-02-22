@@ -62,15 +62,13 @@ a {
 }
 .wrap .menu .sub ul {
   position: absolute;
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
+  height: 0;
 }
 .wrap .menu .sub ul li {
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+  width: 100%;
   line-height: 30px;
 }
 .wrap .menu .sub li a {
