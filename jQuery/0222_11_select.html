@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("input").select(function () {
+          alert("selcted maked");
+        });
+        $("form").submit(function () {
+          alert("양식이 제출되었습니다");
+        });
+        $("button").click(function () {
+          // $("input").trigger("select");
+          $("form").trigger("submit");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" value="javascript & jQuery" />
+      <input type="submit" />
+    </form>
+    <button>클릭</button>
+  </body>
+</html>

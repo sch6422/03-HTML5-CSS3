@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("button:first-of-type").click(function () {
+          //speed : milliseconds "slow" "fast"
+          //easing : "swing" "linear"
+          //callback
+          $("p img").hide(1000, "linear");
+        });
+        $("button:nth-of-type(2)").click(function () {
+          $("p img").show(1000, "linear");
+        });
+        $("button:nth-of-type(3)").click(function () {
+          $("p img").toggle(1000, "linear");
+        });
+        $("button:nth-of-type(4)").click(function () {
+          let txt = $(this).text();
+          if (txt == "Hide") {
+            $("p img").hide(1000, "linear", function () {
+              txt = "Show";
+              $("button:nth-of-type(4)").text(txt);
+            });
+          } else {
+            $("p img").show(1000, "linear", function () {
+              txt = "Hide";
+              $("button:nth-of-type(4)").text(txt);
+            });
+          }
+        });
+        $("button:nth-of-type(5)").click(function () {
+          let txt = $(this).text();
+          $("p img").toggle(1000, "linear", function () {
+            if (txt == "Hide") {
+              txt = "Show";
+              $("button:nth-of-type(5)").text(txt);
+            } else {
+              txt = "Hide";
+              $("button:nth-of-type(5)").text(txt);
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><img src="../javascript/images/photo1.jpg" alt="photo1" /></p>
+    <button>숨기기</button>
+    <button>보이기</button>
+    <button>숨기기&보이기</button>
+    <button>Hide</button>
+    <button>Hide</button>
+  </body>
+</html>

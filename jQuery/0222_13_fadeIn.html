@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("#fadein").click(function () {
+          // $("p").fadeIn();
+          $("p").fadeTo(1000, 1, "linear");
+        });
+        $("#fadeout").click(function () {
+          //$("p").fadeOut();
+          $("p").fadeTo(1000, 0, "linear");
+        });
+        let txt = true;
+        /* $("#fadetoggle").click(function () {
+         
+          //$("p").fadeToggle();
+          if (txt) {
+            $("p").fadeTo(1000, 0, "linear");
+          } else {
+            $("p").fadeTo(1000, 1, "linear");
+          }
+          txt = !txt;
+        });*/
+        $("#fadetoggle").click(function () {
+          let txt2 = $("p").attr("style");
+          console.log(txt2);
+          if (txt) {
+            if (txt2 == undefined || txt2 == "opacity: 1;") {
+              $("p").fadeTo(1000, 0, "linear");
+            } else {
+              $("p").fadeTo(1000, 1, "linear");
+            }
+          } else {
+            if (txt2 == undefined || txt2 == "opacity: 0;") {
+              $("p").fadeTo(1000, 1, "linear");
+            } else {
+              $("p").fadeTo(1000, 0, "linear");
+            }
+          }
+          txt = !txt;
+        });
+        $("#fadeto").click(function () {
+          $("p").fadeTo(1000, 0.5, "linear");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p><img src="../javascript/images/photo1.jpg" alt="photo1" /></p>
+    <button id="fadein">fadeIn</button>
+    <button id="fadeout">fadeout</button>
+    <button id="fadetoggle">fadetoggle</button>
+    <button id="fadeto">fadeto</button>
+  </body>
+</html>
