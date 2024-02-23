@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+        transition: 1s linear;
+      }
+      p,
+      article {
+        width: 300px;
+        height: 300px;
+        background: #fc0;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          $("div").animate(
+            { width: "+=100", height: "400", opasity: "0.5" },
+            1000,
+            "linear"
+          );
+          $("p").animate({ width: "toggle", height: "toggle" }, 1000, "linear");
+          $("article")
+            .animate({ width: "100" })
+            .animate({ height: "100" })
+            .animate({ opasity: "0.5" });
+
+          //애니메이트 메소드는 속성값이 수치데이터가 아니면 애니메이션이 실행되지 않음
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <p></p>
+      <article></article>
+    </section>
+    <button>클릭</button>
+  </body>
+</html>

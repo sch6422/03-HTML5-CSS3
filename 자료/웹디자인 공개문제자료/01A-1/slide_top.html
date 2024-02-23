@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .slide {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+        overflow: hidden;
+      }
+      .slide .ban {
+        width: 100%;
+      }
+      .slide .ban li {
+        height: 300px;
+      }
+      .slide .ban li img {
+        width: 1200px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .slide .btn {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 50px;
+      }
+      .slide .btn li {
+        cursor: pointer;
+      }
+      .slide .btn li.prev {
+        transform: rotate(90deg);
+      }
+      .slide .btn li.next {
+        transform: rotate(90deg);
+      }
+    </style>
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function () {
+        function nextani() {
+          $(".ban").animate({ marginTop: "-300px" }, 500, function () {
+            // $(".ban li").eq(0).appendTo(".ban");
+            //$(".ban").append($(".ban li").eq(0));
+            $(".ban").append($(".ban li:first"));
+            $(".ban").css("marginTop", "0");
+          });
+        }
+        function prevani() {
+          //$(".ban li").eq(2).prependTo(".ban");
+          $(".ban").prepend($(".ban li").eq(2));
+          $(".ban").css("marginTop", "-300px");
+          $(".ban").animate({ marginTop: "0" }, 500);
+        }
+        let interval = setInterval(function () {
+          nextani();
+        }, 2000);
+        $(".slide").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              nextani();
+            }, 2000);
+          }
+        );
+        $(".next").click(nextani);
+        $(".prev").click(function () {
+          prevani();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+      <ul class="ban">
+        <li><img src="images/slide01.jpg" alt="slide" /></li>
+        <li><img src="images/slide02.jpg" alt="slide" /></li>
+        <li><img src="images/slide03.jpg" alt="slide" /></li>
+      </ul>
+      <ul class="btn">
+        <li class="prev">&lt;</li>
+        <li class="next">&gt;</li>
+      </ul>
+    </div>
+  </body>
+</html>

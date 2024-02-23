@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabs</title>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: red;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let ease = $(".box1 .ball").data("ease");
+        let ease1 = $(".box2 .ball").data("ease");
+        let ease2 = $(".box3 .ball").data("ease");
+        $("button").click(function () {
+          $(".box1 .ball")
+            .animate({ left: "480px" }, 1000, ease)
+            .animate({ left: "10px" }, 1000, ease);
+          $(".box2 .ball")
+            .animate({ left: "480px" }, 1000, ease1)
+            .animate({ left: "10px" }, 1000, ease1);
+          $(".box3 .ball")
+            .animate({ left: "480px" }, 1000, ease2)
+            .animate({ left: "10px" }, 1000, ease2);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button>move</button>
+    <div class="box box1">
+      linear
+      <div class="ball" data-ease="linear"></div>
+    </div>
+    <div class="box box2">
+      swing
+      <div class="ball" data-ease="swing"></div>
+    </div>
+    <div class="box box3">
+      easeOutBounce
+      <div class="ball" data-ease="easeOutBounce"></div>
+    </div>
+  </body>
+</html>

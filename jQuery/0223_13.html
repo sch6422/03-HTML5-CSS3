@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabs</title>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: red;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#ease").change(function () {
+          //let txt = $("select>option:selected").val();
+          //  let txt = $(this).find("option:selected").val;
+          let txt = $(this).find("option:selected").attr("value");
+          console.log(txt);
+          if (txt != "") {
+            $("body").append(
+              `<div class="box">${txt}<div class="ball" data-ease=${txt}></div></div>`
+            );
+          }
+          $(".box").click(function () {
+            $(this).remove();
+          });
+          $("button").click(function () {
+            $(".box").each(function (index, value) {
+              let txt = $(this).find(".ball").data("ease");
+              $(this)
+                .find(".ball")
+                .animate({ left: "480" }, 1000, txt)
+                .animate({ left: "10" }, 1000, txt);
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select name="ui" id="ease">
+      <option value="">선택안함</option>
+      <option value="swing">swing</option>
+      <option value="linear">linear</option>
+      <option value="easeOutBounce">easeOutBounce</option>
+      <option value="easeInOutCirc">easeInOUTCirc</option>
+      <option value="easeInOutElastic">easeInOUTElastic</option>
+    </select>
+    <button>move</button>
+  </body>
+</html>
