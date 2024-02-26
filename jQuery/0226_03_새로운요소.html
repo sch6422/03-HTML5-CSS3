@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      .on {
+        color: red;
+        background: yellow;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        // let a = $(".html").text();
+        //let a = $(".photo").text("photo");
+        let a = $(".photo").html('<h2 id="page">제목태그</h2>');
+        //let b = $("input").val("아이디를 입력해주세요");
+        let b = $("input").attr({ value: "아이디를 입력", class: "id" });
+        //   .attr("value", "아이디를 입력해주세요")
+        //  .attr("class", "id");
+        console.log(a);
+        console.log(b);
+        //  $("ul").append('<li class="blank">blank</li>');
+        $('<li class="blank">blank</li>').appendTo("ul");
+        //$("ul").prepend('<li class="blank">blank</li>');
+        $('<li class="blank">blank</li>').prependTo("ul");
+        //  $("ul").clone().appendTo("body");
+        $("body").append($("ul").clone());
+        //  $("ul").wrap("<section></section>"); //ul 부모 따로 만들어줌
+        $("ul li").wrapInner("<div></div>");
+        $("ul").wrapAll("<section></section>"); //ul를 다 선택해서 부모만듬
+        // $(".html").after('<li class="new">newcontent</li>');
+        $('<li class="new">newcontent</li>').insertAfter(".html");
+        // $(".html").before('<li class="new">newcontent</li>');
+        $('<li class="new">newcontent</li>').insertBefore(".html");
+        let txt = $(".javascript").text();
+        //slice(스타트번호,엔드번호)
+        //substr(스타트번호,렝스(길이))
+        //substring(스타트번호,엔드번호) 음수허용안함(음수값을 입력하면 0[제로값이 베이스])
+        // $(".html").text(txt.slice(0, 4));
+        //$(".html").text(txt.slice(-6));
+        // $(".html").text(txt.substr(0,4));
+        // $(".html").text(txt.substring(-6, 4)); //음의값을 못가져옴
+        // $(".html").text(txt.substring(0, 4));
+        $(".html").text(txt.substring(-6));
+        // $(".jquery").remove(); // 선택한 요소(및 하위 요소)를 제거합니다.
+        $(".jquery").empty(); // 선택한 요소에서 하위 요소를 제거합니다.
+        $("ul li").remove(".new , .blank");
+        $(".html").css("color", "red").css("backgroundColor", "yellow");
+        $(".html").css("color", "#000").css("backgroundColor", "#fff");
+        $(".css").addClass("on");
+        $(".css").removeClass("on");
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li class="html">html</li>
+      <li class="photo">
+        img요소
+        <img src="../javascript/images/photo1.jpg" alt="photo" />
+      </li>
+      <li class="css">css</li>
+      <li class="css3">css3</li>
+      <li class="javascript">javascript</li>
+      <li class="jquery">jquery</li>
+      <li><input type="text" value="아이디" /></li>
+    </ul>
+  </body>
+</html>

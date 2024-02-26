@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div#cubic {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        perspective: 800px;
+        /*수치가 너무 크거나 작으면 극단적으로 원근감이 커지고 작아짐*/
+      }
+      div#cubic #contents {
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition: 1s linear;
+      }
+      div img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.5;
+      }
+      div img:first-child {
+        transform: translateZ(-200px);
+      }
+      div img:nth-child(2) {
+        transform: rotateY(60deg) translateZ(200px);
+        opacity: 1;
+        z-index: 1;
+      }
+      div img:nth-child(3) {
+        transform: rotateY(-60deg) translateZ(200px);
+        opacity: 1;
+        z-index: 1;
+      }
+      div img:nth-child(4) {
+        transform: rotateY(-60deg) translateZ(-200px);
+      }
+      div img:nth-child(5) {
+        transform: rotateY(60deg) translateZ(-200px);
+      }
+      div img:nth-child(6) {
+        transform: translateZ(200px);
+        opacity: 1;
+      }
+      #btn {
+        width: 400px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        let x = 0;
+        let y = 0;
+        $("#left").click(function () {
+          $("#contents").css("transform", `rotateY(${(y -= 60)}deg)`);
+        });
+        $("#right").click(function () {
+          $("#contents").css("transform", `rotateY(${(y += 60)}deg)`);
+        });
+        $("#top").click(function () {
+          $("#contents").css("transform", `rotateX(${(x -= 60)}deg)`);
+        });
+        $("#bottom").click(function () {
+          $("#contents").css("transform", `rotateX(${(x += 60)}deg)`);
+        });
+        let interval = setInterval(function () {
+          //$("#left").click();
+          $("#left").trigger("click");
+        }, 1000);
+        $("#cubic,#btn").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              $("#left").trigger("click");
+            }, 1000);
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="cubic">
+      <div id="contents">
+        <img src="../javascript/images/cubic_css1.jpg" alt="cubic" />
+        <img src="../javascript/images/cubic_css2.jpg" alt="cubic" />
+        <img src="../javascript/images/cubic_css3.jpg" alt="cubic" />
+        <img src="../javascript/images/cubic_css4.jpg" alt="cubic" />
+        <img src="../javascript/images/cubic_css5.jpg" alt="cubic" />
+        <img src="../javascript/images/cubic_css6.jpg" alt="cubic" />
+      </div>
+    </div>
+    <div id="btn">
+      <button id="left">left</button>
+      <button id="right">right</button>
+      <button id="top">top</button>
+      <button id="bottom">bottom</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 30px;
+        border: none;
+      }
+      #red {
+        background: red;
+      }
+      #yellow {
+        background: yellow;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        $("button").each(function (i, e) {
+          let bg = $(this).attr("id");
+          //  $(this).css({ backgroundColor: `#$bg`, cursor: "point" });
+          $(this).css({ backgroundColor: "#" + bg, cursor: "point" });
+          $(e).click(function () {
+            $("body").css({ backgroundColor: "#" + bg });
+          });
+        });
+        // $("button").click(function () {
+        //   let bg = $(this).attr("id");
+        //   $("body").css({ backgroundColor: "#" + bg });
+        // });
+      });
+    </script>
+  </head>
+  <body>
+    <button id="aaa">aaa</button>
+    <button id="bbb">bbb</button>
+    <button id="ccc">ccc</button>
+    <button id="ddd">ddd</button>
+  </body>
+</html>

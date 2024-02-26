@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 300px;
+        height: 300px;
+        padding: 30px;
+        margin: 30px;
+        border: 10px solid;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        //let a = $("div").width();
+        //let a = $("div").height("500");
+        //let a = $("div").innerWidth();
+        //let a = $("div").outerWidth();
+        let a = $("div").outerWidth(true);
+        console.log(a);
+        $("div").click(function () {
+          console.log(this.tagName);
+          $("p").html(`${this.tagName} 가로크기는 : ${$(this).width()}<br>
+          ${this.tagName}태그의 세로크기는 : ${$(this).height()}<br>
+          ${this.tagName}태그의 패딩포함가로크기는 : ${$(this).innerWidth()}<br>
+          ${
+            this.tagName
+          }태그의 패딩포함세로크기는 : ${$(this).innerHeight()}<br>
+          ${
+            this.tagName
+          }태그의 패딩테두리포함가로크기는 : ${$(this).outerWidth()}<br>
+          ${
+            this.tagName
+          }태그의 패딩테두리포함세로크기는 : ${$(this).outerHeight()}<br>
+          ${
+            this.tagName
+          }태그의 패딩테두리마진포함가로크기는 : ${$(this).outerWidth(true)}<br>
+             ${
+               this.tagName
+             }태그의 패딩테두리마진포함세로크기는 : ${$(this).outerHeight(true)}<br>`);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <p></p>
+  </body>
+</html>

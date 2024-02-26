@@ -35,30 +35,21 @@ a {
 }
 .wrap .menu .menu1 {
   display: flex;
+  width: 600px;
 }
 .wrap .menu .menu1 li {
   line-height: 60px;
   text-align: center;
+  width: calc(100% / 6);
 }
-.wrap .menu .menu1 li:first-child,
-.wrap .menu .menu1 li:nth-child(2),
-.wrap .menu .menu1 li:nth-child(2),
-.wrap .menu .menu1 li:nth-child(3) {
-  width: 81.5px;
-}
-.wrap .menu .menu1 li:nth-child(4) {
-  width: 98.23px;
-}
-.wrap .menu .menu1 li:nth-child(5) {
-  width: 120px;
-}
-.wrap .menu .menu1 li:nth-child(6) {
-  width: 110px;
-}
+
 .wrap .menu .menu1 li a {
   color: #fff;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 14px;
+}
+.wrap .menu .sub {
+  width: 800px;
 }
 .wrap .menu .sub ul {
   position: absolute;
@@ -66,14 +57,19 @@ a {
   left: 0;
   width: 100%;
   height: 0;
+  display: flex;
 }
 .wrap .menu .sub ul li {
-  width: 100%;
-  line-height: 30px;
+  padding: 10px 30px;
+  line-height: 50px;
+}
+.wrap .menu .sub ul li:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
 }
 .wrap .menu .sub li a {
   color: #fff;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .wrap .menu .logo {

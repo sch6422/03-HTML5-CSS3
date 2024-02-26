@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        width: 115px;
+        margin: 50px auto;
+      }
+
+      ul li {
+        position: relative;
+        width: 100%;
+        height: 94px;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      ul li img:last-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s;
+      }
+
+      ul li:hover img:last-child {
+        left: -100%;
+        top: -100%;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(function () {
+        function myfnc() {
+          $("ul li:first-child img").animate(
+            { left: "-100%", top: "-100%" },
+            100
+          );
+        }
+        myfnc();
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="../javascript/images/menu1_over.jpg" alt="menu1" />
+        <img src="../javascript/images/menu_1.jpg" alt="menu1" />
+      </li>
+      <li>
+        <img src="../javascript/images/menu2_over.jpg" alt="menu2" />
+        <img src="../javascript/images/menu2.jpg" alt="menu2" />
+      </li>
+      <li>
+        <img src="../javascript/images/menu3_over.jpg" alt="menu3" />
+        <img src="../javascript/images/menu3.jpg" alt="menu3" />
+      </li>
+      <li>
+        <img src="../javascript/images/menu4_over.jpg" alt="menu4" />
+        <img src="../javascript/images/menu4.jpg" alt="menu4" />
+      </li>
+      <li>
+        <img src="../javascript/images/menu5_over.jpg" alt="menu5" />
+        <img src="../javascript/images/menu5.jpg" alt="menu5" />
+      </li>
+    </ul>
+  </body>
+</html>

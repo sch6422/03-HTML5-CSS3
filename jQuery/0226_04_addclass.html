@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .on {
+        color: red;
+        background: yellow;
+      }
+    </style>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      //   $(function () {
+      //     $("p").mouseover(function () {
+      //       $("p").addClass("on");
+      //     });
+      //     $("p").mouseout(function () {
+      //       $("p").removeClass("on");
+      //     });
+      //   });
+      //   $(function () {
+      //     $("p").hover(
+      //       function () {
+      //         $(this).addClass("on");
+      //       },
+      //       function () {
+      //         $(this).removeClass("on");
+      //       }
+      //     );
+      //   });
+      $(function () {
+        // let elechange = true;
+        // $("button").click(function () {
+        //   if (elechange) {
+        //     $("p").addClass("on");
+        //   } else $("p").removeClass("on");
+        //   elechange = !elechange;
+        // });
+        $("button").click(function () {
+          $("p").toggleClass("on");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>마우스오버</p>
+    <button>클릭</button>
+  </body>
+</html>
