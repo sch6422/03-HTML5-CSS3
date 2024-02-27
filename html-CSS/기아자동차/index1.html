@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Demo styles -->
+  </head>
+
+  <body>
+    <!-- Swiper --><div class="wrap">
+        <div class="menu">
+          <ul class="menu1">
+            <li><a href="#">차량</a></li>
+            <li><a href="#">구매</a></li>
+            <li><a href="#">체험</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">고객지원</a></li>
+            <li><a href="#">Discover Kia</a></li>
+          </ul>
+          <div class="sub">
+            <ul>
+              <li>
+                <a href="#"><strong>견적내기</strong></a>
+              </li>
+              <li>
+                <a href="#"><strong>이 달의 구매 혜택</strong></a>
+              </li>
+              <li>
+                <a href="#"> <strong>구매 상담 신청</strong></a>
+              </li>
+              <li>
+                <a href="#"> <strong>Kia Connect Store</strong></a>
+              </li>
+              <li>
+                <a href="#"> <strong>모빌리티</strong></a>
+                <a href="#">기아 인증중고차</a>
+                <a href="#">기아렌터카</a>
+                <a href="#">기아플렉스</a>
+                <a href="#">위블 비즈</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="logo">
+            <li>
+              <a href="#"><img src="images/logo.png" alt="logo" /></a>
+            </li>
+          </ul>
+          <ul class="kr">
+            <li><a href="#">KR</a></li>
+            <li>
+              <a href="#"
+                ><img src="images/icon/ic_arow_donw_w.png" alt="arow"
+              /></a>
+            </li>
+            <li><a href="#">통합검색</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>우리만의 스케일대로</p>
+            <p><strong>The new Canivar</strong></p>
+            <a href="#">자세히 보기</a>
+            <a href="#">견적 내기</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>나만의 스케일대로</p>
+            <p>
+              <strong>Carnibal</strong><br />
+              Hi Limousine
+            </p>
+            <a href="#">자세히 보기</a>
+            <a href="#">견적 내기</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p><p>
+                가슴 뛰는 디자인과<br />
+                감각적인 혁신으로 완성한<br />
+                가장 진보적인 세단
+              </p></p>
+            <p><strong>THe new K5</strong></p>
+            <a href="#">자세히 보기</a>
+            <a href="#">견적 내기</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>
+                새로운 도심 엔트리 EV
+            </p>
+            <p><strong>The Kia Ray EV</strong></p>
+            <a href="#">자세히 보기</a>
+            <a href="#">견적 내기</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>The Mainstream</p>
+            <p><strong>The new Sorento</strong></p>
+            <a href="#">자세히 보기</a>
+            <a href="#">견적 내기</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>기아를 만나는 새로운 방법 EV</p>
+            <p><strong>기아 인증중고차 홈페이지</strong></p>
+            <a href="#">바로가기</a>            
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>호남지역 최초 기아 모빌리티 체험공간</p>
+            <p><strong>기아 광주 플래그십스토어<br />Grand Open</strong></p>
+            <a href="#">바로가기</a>            
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="kv">
+            <p>스마트한 카 라이프의 시작! 기아렌터카</p>
+            <p><strong>기아렌터카 온라인 페이지</strong></p>
+            <a href="#">렌터카 견적 내기</a>
+            <a href="#">바로가기</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
