@@ -22,16 +22,8 @@ body {
 }
 .wrap {
   position: relative;
-  z-index: 1;
 }
-.wrap .bg {
-  height: 100vh;
-}
-.wrap .bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .wrap .menu {
   width: 100%;
   max-width: 1920px;
@@ -43,6 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  z-index: 2;
 }
 .wrap .menu .menu1 {
   display: flex;
