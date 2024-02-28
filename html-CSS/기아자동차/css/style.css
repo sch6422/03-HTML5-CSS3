@@ -349,6 +349,9 @@ body {
 .mySwiper1 .swiper-slide ul.car li div span:last-of-type {
   font-size: 14px;
 }
+.mySwiper1 .swiper-slide ul.car li a {
+  position: relative;
+}
 .mySwiper1 .swiper-slide ul.car li a:first-of-type {
   text-align: center;
   background: #fff;
@@ -362,6 +365,19 @@ body {
   left: 35%;
   transform: translate(-50%, -50%);
   border: 1px solid;
+}
+.mySwiper1 .swiper-slide ul.car li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 40px;
+  background: rgb(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.mySwiper1 .swiper-slide ul.car li a:hover::after {
+  width: 100%;
 }
 .mySwiper1 .swiper-slide ul.car li a:last-of-type {
   text-align: center;
@@ -408,7 +424,7 @@ body {
 }
 .pdp {
   width: 1220px;
-  height: 400px;
+  height: 300px;
   margin: 0 auto;
   position: relative;
 }
@@ -423,6 +439,7 @@ body {
   height: 200px;
   background-color: #f8f8f8;
   cursor: pointer;
+  position: relative;
 }
 .pdp .pdp_wrap li img {
   width: 32px;
@@ -448,6 +465,7 @@ body {
   top: 150px;
   left: 150px;
   color: #fff;
+  font-weight: 800;
   opacity: 0.5;
 }
 .pdp .pdp_wrap li p::after {
@@ -481,4 +499,91 @@ body {
     opacity: 1;
     transform: translateX(1px);
   }
+}
+.news {
+  width: 1220px;
+  height: 800px;
+  margin: 0 auto;
+}
+.news h2 {
+  text-align: center;
+  font-size: 38px;
+}
+.news .new {
+  display: flex;
+  margin: 40px 0;
+}
+.news .new li {
+  width: 610px;
+  height: 400px;
+  background: #05141f;
+}
+
+.news .new li img {
+  width: 100%;
+  height: 100%;
+}
+.news .new li p:first-child {
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  font-size: 16px;
+  padding: 20px 30px;
+}
+.news .new li p:nth-child(2) {
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 30px;
+}
+.news .new li span {
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  margin: 50px 30px;
+}
+.news .new li a {
+  text-align: center;
+  background: #fff;
+  display: inline-block;
+  height: 40px;
+  width: 100px;
+  color: #000;
+  line-height: 40px;
+  margin: 70px 30px;
+  position: relative;
+}
+.news .new li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 40px;
+  background: rgb(0, 0, 0, 0.1);
+  transition: 1s;
+}
+.news .new li a:hover::after {
+  width: 100%;
+}
+.news .new1 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.news .new1 li p {
+  margin: 20px 0;
+  color: #697278;
+  font-weight: 600;
+  font-size: 16px;
+}
+.news .new1 li span {
+  color: #05141f;
+  font-size: 16px;
+}
+.ft footer {
+  width: 100%;
+  height: 400px;
+  background: #05141f;
 }
