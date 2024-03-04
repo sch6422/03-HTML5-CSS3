@@ -136,7 +136,7 @@ body {
   padding: 5px 0;
   color: #697278;
 }
-.wrap .kr2 li.on {
+.wrap .kr2.on {
   display: block;
 }
 .mySwiper .swiper-slide:first-child {
