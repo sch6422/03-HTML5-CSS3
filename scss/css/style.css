@@ -1,0 +1,25 @@
+@charset "UTF-8";
+nav ul {
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  width: 300px;
+  text-decoration: none;
+  display: block;
+  padding: 6px 12px;
+  color: #fc0;
+}
+nav ul li a:hover {
+  text-align: center;
+  text-decoration: underline;
+  color: blue;
+}
+nav ul li a::before {
+  content: "가상선택자앞";
+}

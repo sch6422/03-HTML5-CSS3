@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .slide {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        height: 500px;
+      }
+      .slide h1 {
+        position: absolute;
+        opacity: 0;
+        transform: translateX(0);
+        transition: 1s 0.5s;
+      }
+      .slide h1.on {
+        opacity: 1;
+        transform: translateX(50px);
+      }
+      .mySwiper .swiper-slide {
+        height: 500px;
+      }
+      .mySwiper .swiper-slide:first-child {
+        background: #aaa;
+      }
+      .mySwiper .swiper-slide:nth-child(2) {
+        background: #bbb;
+      }
+      .mySwiper .swiper-slide:nth-child(3) {
+        background: #ccc;
+      }
+      .mySwiper .swiper-slide:nth-child(4) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <div class="slide">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><h1>슬라이드1입니다</h1></div>
+          <div class="swiper-slide"><h1>슬라이드2입니다</h1></div>
+          <div class="swiper-slide"><h1>슬라이드3입니다</h1></div>
+          <div class="swiper-slide"><h1>슬라이드4입니다</h1></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      $(".swiper-slide").eq(0).find("h1").addClass("on");
+      var swiper = new Swiper(".mySwiper", {
+        //loop: true,
+        rewind: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+          pauseOnMouseEnter: true,
+        },
+        on: {
+          slideChange: function () {
+            let i = this.realIndex;
+            console.log(i);
+            $(".slide h1").removeClass("on");
+            $(this.slides[i]).find("h1").addClass("on");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

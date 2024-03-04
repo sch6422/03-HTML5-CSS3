@@ -1,0 +1,34 @@
+@charset "utf-8";
+@import "reset";
+$bg: #ccc;
+$wd: 500px;
+nav {
+  ul {
+    width: $wd;
+    list-style: none;
+    background-color: if($wd>=500, red, blue);
+    li {
+      display: inline-block;
+      a {
+        width: $wd;
+        text-decoration: none;
+        display: block;
+        padding: 6px 12px;
+        color: $bg;
+        &:hover {
+          text: {
+            align: center;
+            decoration: underline;
+          }
+          color: blue;
+        }
+        &::before {
+          content: "가상선택자앞";
+        }
+        &.on {
+          color: #333;
+        }
+      }
+    }
+  }
+}
