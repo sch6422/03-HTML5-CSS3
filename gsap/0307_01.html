@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg>
+      <circle cx="50" cy="50" r="50" fill="red" />
+    </svg>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+      //create an object
+      gsap.to("svg circle", { fill: "blue", duration: 2 });
+      let obj = { myNum: 10, myColor: "red" };
+
+      gsap.to(obj, {
+        duration: 2,
+        myNum: 200,
+        myColor: "blue",
+        onUpdate: () => console.log(obj.myNum, obj.myColor),
+      });
+    </script>
+  </body>
+</html>
