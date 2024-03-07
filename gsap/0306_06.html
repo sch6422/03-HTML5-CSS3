@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      button {
+        text-transform: none;
+        margin: 0.25rem;
+      }
+
+      .nav.light {
+        padding-top: 2rem;
+        background-color: transparent;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flair flair--25">
+      <img src="https://assets.codepen.io/16327/flair-25.png" alt="" />
+    </div>
+    <div class="nav light">
+      <button id="play">play()</button>
+      <button id="pause">pause()</button>
+      <button id="resume">resume()</button>
+      <button id="reverse">reverse()</button>
+      <button id="restart">restart()</button>
+      <button id="seek">seek(0.5)</button>
+    </div>
+    <script src="gsap.min.js"></script>
+    <script>
+      let nav = document.querySelector(".nav");
+
+      let tween = gsap.to(".flair", {
+        duration: 2,
+        x: () => nav.offsetWidth, // animate by the px width of the nav
+        xPercent: -100, // offset by the width of the box
+        rotation: 360,
+        ease: "none",
+        paused: true,
+        //onComplete: () => console.log("the tween is complete"),
+        onUpdate: () => console.log("the tween is complete"),
+      });
+
+      // click handlers for controlling the tween instance...
+      document.querySelector("#play").onclick = () => tween.play();
+      document.querySelector("#pause").onclick = () => tween.pause();
+      document.querySelector("#resume").onclick = () => tween.resume();
+      document.querySelector("#reverse").onclick = () => tween.reverse();
+      document.querySelector("#restart").onclick = () => tween.restart();
+      document.querySelector("#seek").onclick = () => tween.seek(0.5);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+      .box {
+        display: block;
+      }
+      .green,
+      .conBox {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        /* background: green; */
+      }
+      .conBox {
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box green">gsap</div>
+    <div class="conBox"></div>
+    <button id="play">play</button>
+    <button id="stop">stop</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      gsap.fromTo(
+        ".box",
+        {
+          duration: 2,
+          x: 200,
+          rotation: 360,
+          backgroundColor: "green",
+        },
+        {
+          duration: 2,
+          x: 400,
+          rotation: 360,
+          backgroundColor: "yellow",
+          borderRadius: "100%",
+          color: "#f00",
+        }
+      );
+      let move = gsap.to(".conBox", {
+        yPercent: 100,
+        /*x: function () {
+          return window.innerWidth / 2;
+        },*/
+        x: () => window.innerWidth / 2,
+        repeat: -1,
+        yoyo: true,
+        ease: "bounce.out",
+      });
+      let play = document.querySelector("#play");
+      let btnstop = document.querySelector("#stop");
+      play.onclick = function () {
+        move.play();
+      };
+      btnstop.onclick = () => move.pause();
+    </script>
+  </body>
+</html>

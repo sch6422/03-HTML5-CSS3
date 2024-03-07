@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        font-size: 20px;
+        background: dodgerblue;
+        padding: 5px 15px;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">BUY</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      const scaleTween = gsap.to(".btn", {
+        scale: 1.2,
+        yoyo: true,
+        repeat: -1,
+        paused: true,
+      });
+      document.querySelector(".btn").onmouseenter = () => scaleTween.play();
+      document.querySelector(".btn").onmouseleave = () => {
+        scaleTween.pause();
+        gsap.to(".btn", { scale: 1 });
+      };
+    </script>
+  </body>
+</html>
