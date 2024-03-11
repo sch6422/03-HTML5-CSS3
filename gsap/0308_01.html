@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      #section2,
+      #section4,
+      #section6,
+      #section8 {
+        background: #222;
+      }
+      .item {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .item_num {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 5vw;
+        line-height: 1;
+      }
+      .item_img {
+        width: 10vw;
+        height: 10vw;
+        margin: 1vw;
+        background-size: cover;
+        background-position: center;
+      }
+      #section1 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg);
+      }
+      #section2 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg);
+      }
+      #section3 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2017/09/25/13/12/puppy-2785074_1280.jpg);
+      }
+      #section4 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/04/13/09/56/alps-7922246_1280.jpg);
+      }
+      #section5 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/01/mountains-736886_1280.jpg);
+      }
+      #section8 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg);
+      }
+      #section9 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990_1280.jpg);
+      }
+      #section3 .item_img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      #section5 {
+        flex-direction: column;
+      }
+      #section5 .item_text,
+      #section6 .item_text {
+        text-transform: uppercase;
+        font-size: 5vw;
+        font-weight: bold;
+      }
+      #section7 .item_text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5vw;
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        background: #111;
+      }
+      #section8 {
+        flex-direction: column;
+      }
+      #section8 .item_text {
+        font-size: 2vw;
+        line-height: 1.5;
+        text-transform: uppercase;
+      }
+      #section8 .item_img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+      #section9 .item_img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--패럴럭스효과:웹페이지 스크롤과 애니메이션 속도를 통해 깊이에 대한 착시로 입체적인효과를 만들어주는 애니메이션효과-->
+    <main id="parallax">
+      <section id="section1" class="item">
+        <span class="item_num">01</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section2" class="item">
+        <span class="item_num">02</span>
+        <div class="item_img i1"></div>
+        <div class="item_img i2"></div>
+        <div class="item_img i3"></div>
+      </section>
+      <section id="section3" class="item">
+        <span class="item_num">03</span>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section4" class="item">
+        <span class="item_num">04</span>
+        <div class="item_img"></div>
+      </section>
+      <section id="section5" class="item">
+        <span class="item_num">05</span>
+        <div class="item_text t1">section5</div>
+        <div class="item_text t2">section5</div>
+        <div class="item_text t3">section5</div>
+        <div class="item_text t4">section5</div>
+      </section>
+      <section id="section6" class="item">
+        <span class="item_num">06</span>
+        <div class="item_text">section6</div>
+      </section>
+      <section id="section7" class="item">
+        <span class="item_num">07</span>
+        <div class="item_text t1">코딩이란</div>
+        <div class="item_text t2">프그래밍 코드를</div>
+        <div class="item_text t3">어딘가에</div>
+        <div class="item_text t4">적는것을 말한다</div>
+        <div class="item_text t5">코딩은</div>
+        <div class="item_text t6">누구나</div>
+        <div class="item_text t7">할 수 있다</div>
+      </section>
+      <section id="section8" class="item">
+        <span class="item_num">08</span>
+        <div class="item_text t1">section8 title1</div>
+        <div class="item_text t2">section8 title2</div>
+        <div class="item_text t3">section8 title3</div>
+        <div class="item_img"></div>
+      </section>
+      <section id="section9" class="item">
+        <span class="item_num">09</span>
+        <div class="item_img"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      let ani1 = gsap.timeline();
+      ani1
+        .to("#section1 .item_img", {
+          rotation: 720,
+          scale: 0,
+          borderRadius: 200,
+        })
+        .to("#section1 .item_img", {
+          rotation: 0,
+          scale: 1,
+          borderRadius: 20,
+        });
+      ScrollTrigger.create({
+        animation: ani1,
+        trigger: "#section1",
+        start: "top top",
+        end: "+=2000", //#section1 시작위치에서 2000픽셀 떨어진곳에서 끝나도록 설정
+        // markers: true,
+        scrub: true,
+        pin: true,
+      });
+      let ani2 = gsap.timeline({
+        defaults: {
+          autoAlpha: 0,
+          borderRadius: 200,
+        },
+      });
+      ani2
+        .from("#section2 .i1", { y: -100 })
+        .from("#section2 .i2", { y: 100 })
+        .from("#section2 .i3", { y: -100 });
+      ScrollTrigger.create({
+        animation: ani2,
+        trigger: "#section2",
+        start: "top top",
+        end: "+=2000", //#section1 시작위치에서 2000픽셀 떨어진곳에서 끝나도록 설정
+        //markers: true,
+        scrub: true,
+        pin: true,
+      });
+      let ani3 = gsap.timeline();
+      ani3.from("#section3 .item_img", {
+        autoAlpha: 0,
+        y: -100,
+        ease: "back.out(4)",
+        stagger: {
+          amount: 3,
+          from: "random",
+        },
+      });
+      ScrollTrigger.create({
+        animation: ani3,
+        trigger: "#section3",
+        start: "top top",
+        end: "+=3000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani4 = gsap.timeline();
+      ani4.from("#section4 .item_img", {
+        autoAlpha: 0,
+        scale: 3,
+        width: "100vw",
+        height: "100vh",
+      });
+      ScrollTrigger.create({
+        animation: ani4,
+        trigger: "#section4",
+        start: "top top",
+        end: "+=3000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani5 = gsap.timeline();
+      ani5
+        .to("#section5 .t1", { xPercent: 300 }, "text")
+        .to("#section5 .t2", { xPercent: -300 }, "text")
+        .to("#section5 .t3", { xPercent: 300 }, "text")
+        .to("#section5 .t4", { xPercent: -300 }, "text");
+      ScrollTrigger.create({
+        animation: ani5,
+        trigger: "#section5",
+        start: "top top",
+        end: "+=3000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani6 = gsap.timeline();
+      ani6
+        .to("#section6 .item_text", {
+          scale: 60,
+          duration: 2,
+        })
+        .to("#section6 .item_text", {
+          autoAlpha: 0,
+        });
+      ScrollTrigger.create({
+        animation: ani6,
+        trigger: "#section6",
+        start: "top top",
+        end: "+=4000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani7 = gsap.timeline(
+        {
+          defaults: {
+            autoAlpha: 0,
+            y: 50,
+            duration: 1,
+          },
+        },
+        "+=1"
+      );
+      ani7
+        .from("#section7 .t1", {})
+        .from("#section7 .t2", {})
+        .from("#section7 .t3", {})
+        .from("#section7 .t4", {})
+        .from("#section7 .t5", {})
+        .from("#section7 .t6", {})
+        .from("#section7 .t7", {});
+
+      ScrollTrigger.create({
+        animation: ani7,
+        trigger: "#section7",
+        start: "top top",
+        end: "+=6000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani8 = gsap.timeline();
+      ani8
+        .from("#section8 .t1", {
+          x: innerWidth * 1,
+        })
+        .from("#section8 .t2", {
+          x: innerWidth * -1,
+        })
+        .from("#section8 .t3", {
+          x: innerWidth * 1,
+        })
+        .from("#section8 .item_img", {
+          x: innerWidth * 1,
+          rotation: 360,
+          scale: 5,
+        });
+      ScrollTrigger.create({
+        animation: ani8,
+        trigger: "#section8",
+        start: "top top",
+        end: "+=4000",
+        //markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+      let ani9 = gsap.timeline();
+      ani9
+        .to("#section9 .item_img", {
+          scale: 13,
+        })
+        .to("#section9 .item_img", {
+          autoAlpha: 0,
+        });
+      ScrollTrigger.create({
+        animation: ani9,
+        trigger: "#section9",
+        start: "top top",
+        end: "+=4000",
+        markers: true,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+      });
+    </script>
+  </body>
+</html>

@@ -56,11 +56,13 @@ body {
 .wrap .menu .sub {
   width: 900px;
   margin: 0 auto;
+  display: none;
 }
 .wrap .menu .sub ul {
   position: absolute;
   top: 50px;
   left: 0;
+  width: 100%;
   height: 0;
   display: flex;
 }
@@ -69,6 +71,7 @@ body {
   line-height: 50px;
   height: 400px;
   width: 100%;
+  background: #fff;
 }
 .wrap .menu .sub ul li:nth-of-type(5) {
   display: flex;
@@ -202,7 +205,7 @@ body {
 }
 .mySwiper .swiper-slide .kv2 {
   position: absolute;
-  top: 75%;
+  top: 74%;
   padding: 0 40px;
 }
 .mySwiper .swiper-slide .kv7 .kv {
@@ -485,37 +488,55 @@ body {
 .mySwiper1 .swiper-pagination-bullet {
   background: #000;
 }
-.bestKia .chat1 {
-  position: fixed;
-  top: 80%;
-  left: 95%;
-  z-index: 1;
+.newsWrap {
+  position: relative;
 }
-.bestKia .chat1 ul li img {
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-}
-.bestKia section {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background-image: url(../images/icon/footer_top_btn.svg);
-  background-size: cover;
-  position: absolute;
-  top: 90%;
-  right: 15px;
-  cursor: pointer;
-  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
-}
-.bestKia .chat1 ul li:nth-child(2) img {
-  position: absolute;
-  top: 0;
+.chat1 {
+  width: 100%;
+  height: 200px;
+  bottom: 0;
   left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
   opacity: 0;
+  transition: 0.5s;
 }
-.bestKia .chat1 ul li:nth-child(2) img:hover {
+.chat1.on {
+  position: fixed;
   opacity: 1;
+  bottom: 20px;
+}
+.chat1.active {
+  position: absolute;
+  opacity: 1;
+  bottom: 20px;
+}
+.chat1 ul {
+  width: 92px;
+  text-align: center;
+}
+.chat1 ul li {
+  display: inline-block;
+}
+.chat1 ul li:first-child {
+  width: 92px;
+  height: 92px;
+  background-image: url(../images/icon/icon_Chat-Active.svg);
+}
+.chat1 ul li:nth-child(2) {
+  width: 56px;
+  height: 56px;
+  background-color: #fff;
+  background-image: url(../images/icon/footer_top_btn.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.chat1 ul li img {
+  width: 100%;
+  object-fit: cover;
 }
 .pdp {
   width: 1220px;
@@ -666,8 +687,6 @@ body {
   text-align: left;
   justify-content: space-between;
   width: 100%;
-}
-.news .new1 {
   padding: 30px 0;
 }
 .news .new1 li p {

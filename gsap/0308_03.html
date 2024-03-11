@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Scroll Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #fff;
+        background-color: #111;
+      }
+      #parallax {
+        overflow: hidden;
+      }
+      .item {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .item_num {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        font-size: 3vw;
+        line-height: 1;
+        z-index: 10;
+      }
+      .item_img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }
+      .item_img::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      #section1 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/21/14/14/mountains-8587802_1280.jpg);
+      }
+      #section2 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/13/22/20/flower-meadow-8572000_1280.jpg);
+      }
+      #section3 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/26/15/03/narzissen-8598191_1280.jpg);
+      }
+      #section4 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/22/09/04/warehouse-8589487_1280.jpg);
+      }
+      #section5 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/08/03/22/25/mountain-8168060_1280.jpg);
+      }
+      #section6 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/09/22/07/52/beach-8268375_1280.jpg);
+      }
+      #section7 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/08/24/01/01/boy-8209561_1280.jpg);
+      }
+      #section8 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2023/08/06/18/16/trees-8173530_1280.jpg);
+      }
+      #section9 .item_img {
+        background-image: url(https://cdn.pixabay.com/photo/2024/02/12/16/45/rocks-8568995_1280.jpg);
+      }
+      .item_title {
+        font-size: 5vw;
+        z-index: 100;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="parallax">
+      <section id="section1" class="item">
+        <span class="item_num">01</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section1</h2>
+      </section>
+      <section id="section2" class="item">
+        <span class="item_num">02</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section2</h2>
+      </section>
+      <section id="section3" class="item">
+        <span class="item_num">03</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section3</h2>
+      </section>
+      <section id="section4" class="item">
+        <span class="item_num">04</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section4</h2>
+      </section>
+      <section id="section5" class="item">
+        <span class="item_num">05</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section5</h2>
+      </section>
+      <section id="section6" class="item">
+        <span class="item_num">06</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section6</h2>
+      </section>
+      <section id="section7" class="item">
+        <span class="item_num">07</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section7</h2>
+      </section>
+      <section id="section8" class="item">
+        <span class="item_num">08</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section8</h2>
+      </section>
+      <section id="section9" class="item">
+        <span class="item_num">09</span>
+        <div class="item_img"></div>
+        <h2 class="item_title">section9</h2>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+      // 스냅 고정 효과 만들기
+      let panels = gsap.utils.toArray(".item");
+      let tops = panels.map((panel) =>
+        ScrollTrigger.create({ trigger: panel, start: "top top" })
+      );
+      panels.forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: () =>
+            panel.offsetHeight < window.innerHeight
+              ? "top top"
+              : "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+        });
+      });
+
+      ScrollTrigger.create({
+        snap: {
+          snapTo: (progress, self) => {
+            let panelStarts = tops.map((st) => st.start),
+              snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+            return gsap.utils.normalize(
+              0,
+              ScrollTrigger.maxScroll(window),
+              snapScroll
+            );
+          },
+          duration: 0.5,
+        },
+      });
+    </script>
+  </body>
+</html>

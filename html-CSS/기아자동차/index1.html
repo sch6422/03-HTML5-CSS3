@@ -148,10 +148,6 @@
         </div>
       </div>
       <div class="swiper-pagination"></div>
-      <div class="chat">
-        <div><img src="images/icon/icon_Chat-Active 1.png" alt="chat" /></div>
-        <div><img src="images/icon/icon_chat_avtive.svg" alt="chat" /></div>
-      </div>
     </div>
     <div class="bestKia">
       <div class="best">
@@ -356,13 +352,6 @@
           </p>
         </div>
       </div>
-      <div class="chat1">
-        <ul>
-          <li><img src="images/icon/icon_Chat-Active 1.png" alt="chat" /></li>
-          <li><img src="images/icon/icon_chat_avtive.svg" alt="chat" /></li>
-        </ul>
-        <section></section>
-      </div>
     </div>
     <div class="pdp">
       <ul class="pdp_wrap">
@@ -392,39 +381,48 @@
         </li>
       </ul>
     </div>
-    <div class="news">
-      <h2>News</h2>
-      <ul class="new">
-        <li>
-          <p>기아 소식</p>
-          <p>기아, ‘EV페스타’ 실시</p>
-          <span
-            >기아가 전기차 보급 확대를 위해 일부 전기차 모델에 대해 추가 혜택을
-            제공하는 <br />‘EV페스타’를 실시한다고 22일(목) 밝혔다.</span
-          >
-          <a href="#">자세히 보기</a>
-        </li>
-        <li>
-          <img src="images/news_20240223_kia_ev_festa_pc.jpg" alt="news" />
-        </li>
-      </ul>
-      <ul class="new1">
-        <li>
-          <p>뉴스</p>
-          <span
-            >기아 인증중고차, 오프라인 방문 예약 서비스 <br />
-            런칭</span
-          >
-        </li>
-        <li>
-          <p>뉴스</p>
-          <span>기아, ‘EV페스타’ 실시</span>
-        </li>
-        <li>
-          <p>공지</p>
-          <span>개인정보 처리방침 변경 안내 (2024.02.29)</span>
-        </li>
-      </ul>
+    <div class="newsWrap">
+      <div class="news">
+        <h2>News</h2>
+        <ul class="new">
+          <li>
+            <p>기아 소식</p>
+            <p>기아, ‘EV페스타’ 실시</p>
+            <span
+              >기아가 전기차 보급 확대를 위해 일부 전기차 모델에 대해 추가
+              혜택을 제공하는 <br />‘EV페스타’를 실시한다고 22일(목)
+              밝혔다.</span
+            >
+            <a href="#">자세히 보기</a>
+          </li>
+          <li>
+            <img src="images/news_20240223_kia_ev_festa_pc.jpg" alt="news" />
+          </li>
+        </ul>
+        <ul class="new1">
+          <li>
+            <p>뉴스</p>
+            <span
+              >기아 인증중고차, 오프라인 방문 예약 서비스 <br />
+              런칭</span
+            >
+          </li>
+          <li>
+            <p>뉴스</p>
+            <span>기아, ‘EV페스타’ 실시</span>
+          </li>
+          <li>
+            <p>공지</p>
+            <span>개인정보 처리방침 변경 안내 (2024.02.29)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="chat1">
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </div>
     <div class="ft">
       <div class="ft_inner">
@@ -544,13 +542,43 @@
         </ul>
       </div>
     </div>
+
     <!-- Swiper JS -->
-    <script src="../../jQuery/js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../../gsap/gsap.min.js"></script>
-    <script src="../../gsap/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+      let chat = gsap.timeline({
+        defaults: { position: "fixed" },
+      });
+      chat.fromTo(
+        ".chat1",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+        }
+      );
+      let chat1 = gsap.timeline();
+      chat1.to(".chat1", {
+        position: "absolute",
+      });
+      ScrollTrigger.create({
+        animation: chat,
+        trigger: ".bestKia,.new,.new1",
+        // markers: true,
+        scrub: true,
+      });
+      ScrollTrigger.create({
+        animation: chat1,
+        trigger: ".ft",
+        //markers: true,
+        scrub: true,
+      });
       $(".mySwiper .swiper-slide").eq(0).find(".kv p").addClass("on");
       var swiper = new Swiper(".mySwiper", {
         pagination: {
@@ -609,11 +637,11 @@
           kr = !kr;
         });
       });
-      gsap.to(".news .new1 li", {
+      gsap.to(".newsWrap .news .new1 li", {
         y: -50,
         duration: 0.5,
         scrollTrigger: {
-          trigger: ".news .new1 li", //시작점설정
+          trigger: ".newsWrap .news .new1 li",
           toggleActions: "play reverse reverse reverse",
         },
       });
