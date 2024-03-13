@@ -4,6 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      section.intro {
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        position: relative;
+      }
+      .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fc0;
+      }
+      .intro_text > div {
+        position: absolute;
+        top: 50%;
+        left: 100px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-weight: bold;
+      }
+      .intro_text > div.intro_text1 {
+        font-size: 70px;
+      }
+      .intro_text > div.intro_text2 {
+        font-size: 48px;
+        display: none;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <section class="intro">
+      <div class="content">
+        <div class="inner">
+          <div class="pad"></div>
+          <div class="video"></div>
+        </div>
+      </div>
+      <div class="intro_text">
+        <div class="intro_text1">그린컴퓨터아트학원</div>
+        <div class="intro_text2">대전광역시 서구</div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      let intro = gsap.timeline();
+      intro
+        .to(
+          ".content",
+          {
+            width: 800,
+            height: 600,
+            left: "50%",
+            top: "50%",
+            transform: "translateY(-50%)",
+          },
+          "text"
+        )
+        .to(
+          ".intro_text1",
+          {
+            fontSize: 48,
+          },
+          "text"
+        );
+      ScrollTrigger.create({
+        animation: intro,
+        trigger: ".intro",
+        scrub: true,
+        pin: true,
+      });
+    </script>
+  </body>
 </html>
