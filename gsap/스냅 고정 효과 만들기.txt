@@ -14,7 +14,6 @@
           pinSpacing: false,
         });
       });
-
       ScrollTrigger.create({
         snap: {
           snapTo: (progress, self) => {

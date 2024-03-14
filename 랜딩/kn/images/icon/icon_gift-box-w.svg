@@ -1,0 +1,23 @@
+<svg id="SalesOffers_48" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: red;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: #ffffff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Area" class="cls-1" width="48" height="48"/>
+  <g id="그룹_911" data-name="그룹 911" transform="translate(-780 -674)">
+    <path id="패스_2257" data-name="패스 2257" class="cls-2" d="M820.25,714.25v-17h2v17a2,2,0,0,1-2,2h-32.5a2,2,0,0,1-2-2V698h2v16.25Z"/>
+    <path id="패스_2258" data-name="패스 2258" class="cls-2" d="M782.75,689.25a2,2,0,0,1,2-2h38.5a2,2,0,0,1,2,2V697a2,2,0,0,1-2,2h-38.5a2,2,0,0,1-2-2Zm40.5,0h-38.5V697h38.5Z"/>
+    <path id="패스_2259" data-name="패스 2259" class="cls-2" d="M805,698v17.25h-2V698Z"/>
+    <path id="패스_2260" data-name="패스 2260" class="cls-2" d="M805,689.25h-8.125a5.125,5.125,0,0,1,0-10.25h.375a7.75,7.75,0,0,1,7.75,7.75Zm-2-2v-.5a5.75,5.75,0,0,0-5.75-5.75h-.375a3.125,3.125,0,0,0,0,6.25Z"/>
+    <path id="패스_2261" data-name="패스 2261" class="cls-2" d="M805,687.25v-1.625A4.625,4.625,0,0,1,809.625,681h1.5a3.125,3.125,0,0,1,0,6.25Zm6.125,2a5.125,5.125,0,0,0,0-10.25h-1.5A6.625,6.625,0,0,0,803,685.625v3.625Z"/>
+  </g>
+</svg>

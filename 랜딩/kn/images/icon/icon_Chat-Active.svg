@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="92" height="92" viewBox="0 0 92 92">
+    <defs>
+        <filter id="byen36nb4a" x="0" y="0" width="92" height="92" filterUnits="userSpaceOnUse">
+            <feOffset dy="8"/>
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feFlood flood-color="#05141f" flood-opacity=".102"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Chat/Active">
+        <g style="filter:url(#byen36nb4a)">
+            <circle data-name="Background" cx="28" cy="28" r="28" transform="translate(18 10)" style="fill:#fff"/>
+        </g>
+        <g data-name="그룹 782">
+            <path data-name="패스 1976" d="M128.5 2382a1.5 1.5 0 1 0-1.5-1.5 1.5 1.5 0 0 0 1.5 1.5z" style="fill:#697278" transform="translate(-85 -2344)"/>
+            <path data-name="패스 1977" d="M134.5 2382a1.5 1.5 0 1 0-1.5-1.5 1.5 1.5 0 0 0 1.5 1.5z" style="fill:#697278" transform="translate(-85 -2344)"/>
+            <path data-name="패스 1978" d="M125 2392.44a.5.5 0 0 0 .817.39l4.683-3.83h9.5a2 2 0 0 0 2-2v-13a2 2 0 0 0-2-2h-17a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h2zm2-3.16V2387h-4v-13h17v13h-10.214z" style="fill-rule:evenodd;fill:#697278" transform="translate(-85 -2344)"/>
+        </g>
+    </g>
+</svg>
