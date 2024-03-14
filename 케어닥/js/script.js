@@ -1,6 +1,5 @@
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>;
 var swiper = new Swiper(".mySwiper", {
-  cssMode: true,
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -8,8 +7,10 @@ var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
-  mousewheel: true,
-  keyboard: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 });
 $(function () {
   $(".menu ul li:nth-child(6) a").hover(function () {
