@@ -6,14 +6,50 @@ var swiper = new Swiper(".mySwiper", {
   },
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
 });
+var swiper1 = new Swiper(".mySwiper1", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 $(function () {
-  $(".menu ul li:nth-child(6) a").hover(function () {
-    $(".menu ul li .menu_txt").css({ opasity: "1" });
-  });
+  $(".last,.menu_txt").hover(
+    function () {
+      //$(".menu_txt").fadeIn();
+      $(".menu_txt").css({ display: "block" });
+      //  $(".menu_txt").fadeIn();
+    },
+    function () {
+      $(".menu_txt").css({ display: "none" });
+
+      // $(".menu_txt").fadeOut();
+    }
+  );
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  loop: true,
+  //centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });

@@ -28,11 +28,12 @@ body {
   width: 100%;
   min-width: 1600px;
   position: absolute;
+  height: 71px;
   left: 0;
   top: 0;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 20;
 }
 .wrap .menu .menu1 {
   display: flex;
@@ -51,15 +52,21 @@ body {
 .wrap .menu .menu1 li a.on {
   color: #05141f;
 }
+.wrap .menu .menu1 li a.on1 {
+  text-decoration: underline;
+  text-underline-offset: 20px;
+  text-decoration-thickness: 2px;
+}
 .wrap .menu .sub_menu {
-  padding-top: 30px;
+  /* padding-top: 30px; */
   width: 100%;
   height: 100vh;
   min-width: 1600px;
   margin: 0 auto;
   position: absolute;
-  top: 50%;
+  top: 71px;
   left: 0;
+  display: none;
 }
 .wrap .menu .sub_menu .sub_menu1 {
   position: relative;
@@ -74,10 +81,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
-.wrap .menu .sub_menu .sub_menu1 .sub.on {
+/* .wrap .menu .sub_menu .sub_menu1 .sub.on {
   display: block;
-}
+} */
 .wrap .menu .sub_menu .sub_menu1 .sub li {
   display: flex;
   padding: 30px 40px;
@@ -105,7 +113,7 @@ body {
   align-items: center;
   border-top: 1px solid #dadbdc;
   position: absolute;
-  top: 38%;
+  top: 279px;
   left: 0;
 }
 .wrap .menu .sub_menu .sub_icon.on {
@@ -133,15 +141,17 @@ body {
 .wrap .menu .logo {
   position: absolute;
   left: 50%;
-  top: 60%;
+  top: 50%;
+  width: 102px;
+  height: 71px;
   transform: translate(-50%, -50%);
 }
-.wrap .menu .logo.on {
-  background: url(../images/logo.svg);
-}
 .wrap .menu .logo li {
-  width: 100%;
-  margin: 0 auto;
+  height: 25px;
+  line-height: 71px;
+}
+.wrap .menu .logo img {
+  vertical-align: middle;
 }
 .wrap .kr {
   display: flex;
