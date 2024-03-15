@@ -757,12 +757,50 @@ div.btn_wrap a {
   padding: 180px 0;
 }
 .business .iness {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 70px;
   max-width: 1440px;
+  gap: 50px;
+  margin-left: 50px;
 }
 .business .iness h5 {
   font-size: 49px;
   color: #fff;
+}
+.business .iness1 p {
+  font-size: 20px;
+  color: #fff;
+  padding-bottom: 50px;
+}
+.business .iness_btn {
+  display: flex;
+  gap: 10px;
+}
+.business .iness_btn a {
+  color: #fff;
+  font-size: 22px;
+}
+.business .iness_btn a::after {
+  content: url(../images/arrow_left.png);
+  transform: rotate(270deg);
+}
+.business .iness_btn a:first-child {
+  width: 318px;
+  height: 70px;
+  border: 1px solid #fff;
+  display: inline-block;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 30px;
+}
+.business .iness_btn a:nth-child(2) {
+  width: 393px;
+  height: 70px;
+  border: 1px solid #fff;
+  display: inline-block;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 30px;
 }
