@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tabs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .slide {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        height: 300px;
+        overflow: hidden;
+      }
+      .slide .ban {
+        width: 100%;
+      }
+      .slide .ban li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 300px;
+      }
+      .slide .ban li img {
+        width: 1200px;
+        height: 300px;
+        object-fit: cover;
+      }
+      .slide .btn {
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 50px;
+      }
+      .slide .btn li {
+        cursor: pointer;
+      }
+    </style>
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function () {
+        $(".ban li:gt(0)").fadeOut();
+        //end()선택한요소 이전요소선택
+        function nextani() {
+          $(".ban li:first")
+            .fadeOut(500)
+            .next()
+            .fadeIn(500)
+            .end()
+            .appendTo(".ban");
+        }
+        function prevani() {
+          $(".ban li:last")
+            .fadeOut(500)
+            .prev()
+            .fadeIn(500)
+            .end()
+            .prependTo(".ban");
+        }
+        let interval = setInterval(function () {
+          nextani();
+        }, 2000);
+        $(".slide").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(function () {
+              nextani();
+            }, 2000);
+          }
+        );
+        $(".next").click(nextani);
+        $(".prev").click(function () {
+          prevani();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="slide">
+      <ul class="ban">
+        <li><img src="images/slide01.jpg" alt="slide" /></li>
+        <li><img src="images/slide02.jpg" alt="slide" /></li>
+        <li><img src="images/slide03.jpg" alt="slide" /></li>
+      </ul>
+      <ul class="btn">
+        <li class="prev">&lt;</li>
+        <li class="next">&gt;</li>
+      </ul>
+    </div>
+  </body>
+</html>

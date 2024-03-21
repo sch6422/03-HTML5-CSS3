@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        margin: 1rem;
+        text-align: center;
+      }
+      .flair {
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: none; /* Initially hide the flair */
+      }
+      .flair--3 {
+        background-image: url(https://assets.codepen.io/16327/flair-3.png);
+      }
+      .top {
+        height: 500px;
+        background: #f00;
+      }
+      section {
+        height: 500px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flair flair--3"></div>
+    <div class="top"></div>
+    <section></section>
+    <div class="top"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      gsap.set(".flair", { xPercent: -50, yPercent: -50 });
+
+      let xSetter = gsap.quickSetter(".flair", "x", "px");
+      let ySetter = gsap.quickSetter(".flair", "y", "px");
+      let flair = document.querySelector(".flair");
+      let sec = document.querySelector("section");
+
+      sec.addEventListener("mouseenter", () => {
+        flair.style.display = "block";
+      });
+
+      sec.addEventListener("mouseleave", () => {
+        flair.style.display = "none";
+      });
+
+      sec.addEventListener("mousemove", (e) => {
+        if (
+          e.clientX >= sec.offsetLeft &&
+          e.clientX <= sec.offsetLeft + sec.offsetWidth &&
+          e.clientY >= sec.offsetTop &&
+          e.clientY <= sec.offsetTop + sec.offsetHeight
+        ) {
+          xSetter(e.clientX);
+          ySetter(e.clientY);
+        }
+      });
+    </script>
+  </body>
+</html>
