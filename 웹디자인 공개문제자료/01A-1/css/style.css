@@ -1,0 +1,106 @@
+@charset "uf8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+.wrap {
+  width: 100%;
+}
+.main {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.main .wrap_logo {
+  width: 600px;
+}
+.main .logo {
+  width: 200px;
+  height: 40px;
+  background: #ccc;
+}
+.main_menu {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid;
+}
+.main_menu > li {
+  width: 100%;
+  text-align: center;
+}
+.main_menu > li > a {
+  display: block;
+  height: 30px;
+  border: 1px solid;
+  border-right: none;
+}
+.sub {
+  border: 1px solid;
+  border-right: none;
+  border-top: none;
+  display: none;
+}
+.sub li {
+  height: 30px;
+}
+.slide {
+  width: 1200px;
+  margin: 0 auto;
+  height: 300px;
+  position: relative;
+}
+.slide img {
+  width: 1200px;
+  height: 300px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slide p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.con {
+  width: 1200px;
+  height: 300px;
+  margin: 0 auto;
+}
+.con .left {
+  width: 400px;
+  height: 200px;
+  position: relative;
+}
+.con .left .c1 section {
+  width: 100px;
+  height: 50px;
+  border: 1px solid;
+  line-height: 50px;
+  text-align: center;
+}
+.con .left .c1 ul {
+  border: 1px solid;
+  height: 150px;
+}
+.con .left .c1 ul li {
+  width: 400px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.con .left .c1 a {
+  font-size: 12px;
+}
