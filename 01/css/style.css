@@ -1,4 +1,4 @@
-@charset "uf8";
+@charset "utf8";
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +29,6 @@ input {
 .main .logo {
   width: 200px;
   height: 40px;
-  background: #ccc;
 }
 .main_menu {
   width: 700px;
@@ -91,7 +90,7 @@ input {
   overflow: hidden;
 }
 .slide .ban {
-  width: 300%;
+  width: 100%;
 }
 .slide .ban li {
   float: left;
