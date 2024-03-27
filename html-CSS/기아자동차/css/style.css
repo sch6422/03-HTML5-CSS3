@@ -54,7 +54,7 @@ body {
 }
 .wrap .menu .menu1 li a.on1 {
   text-decoration: underline;
-  text-underline-offset: 20px;
+  text-underline-offset: 23px;
   text-decoration-thickness: 2px;
 }
 .wrap .menu .sub_menu {

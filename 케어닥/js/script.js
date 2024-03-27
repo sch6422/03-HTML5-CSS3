@@ -53,3 +53,9 @@ var swiper2 = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
+$(function () {
+  $(".footer_img>li").click(function () {
+    $(".footer_img>li").removeClass("on");
+    $(".footer_img>li").addClass("on");
+  });
+});
