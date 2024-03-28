@@ -307,7 +307,9 @@ div.skill img.on {
   top: 30%;
   left: 50%;
 }
-
+.swiper-slide:nth-child(4) .content .right .kia img {
+  top: 35%;
+}
 .kia img:hover {
   transform: scale(1.2);
   transition: 0.5s;

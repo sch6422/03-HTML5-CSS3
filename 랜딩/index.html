@@ -92,7 +92,9 @@
               </div>
               <div class="right">
                 <div class="kia">
-                  <img src="images/Rectangle.png" alt="rect" />
+                  <a href="kn/index.html"
+                    ><img src="images/Rectangle.png" alt="rect"
+                  /></a>
                 </div>
                 <div class="con_motion">
                   <div class="motion">
@@ -120,7 +122,9 @@
               </div>
               <div class="right">
                 <div class="kia">
-                  <img src="images/care.png" alt="rect" />
+                  <a href="kd/index.html"
+                    ><img src="images/care.png" alt="rect"
+                  /></a>
                 </div>
                 <div class="con_motion">
                   <div class="motion">
@@ -148,7 +152,9 @@
               </div>
               <div class="right">
                 <div class="kia">
-                  <img src="images/Rectangle.png" alt="rect" />
+                  <a href="kn/index.html"
+                    ><img src="images/Rectangle.png" alt="rect"
+                  /></a>
                 </div>
                 <div class="con_motion">
                   <div class="motion">
@@ -161,44 +167,12 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script>
-      $(".mySwiper .swiper-slide").eq(0).find(".main h1").addClass("on");
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        on: {
-          slideChange: function () {
-            let i = this.realIndex;
-            console.log(i);
-            $(".mySwiper .swiper-slide .main h1").removeClass("on");
-            $(".mySwiper .swiper-slide .wrap .man").removeClass("on");
-            $(".mySwiper .swiper-slide .me ul").removeClass("on");
-            $(".mySwiper .swiper-slide div.skill img").removeClass("on");
-            $(".mySwiper .swiper-slide .use_tool h2").removeClass("on");
-            $(this.slides[i]).find("h1").addClass("on");
-            $(this.slides[i]).find("img").addClass("on");
-            $(this.slides[i]).find("ul").addClass("on");
-            $(this.slides[i]).find("img").addClass("on");
-            $(this.slides[i]).find("h2").addClass("on");
-          },
-        },
-      });
-      gsap.to(".wrap .man", { duration: 1, opacity: 1, delay: 1 });
-      gsap.to(".me ul", { opacity: 1, delay: 1.7 });
-      gsap.to(".use_tool", { duration: 1, opacity: 1, delay: 3 });
-    </script>
+    <script src="script/script.js"></script>
   </body>
 </html>
