@@ -171,6 +171,9 @@ body {
   position: relative;
 }
 .wrap .kr li a.on {
+  color: #fff;
+}
+.wrap .kr li a.on1 {
   color: #05141f;
 }
 .wrap .kr li:first-child a::after {
@@ -186,6 +189,9 @@ body {
   top: -20%;
   left: 50%;
   transform: translateX(50%) rotate(180deg);
+}
+.wrap .kr li:first-child a.on1::after {
+  content: url(../images/icon/ic_arow_donw.svg);
 }
 .wrap .wrap_kr {
   position: relative;

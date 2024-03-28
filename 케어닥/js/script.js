@@ -13,18 +13,6 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
   },
 });
-var swiper1 = new Swiper(".mySwiper1", {
-  spaceBetween: 30,
-  centeredSlides: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
 $(function () {
   $(".last,.menu_txt").hover(
     function () {
@@ -54,8 +42,30 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
 });
 $(function () {
-  $(".footer_img>li").click(function () {
-    $(".footer_img>li").removeClass("on");
-    $(".footer_img>li").addClass("on");
+  let btn = true;
+  $(".footer_img>li>button").click(function () {
+    if (btn) {
+      $(".footer_img>li>a").addClass("on");
+    } else {
+      $(".footer_img>li>a").removeClass("on");
+    }
+    btn = !btn;
   });
 });
+var swiper = new Swiper(".swiper-container", {
+  loop: true,
+  autoHeight: true,
+  slidesPerView: 4,
+  spaceBetween: 0,
+  centeredSlides: true,
+  speed: 800,
+
+  pagination: {
+    el: ".service-img-slider .swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+});
+setInterval(function () {
+  swiper.slidePrev();
+}, 5000); // 5초 간격으로 슬라이드 이동

@@ -456,87 +456,99 @@ div.btn_wrap a {
   left: 0;
   animation: ani 1.4s linear infinite alternate;
 }
-.pone2 {
-  width: 100%;
-  height: 100vh;
-}
-.pon_icon3 {
-  width: 100%;
+.wrap1 .content {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
-.mySwiper1 {
-  width: 100%;
-  margin: 0 auto;
-  /* position: relative; */
-}
-.pon_icon3 {
-  width: 1257px;
-  margin: 0 auto;
-}
-.mySwiper1 .swiper-slide img:first-child {
+.service-img-slider {
   position: relative;
+  width: 700px !important;
+  padding-left: 150px;
+  overflow: hidden;
 }
-.mySwiper1 .swiper-slide img:nth-child(2) {
+.swiper-container {
+  width: 700px;
+}
+.service-img-slider .swiper-slide {
+  height: 620px;
+}
+.service-img-slider:hover {
+  cursor: url(../images/drag-mouse.png) 58 58, auto;
+}
+.service-img-slider .swiper-slide .img-bx {
+  line-height: 620px;
+}
+.service-img-slider .swiper-slide .img-bx .default-img {
+  border-radius: 35px;
+  width: 146px;
+  vertical-align: middle;
+}
+.service-img-slider .swiper-slide-active {
+  margin-top: 0;
+  width: 325px !important;
+  margin-left: -50px !important;
+}
+.service-img-slider .swiper-slide-active .img-bx .default-img {
+  display: none;
+}
+.service-img-slider .swiper-slide-active .img-bx .active-img {
+  display: block;
+  position: relative;
+  height: 620px;
+  z-index: 1;
+}
+.service-img-slider .swiper-slide-active .img-bx .active-img img {
+  width: 100%;
+}
+.service-img-slider .swiper-slide-active .img-bx .active-img .on-img {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 310px;
-  height: 630px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
 }
-/* .mySwiper1 .swiper-pagination {
-  position: absolute;
-  top: 0;
-  left: 0;
-} */
-.right2 {
-  width: 50%;
-  margin: 0 auto;
+.swiper-slide-active {
+  width: 146px;
 }
-.pone_right2 p {
-  font-size: 22px;
-  color: #eba94b;
-  line-height: 70px;
-  font-weight: bold;
-}
-.pone_right2 h5 {
-  font-size: 58px;
-  color: #181818;
-  text-align: left;
-  padding-bottom: 50px;
-}
-.pone_right3 strong {
-  font-size: 22px;
-  color: #181818;
-  line-height: 50px;
-}
-.pone_right3 p {
-  font-size: 22px;
-  color: #333;
-}
-.pone_right3 p:nth-child(2) {
-  padding-bottom: 50px;
-}
-.right4 {
-  width: 211px;
-  height: 70px;
-  border: 1px solid #fff;
-  text-align: center;
-  line-height: 70px;
-  background: #eba94b;
-  border-radius: 30px;
-  transition: 0.5s;
-}
-.right4 a {
-  font-size: 22px;
-  color: #fff;
-}
-.right4:hover {
+.txt-wrap {
+  position: relative;
+  width: 700px;
   background: #fff;
-  border: 1px solid #eba94b;
+  left: -85px;
+  z-index: 2;
+  padding-left: 80px;
+  box-sizing: border-box;
 }
-.right4:hover a {
+.txt-wrap .title h5 {
+  font-size: 60px;
+  color: #181818;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+.txt-wrap .desc {
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.txt-wrap .desc p {
+  font-size: 24px;
+  color: #181818;
+}
+.txt-wrap .title p {
   color: #eba94b;
+}
+.main-link-btn {
+  width: 150px;
+  background-color: #eba94b;
+  border: 1px solid #eba94b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 50px;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 1.5rem;
 }
 .pone3 {
   width: 100%;
@@ -921,20 +933,22 @@ footer {
   float: right;
   position: relative;
 }
-.footer_img > li:first-child > a {
+.footer_img > li:first-child > button {
   display: block;
   height: 50px;
-  width: 200px;
+  width: 235px;
   line-height: 50px;
   border: 1px solid #ccc;
   font-size: 14px;
   padding: 0 15px;
   border-radius: 30px;
+  background: #fff;
+  cursor: pointer;
 }
-.footer_img > li:first-child > a::after {
+.footer_img > li:first-child > button::after {
   content: url(../images/Vector.png);
   position: relative;
-  left: 100px;
+  left: 50px;
 }
 .sns {
   display: flex;
@@ -951,25 +965,23 @@ footer {
   border-right: 3px solid #ccc;
   font-size: 14px;
   padding: 0 15px;
+  display: none;
 }
 .footer_img > li:nth-child(2) > a {
   border-radius: 30px 0 0 0;
   position: absolute;
   top: -150px;
-  display: none;
 }
 .footer_img > li:nth-child(3) > a {
   position: absolute;
   top: -100px;
-  display: none;
 }
 .footer_img > li:nth-child(4) > a {
   border-radius: 0 0 0 30px;
   position: absolute;
   top: -50px;
-  display: none;
 }
-.footer_img li.on {
+.footer_img li a.on {
   display: block;
 }
 .bottom {
