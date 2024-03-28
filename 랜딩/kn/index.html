@@ -30,6 +30,7 @@
         </ul>
         <div class="sub_menu">
           <div class="sub_menu1">
+            <ul class="sub"></ul>
             <ul class="sub">
               <li>
                 <a href="#"><strong>견적내기</strong></a>
@@ -638,101 +639,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!-- Initialize Swiper -->
-    <script>
-      let chat = gsap.timeline({
-        defaults: { position: "fixed" },
-      });
-      chat.fromTo(
-        ".chat1",
-        {
-          opacity: 0,
-        },
-        {
-          opacity: 1,
-        }
-      );
-      let chat1 = gsap.timeline();
-      chat1.to(".chat1", {
-        position: "absolute",
-      });
-      ScrollTrigger.create({
-        animation: chat,
-        trigger: ".bestKia,.new,.new1",
-        // markers: true,
-        scrub: true,
-      });
-      ScrollTrigger.create({
-        animation: chat1,
-        trigger: ".ft",
-        //markers: true,
-        scrub: true,
-      });
-      $(".mySwiper .swiper-slide").eq(0).find(".kv p").addClass("on");
-      var swiper = new Swiper(".mySwiper", {
-        pagination: {
-          el: ".swiper-pagination",
-        },
-        on: {
-          slideChange: function () {
-            let i = this.activeIndex;
-            console.log(i);
-            $(".mySwiper .swiper-slide .kv p").removeClass("on");
-            $(".mySwiper .swiper-slide .kv2 p").removeClass("on");
-            $(".mySwiper .swiper-slide .kv3 p").removeClass("on");
-            $(this.slides[i]).find("p").addClass("on");
-          },
-        },
-      });
-      var swiper1 = new Swiper(".mySwiper1", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        loop: true,
-        speed: 800,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      $(function () {
-        let ftButton = true;
-        $(".btn>button").click(function () {
-          if (ftButton) {
-            $(".btn2").addClass("on");
-            $(".btn").addClass("on");
-            $(".btn").eq(0).find("button").addClass("on");
-          } else {
-            $(".btn2").removeClass("on");
-            $(".btn").removeClass("on");
-            $(".btn").eq(0).find("button").removeClass("on");
-          }
-          ftButton = !ftButton;
-        });
-      });
-      $(function () {
-        let kr = true;
-        $(".kr li").click(function () {
-          if (kr) {
-            $(".kr2").addClass("on");
-            $(".wrap .kr li").eq(0).find("a").addClass("on");
-          } else {
-            $(".kr2").removeClass("on");
-            $(".wrap .kr li").eq(0).find("a").removeClass("on");
-          }
-          kr = !kr;
-        });
-      });
-      gsap.to(".newsWrap .news .new1 li", {
-        y: -50,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".newsWrap .news .new1 li",
-          toggleActions: "play reverse reverse reverse",
-        },
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>

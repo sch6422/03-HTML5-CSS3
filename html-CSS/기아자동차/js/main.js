@@ -92,13 +92,16 @@ gsap.to(".newsWrap .news .new1 li", {
     toggleActions: "play reverse reverse reverse",
   },
 });
+
 $(".menu1 li").click(function () {
   let i = $(this).index();
+  let a = true;
   console.log(i);
   $(".wrap .menu").css("background", "#fff");
   $(".wrap .menu .menu1 li a").addClass("on");
   $(".wrap .menu .menu1 li a").removeClass("on1");
   $(".wrap .menu .menu1 li").eq(i).find("a").addClass("on1");
+  $(".wrap .kr li a").addClass("on");
   $(".wrap .kr li a").addClass("on1");
   $(".logo li a img").attr("src", "images/logo.svg");
   $(".wrap .kr li").eq(0).find("a").addClass("on");
@@ -106,5 +109,28 @@ $(".menu1 li").click(function () {
     $(".sub_menu").css("display", "block");
     $(".sub").css("display", "none");
     $(".sub").eq(i).css("display", "flex");
+  }
+});
+// $(".sub_menu").click(function () {
+//   let a = $(this).attr("style");
+//   console.log(a);
+//   $(".wrap .menu .menu1 li a").removeClass("on1");
+//   if (a == "display: block;") {
+//     $(this).css("display", "none");
+//     $(".wrap .menu").css("background", "transparent");
+//     $(".wrap .kr li a").css("color", "#fff");
+//     $(".wrap .menu .menu1 li a").css("color", "#fff");
+//     $(".logo li a img").attr("src", "images/logo.png");
+//   }
+// });
+$(".sub_menu").click(function () {
+  let a = $(this).attr("style");
+  console.log(a);
+  if (a == "display: block;") {
+    $(this).css("display", "none");
+    $(".wrap .menu").css("background", "transparent");
+    $(".wrap .menu .menu1 li a").removeClass("on on1");
+    $(".logo li a img").attr("src", "images/logo.png");
+    $(".wrap .kr li a").removeClass("on on1");
   }
 });
